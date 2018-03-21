@@ -1,0 +1,12 @@
+name: appCiudatos
+title: appCiudatos
+username:
+account: randommonkey
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 282005
+bundleId: 1268196
+url: https://randommonkey.shinyapps.io/appCiudatos/
+when: 1521033428.80936
+asMultiple: FALSE
+asStatic: FALSE

@@ -1,0 +1,33 @@
+library(shiny)
+library(shinyjs)
+
+ui <- function(request) {
+  fluidPage(
+    tabsetPanel(id = "tabs",
+                tabPanel("One",
+                         checkboxInput("chk1", "Checkbox 1"),
+                         uiOutput('ch1')
+                ),
+                tabPanel("Two",
+                         checkboxInput("chk2", "Checkbox 2"),
+                         uiOutput('ch2')
+                )
+    )
+  )
+}
+server <- function(input, output, session) {
+  
+  observe(
+    if (length(parseQueryString(session$clientData$url_search)) > 0) {
+      updateTabsetPanel(session, 'tabs', selected = parseQueryString(session$clientData$url_search)$tab)
+    } 
+  )
+  # Trigger bookmarking witwh either button
+  # observeEvent(input$bookmark1, {
+  #   session$doBookmark()
+  # })
+  # observeEvent(input$bookmark2, {
+  #   session$doBookmark()
+  # })
+}
+shinyApp(ui, server)

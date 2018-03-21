@@ -1,0 +1,624 @@
+@import url('https://fonts.googleapis.com/css?family=Karla');
+
+*, *:before, *:after {
+  outline: none;
+}
+
+body {
+	background: #f7f9fa;
+  overflow-x: hidden;
+  font-family: 'Karla', sans-serif;
+  color: #26327e;
+}
+
+.shiny-output-error {
+   visibility: hidden; 
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  margin-top: 15px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.nav-tabs {
+    border-bottom: none;
+}
+
+.nav-tabs a {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+ .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover { border-width: 0; }
+ 
+ .nav-tabs > li > a {
+   border: none; 
+   color: #26327E;
+   background: #e8ecf1;
+ }
+
+.nav-tabs>li>a {
+    margin-right: 2px;
+    line-height: 0;
+    /* border: 1px solid transparent; */
+    border-radius: 0px 0px 0 0;
+}
+
+ .nav-tabs > li.active > a, .nav-tabs > li > a:hover { 
+ 	border: none;  
+ 	color: #26327E !important;
+ 	background: #fff;
+ }
+ .nav-tabs > li > a::after { 
+ 	content: "";
+ 	background: #e8ecf1;
+ 	height: 2px; 
+ 	position: absolute;
+ 	width: 100%; 
+ 	left: 0px; 
+ 	bottom: -1px;
+ 	transition: all 250ms ease 0s; transform: scale(0); 
+ }
+ 
+ .nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after {
+  transform: scale(1); 
+}
+
+.tab-nav > li > a::after {
+   background: #5a4080 none repeat scroll 0% 0%; 
+   color: #26327E; 
+}
+.tab-pane { 
+   padding: 5px; 
+}
+.tab-content{
+	padding: 0px;
+}
+.nav-tabs > li  {
+	width:24%; 
+	align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  
+.row {
+    margin-right: 0px !important; 
+    margin-left: 0px !important; 
+    text-align: center;
+}
+.nav-tabs {
+    font-size: 9px;
+}
+
+.buttonStyleCruces {
+    margin-left: 14px !important;
+    left: 0px !important;  
+}
+
+.buttonStyle, .buttonStyleCity, .buttonObj, .buttonObjCty, .buttonStyleCruces {
+    width: 105px !important;
+    height: 105px !important;
+    font-size: 16px !important;
+    margin-right: 7px !important;
+    margin-bottom: 7px !important;
+}
+
+.shiny-input-container:not(.shiny-input-container-inline) {
+    width: auto;
+}
+
+#cajaDiv, #cajaDivCiudad {
+  height: auto !important;
+}
+}
+
+@media (max-width: 480px) {
+.nav-tabs > li > a::after {
+  position: relative;
+}  
+.sidNav {
+    margin-left: -16px !important;
+    margin-right: -15px !important;
+    margin-top: -5px !important;
+}
+.imgTab{
+  display: none !important;
+       }
+       
+.nav-tabs{
+  font-size: 9px;
+}
+.nav-tabs>li>a{
+  height: 75%;
+  margin-top: 15px;
+  line-height: 1.2 !important;
+  display: flex;
+  align-items: center;
+}
+
+.nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after {
+    display: none;
+}
+.nav>li>a {
+    padding: 4px 8px;
+}
+.nav {
+  margin-top: 5px;
+}
+
+/*
+.containerButtons {
+  height: 180px !important;
+  margin-left: 5px !important;
+  margin-right: 5px !important;
+  background: red;
+}*/
+.buttonStyleCruces {
+    margin-left: 14px !important;
+    left: 0px !important;  
+}
+
+.buttonStyle, .buttonStyleCity, .buttonObj,  .buttonObjCty, .buttonStyleIcu {
+  width: 90px !important;
+  height: 90px !important;
+  margin-bottom: 0px !important;
+  font-size: 10px !important;
+  margin-right: 4px !important;
+  margin-top: 0px;
+}
+
+#grafSubj, #grafSubjCiud{
+  display: flex;
+}
+
+
+#cajaDiv {
+  height: 385px !important;
+}
+
+}
+
+
+
+
+.sidNav{
+    margin-left: -10px;
+    margin-right: -9px;
+    margin-top: 10px;
+}
+
+.sidNav li{
+  	float: left;
+    width: 50%;
+    background: #E8ECF1;
+    text-decoration: none;
+ }
+
+.sidNav li.active {
+    background: #d8e0e8;
+}
+
+
+.sidNav li.active>a,  .sidNav li.active>a:focus, .sidNav li.active>a:hover {
+    color: #26327E;
+    cursor: default;
+    background-color: #d8e0e8;
+    border: none;
+}
+
+#botonesSubjetivos, #BotCiudadSubj, #botonesObjetivos, #BotCiudadObj, #botonesCruces {
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.buttonStyle, .buttonStyleCity, .buttonObj, .buttonObjCty, .buttonStyleCruces {
+    background: #26327E;
+    position: relative;
+    width: 85px;
+    height: 85px;
+    vertical-align: middle;
+    text-align: center;
+    align-content: center;
+    box-shadow: none;
+    border: none;
+    margin-right: 3px;
+    margin-bottom: 3px;
+    font-size: 12px;
+    margin-top: 3px;
+    color: #fff;
+    top: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.blabla {
+  float: right;
+  margin-right: -50px !important;
+}
+ 
+.buttonStyleCruces {
+ margin-left: 12px;
+ left: -56px;
+} 
+ 
+.pressed {
+  background: #D8E13E;
+  color: #26327E;
+}
+
+.cosa {
+  filter: brightness(0) invert(1);
+  margin: 0px 0px 10px
+} 
+ 
+img {
+		cursor: pointer;
+}
+
+.inverse {
+		/*filter: hue-rotate(10deg) invert(1);*/
+ filter: none !important;
+}
+
+.inverseuysfib{
+  filter: hue-rotate(10deg) invert(1);
+}
+
+#cajaDiv {
+  background: #d8e0e8;
+  margin-top: -15px;
+  margin-left: -5px;
+  margin-right: -5px;
+  height: 523px;
+}
+
+#cajaDivCiudad {
+  background: #d8e0e8;
+  margin-left: -5px;
+  margin-right: -5px;
+  margin-top: -5px;
+  height: 523px;
+}
+
+
+.containerButtons {
+  height: 200px;
+  overflow-y: scroll;
+  overflow-x: hidden !important;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+.containerButtonsCiudad {
+  height: 195px;
+  overflow-y: scroll;
+  margin-top: -55px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+
+#styleScroll::-webkit-scrollbar-track {
+    background-color: #fff;
+    margin-top: 20px;
+}
+
+#styleScroll::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+}
+
+#styleScroll::-webkit-scrollbar-thumb {
+    background-color: #E8ECF1;
+    border: 2px solid #E8ECF1;
+    height: 130px;
+}
+
+.shiny-input-container:not(.shiny-input-container-inline) {
+    padding: 20px;
+}
+
+.selectize-control.single .selectize-input, .selectize-control.single .selectize-input input {
+    cursor: pointer;
+    background: #E8ECF1;
+}
+
+.selectize-input {
+    border: none !important;
+    border-radius: 0px !important;
+}
+
+.irs-slider.single {
+    background: #428bca;
+}
+
+.contViz {
+  background: white;
+  margin-top: 10px;
+  height: 500px;
+}
+
+.contVizCiud {
+  background: white;
+  margin-top: 10px;
+  height: 500px;
+}
+
+.imgTab{
+  padding: 12px;
+  width: 55px;
+}
+
+.buttonStyleGraph, .buttonStyleGraphCity, .buttonStyleGraphObj, .buttonStyleGraphObjCiud{
+  background: transparent;
+  border: none;
+  width: 150px;
+  margin-top: 9px;
+}
+
+.buttonStyleODS {
+   background: transparent;
+   border: 0px;
+   margin-top: 11px;
+   width: 85px;
+   height: 85px; 
+   margin-left: 6px;
+}
+
+
+.odsIn .shiny-input-container:not(.shiny-input-container-inline) {
+    display: inline-flex;
+    width: 500px;
+}
+
+.odsIn .selectize-control.single .selectize-input, .selectize-control.single .selectize-input .input {
+   margin-left: 9px;
+}
+
+.contVizOds {
+ margin-left: 91px;
+ margin-top: 70px;
+ margin-right: 18px;
+}
+
+#anioSubj {
+  margin-left: 15px;
+  margin-top: -20px;
+}
+
+
+/*.buttonStyleCruces {
+  width: 70px !important;
+  height: 70px !important;
+  margin-bottom: 0px !important;
+  font-size: 10px !important;
+  vertical-align: middle;
+  background-color: #26327E;
+}*/
+
+
+#MenuIndices li {
+ display: inline !important;
+ width: 24% !important;
+ }
+
+
+#MenuIndices li a {
+ font-size: 11px !important;
+ text-decoration: none !important;
+ float: center !important;
+ padding: 22px !important;
+ }
+
+#MenuIndices > li > a {
+  background: #fff;
+}
+
+#MenuIndices li.active > a {
+  background: #26327e  !important;
+  color: white !important;
+}
+
+.imgODS {
+ width: 85px;
+ vertical-align: middle;
+ height: 85px; 
+}
+
+.colTabDesc {
+ width: 450px;
+}
+
+.colTabValr {
+ width:20%;  
+}
+
+.bttIPS {
+  width : 300px;
+  height: 500px;
+}
+
+.selectize-input > * {
+  vertical-align: baseline;
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  margin-right: 8px;
+}
+
+.contODS {
+ background: #d8e0e8;
+ height: 511px;
+ overflow-x: hidden !important;
+ margin-left: -48px;
+ margin-right: 12px;
+ margin-top: 13px;
+}
+
+#CiudadCruce {
+  margin-left: -13px;
+}
+
+#CiudadCruce .selectize-control {
+    position: relative;
+    width: 295px;
+}
+
+#grafSubC .highcharts-container {
+  margin-top: -27px;
+  margin-left: 10px;
+}
+
+#grafObjC .highcharts-container {
+  margin-top: -27px;
+  margin-left: 0px;
+}
+
+
+.contIPSMenu {
+  background: #d8e0e8;
+  margin-left: 3px;
+  margin-right: -15px;
+  margin-top: 15px;
+  height: 500px;
+}
+
+.leaflet, .html-widget, .html-widget-static-bound, .leaflet-container, .leaflet-fade-anim {
+  background: #fff;
+}
+
+.imgLeg {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+  margin-left: 3%;
+}
+
+.centInd .form-group.shiny-input-container {
+  margin: auto;
+  width: 500px;
+}
+
+
+#fichaDepto{
+  margin-left: 10%;
+}
+
+.grafICU {
+  text-align: -webkit-center;
+  text-align: -moz-center;
+}
+
+
+
+
+@media only screen and (max-device-width: 1024px) {
+.buttonStyle, .buttonStyleCity, .buttonObj, .buttonObjCty, .buttonStyleCruces {
+    width: 64px;
+    height: 64px;
+    top: 17px;
+    font-size: 11px;
+}
+
+#CiudadCruce .selectize-control {
+    position: relative;
+    width: 240px;
+    margin-left: -5px;
+}
+
+}
+
+
+.leaflet-container .leaflet-control-attribution, .leaflet-container .leaflet-control-scale {
+    font-size: 11px;
+    display: none;
+}
+
+/*
+.highcharts-credits {
+  display: none;
+}
+
+
+
+#mapCiudad .highcharts-point, .highcharts-negative, .highcharts-color-1 {
+ stroke-width: 0;
+}
+
+
+
+
+#anioSubj .selectize-control {
+    position: relative;
+    width: 85px;
+}
+
+.crucesPerc {
+ margin-left: -12px;
+}
+
+.crucesObj {
+ margin-left: -22px;  
+}
+#CiudSubj .shiny-html-output .shiny-bound-output{
+ padding: 10px; 
+}
+
+
+
+#anioSubj .shiny-input-container:not(.shiny-input-container-inline) {
+ background: #d8e0e8; 
+ border-radius: 11px;
+ padding: 10px;
+}
+
+.irs-slider {
+  top: 21px;
+  width: 15px;
+  height: 15px;
+}
+
+.containerCiudad {
+  margin-top: 10px;
+}
+
+#CiudSubj { 
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#CiudObj {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#varCiudadSubj{
+  margin-left: 10px;
+  margin-right: 10px; 
+}
+
+#CiudSubj .control-label{
+  margin-top: 10px;
+}
+
+#CiudSubj .form-group{
+  margin-bottom: -5px;
+}*/

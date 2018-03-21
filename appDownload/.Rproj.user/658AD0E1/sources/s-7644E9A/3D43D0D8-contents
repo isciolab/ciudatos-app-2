@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css?family=Karla');
+*, *:before, *:after {outline: none;}
+
+body {
+font-family: Karla;
+}
+
+.shiny-output-error {
+   visibility: hidden; 
+}
+
+.buttonStyleIcu {
+  font-size: 10px !important;
+}
+
+ .buttonStyleObj, .buttonStyle, .buttonStyleIcu{
+    background: #000;
+    position: relative;
+    width: 90px;
+    height: 90px;
+    vertical-align: middle;
+    text-align: center;
+    align-content: center;
+    box-shadow: none;
+    border: none;
+    margin-right: 3px;
+    margin-bottom: 3px;
+    font-size: 12px;
+    margin-top: 3px;
+    color: #00CEF6;
+    top: 4px;
+    line-height: 10px !important;
+}
+
+.cosa{
+   position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: hue-rotate(140deg) invert(1);
+}
+
+.textBut {
+    position: relative;
+    top: 16px;
+    line-height: 1.4;
+}
+
+.containerButtons {
+ height: 198px;
+ overflow-y: auto;
+ margin-top: -7px;
+ margin-bottom: 23px;
+ margin-left: 1px;
+ margin-right: 1px;
+}
+
+#styleScroll::-webkit-scrollbar-track {
+    background-color: #000;
+    margin-top: 8px;
+}
+
+#styleScroll::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+}
+
+#styleScroll::-webkit-scrollbar-thumb {
+    background-color: #353D4E;
+    border: 2px solid #353D4E;
+    height: 130px;
+}
+
+#SelectorVarSubjetivos {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+.buttonStyleODS {
+  background: transparent; 
+  position: relative;
+  width: 85px;
+  height: 85px;
+  vertical-align: middle;
+  text-align: center;
+  align-content: center;
+  border: none;
+  margin: 3px 3px;
+  top: 4px;
+  left: -6px;
+}
+
+.imgODS {
+  width: 80px;
+  vertical-align: middle;    
+}
+
+.contTab {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: fit-content;
+  margin-bottom: 15px;
+  margin-top: 8%;
+}
+
+
+
+#styleScrollx::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: transparent;
+}
+ 
+#styleScrollx::-webkit-scrollbar-track {
+   background-color: #D8E0E8;
+}
+ 
+#styleScrollx::-webkit-scrollbar-thumb {
+  background-color: #586383;
+  border: 2px solid #586383;
+}
+
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    background-color: #26327E;
+    border-color: #26327E;
+}
+
+
+.pagination>li>a, .pagination>li>span {
+    color: #26327E;
+}
+
+
+.contLat {
+ padding-top: 25px !important; 
+}
+
+.butAl .btn-default {
+  margin-top: 15px;
+}
+
+.butAl{
+  text-align: center;
+}
+
+.loadmessage {
+  position: fixed;
+  width: 5%;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: #D8E0E8;
+}
+
+table.dataTable, .dataTables_length, .dataTables_info {
+    font-family: Karla;
+    font-size: 10px;
+}
+
+.pagination>li {
+    display: inline;
+    font-family: Karla;
+    width: fit-content;
+}
+
+div.dataTables_filter label {
+    font-family: Karla;
+}
+
+.styCont {
+  background: #2A2D36;
+  height: -webkit-fill-available;
+  color: white;
+}
+
+.btn {
+  font-size: 13px;
+  border-radius: 0px;
+}
+
+.btn-default {
+    color: #fff;
+    background-color: #26327E;
+    border-color: #26327E;
+}
+
+.selectize-input {
+  border: 1px solid #23262C !important;
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  border-radius: 0px !important;
+}
+
+.selectize-input.full {
+  background: #23262C !important;
+  color: #fff;
+}
+
+.pressed {
+  background: #00CEF6;
+  color: #26327E;
+}
+
+.inverse {
+		/*filter: hue-rotate(10deg) invert(1);*/
+ filter: none !important;
+}
+
+.shiny-input-checkboxgroup label ~ .shiny-options-group, .shiny-input-radiogroup label ~ .shiny-options-group {
+    margin-top: -28px;
+}
+
+.shiny-input-checkboxgroup.shiny-input-container-inline label ~ .shiny-options-group, .shiny-input-radiogroup.shiny-input-container-inline label ~ .shiny-options-group {
+    margin-top: -28px;
+}
+
+@media only screen and (max-device-width: 1024px) {
+   .buttonStyleObj, .buttonStyle, .buttonStyleIcu{
+    width: 64px;
+    height: 64px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    font-size: 11px;
+    margin-top: 2px;
+}
+
+.cosa{
+  top: 7px;
+}
+
+.textBut {
+    line-height: 0px;
+}
+
+.containerButtons {
+ height: 142px;
+ overflow-x: hidden;
+}
+.imgODS {
+    width: 65px;
+}
+.buttonStyleODS {
+    width: 60px;
+    height: 60px;
+    margin: 4px 3px;
+    top: 4px;
+    left: -9px;
+}
+}
+
+@media only screen and (device-width:768px){
+ .buttonStyleObj, .buttonStyle, .buttonStyleIcu{
+ width: 96px;
+ height: 96px;
+}
+.containerButtons {
+ height: 100px;
+ overflow-x: hidden;
+}
+
+.styCont {
+ height: auto;
+}
+
+.butAl .btn-default {
+ margin-bottom: 3%;
+}
+
+}

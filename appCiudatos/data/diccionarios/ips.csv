@@ -1,0 +1,17 @@
+id,label,grupo
+IPS, Índice de Progreso Social,IPS
+NHB,Necesidades Básicas Humanas,Dimensión
+FB,Fundamentos del Bienestar,Dimensión
+Op,Oportunidades,Dimensión
+NCB,Nutrición y cuidados médicos básicos,Necesidades Básicas Humanas
+ASB,Agua y Saneamiento,Necesidades Básicas Humanas
+VSP,Vivienda,Necesidades Básicas Humanas
+SP,Seguridad personal,Necesidades Básicas Humanas
+ACB,Acceso a Conocimientos Básicos,Fundamentos del Bienestar
+AIC,Acceso a Información y Comunicaciones,Fundamentos del Bienestar
+SB,Salud y Bienestar,Fundamentos del Bienestar
+SA,Sostenibilidad  del ecosistema,Fundamentos del Bienestar
+DP,Derechos Personales,Oportunidades
+LPE,Libertad Personal y de Elección,Oportunidades
+TI,Tolerancia e Inclusión,Oportunidades
+AES,Acceso a Educación Superior,Oportunidades

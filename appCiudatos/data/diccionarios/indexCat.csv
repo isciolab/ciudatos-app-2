@@ -1,0 +1,65 @@
+c,index
+Nada orgulloso,a
+Poco orgulloso,b
+Ni orgulloso ni no orgulloso,c
+Orgulloso,d
+Muy orgulloso,f
+Muy insatisfecho,a
+Algo insatisfecho,b
+Ni satisfecho ni insatisfecho,c
+Algo satisfecho,d
+Muy satisfecho,f
+Nada seguro,a
+Poco seguro,b
+Algo seguro,c
+Seguro,d
+Muy seguro,f
+Muy mal,a
+Mal,b
+Regular,c
+Bien,d
+Muy bien,f
+Nada,a
+Poco,b
+Algo,c
+Bastante,d
+Mucho,f
+Muy mala gestión,a
+Mala gestión,b
+Gestión regular,c
+Buena gestión,d
+Muy buena gestión,f
+"Inmediato, era una urgencia",a
+Entre 1 y 5 días,b
+Entre 6 y 10 días,c
+Entre 11 y 20 días,d
+Entre 21 y 30 días,f
+Más de 30 días,g
+Lo mismo,b
+Más tiempo,c
+Menos tiempo,a
+NS/NC/NO/NA,z
+Ha empeorado mucho,a
+Ha empeorado algo,b
+Sigue igual,c
+Ha mejorado algo,d
+Ha mejorado mucho,f
+"No hay jóvenes, o ninguno está estudiando educación superior",y
+Nada transparente,a
+Poco transparente,b
+Algo transparente,c
+Transparente,d
+Muy transparente,e
+No confía nada,a
+Confía poco,b
+Confía algo,c
+Confia bastante,d
+Confía mucho,e
+Buen camino,a
+Mal camino,b
+Ninguno,z
+Si,a
+No,b
+Sí,a
+No recibió,z
+No recibe,z

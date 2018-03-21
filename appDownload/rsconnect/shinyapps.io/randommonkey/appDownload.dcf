@@ -1,0 +1,12 @@
+name: appDownload
+title: appDownload
+username:
+account: randommonkey
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 279543
+bundleId: 1268683
+url: https://randommonkey.shinyapps.io/appDownload/
+when: 1521050264.18362
+asMultiple: FALSE
+asStatic: FALSE

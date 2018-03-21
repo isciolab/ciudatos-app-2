@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+  <!-- template.html -->
+  <html>
+  <head>
+   <style>
+
+.modal-body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.container{
+  display: flex;  
+  flex-flow: row wrap;
+  text-align: center;
+  width: auto;
+}
+
+.container > * {
+  padding: 0px;
+  flex: 1 100%;
+}
+
+
+@media screen and (min-width: 768px) {
+.Grafico {
+  flex: 7 0px;
+  order: 1;
+}
+
+.Descripcion {
+  order: 2;
+  flex: 5 0px;
+}
+
+#ModaSelectIPS .shiny-input-container:not(.shiny-input-container-inline) {
+    padding: 0px;
+    display: inline;
+}
+#ModaSelectIPSLoc .shiny-input-container:not(.shiny-input-container-inline) {
+    padding: 0px;
+    display: inline;
+}
+}
+</style>
+  {{ headContent() }}
+</head>
+  <body>
+ 
+ <div class="container">
+  <div class="BarraDimension">{{ graficoDim }}</div>
+    <div class="RadioButtons">{{ radioBotones }}</div>
+  <div class ="Grafico"> {{graficoTodo}}  
+  </div>
+    <div class ="Descripcion"> {{selecDesc}}
+  </div>
+  
+</div>
+  </body>
+ 
+  </html>
