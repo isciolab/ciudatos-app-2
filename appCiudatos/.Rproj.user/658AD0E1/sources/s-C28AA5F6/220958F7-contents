@@ -1,0 +1,105 @@
+library(datafringe)
+library(stringr)
+library(plyr)
+
+
+m <- read_csv('data/prep/movilidad.csv', na = c('ND2','ND', NA,''))
+m <- m[-30:-32,]
+#m <- plyr::rename(m, c('Población' = 'Población (Millones)'))
+
+m$`PIB per cápita (USD/hab)` <- (m$`PIB (Miles de millones USD)`*10^9)/m$Población
+m$`Tarifa del bus/salario mínimo` <- m$`Tarifa mínima (US$ ) - Ómnibus`/m$`Salario mínimo (USD)`
+
+
+dm <- read_csv('data/prep/diccionario.csv')
+#dm$Nombre[dm$Nombre == 'Población'] <- 'Población (Millones)'
+
+# nm <- names(m)
+fid <-function(nm){
+  nm <- gsub('/', ' ', nm)
+  nw <- sapply(gregexpr("[[:alpha:]]+", nm), function(x) sum(x > 0))
+  na <- iconv(nm,to='ASCII//TRANSLIT')
+  na <- gsub("[[:punct:]]",'',na)
+  id <- ifelse(nw == 1, tolower(gsub("([A-Za-z]+).*", "\\1", na)), 
+               tolower(paste0(gsub("([A-Za-z]+).*", "\\1", na),'_', word(na,-1))))
+  id <- gsub(' subrec', 'subrec', id)
+  id
+}
+
+
+id_names <- fid(names(m))
+id_dic <- fid(dm$Nombre)
+
+names(m) <- id_names
+
+
+# m$poblacion <- round(m$poblacion)
+# m$flota_motocicleta <- round(m$flota_motocicleta)
+# m$flota_automovil <- round(m$flota_automovil)
+# m$recursos_neumaticos <- round(m$recursos_neumaticos)
+# m$asientos <-  round(m$asientos)
+# m$flota_individual <- round(m$flota_individual)
+
+is.na(m[,grep('patrimonio', names(m))]) <- !m[,grep('patrimonio', names(m))]
+is.na(m[,grep('sub', names(m))]) <- !m[,grep('sub', names(m))]
+
+
+
+dm$id <- id_dic
+dm <- dm   %>% select(id, Nombre:tipo)
+dm <-  plyr::rename(dm, c('Nombre' = 'label'))
+dm <- bind_rows(data.frame(id = 'ciudad', label = 'ciudad'), dm)
+
+varinfo <- data.frame(id = names(m)) 
+
+dm <- left_join(varinfo, dm)
+
+enteros <- dm %>% filter(tipo == 'Entero') %>% select(id, label, tipo)
+m[c(enteros$id)] <- lapply(m[c(enteros$id)], function(x) round(x))
+
+
+write_csv(m, 'data/clean/caf_movilidad_data.csv', na = c(''))
+write_csv(m, 'fringe/caf_movilidad_data.csv', na = c(''))
+
+coalesce2 <- function(...) {
+  Reduce(function(x, y) {
+    i <- which(is.na(x))
+    x[i] <- y[i]
+    x},
+    list(...))
+}
+
+
+
+dm <- dm %>% mutate(label = coalesce2(label, id))
+dm$label <- gsub('3', '', dm$label)
+#dm$label <- gsub('1', '', dm$label)
+dm$label <- gsub('Automóvil2', 'Automóvil', dm$label)
+dm$label <- gsub('Autobús2', 'Autobús', dm$label)
+dm$label <- gsub('bus2', 'bus', dm$label)
+dm$label <- gsub('\\(%\\)2', '(%)', dm$label)
+dm$label <- gsub('\\(%\\)1', '(%)', dm$label)
+dm$missing <- colMeans(is.na(m))
+
+
+
+
+write_csv(dm, 'data/clean/caf_movilidad_dic.csv', na = c(''))
+write_csv(dm, 'fringe/caf_movilidad_dic.csv', na = c(''))
+
+
+
+dm$ctype <- guessCtypes(m)
+dm <- dm %>% select(id, label, ctype, missing, everything())
+
+write_csv(dm, 'data/clean/caf_movilidad_dic_.csv', na = c(''))
+write_csv(dm, 'fringe/caf_movilidad_dic_.csv', na = c(''))
+
+
+readFringe('data/clean/caf_movilidad',
+           forceDic = TRUE,verbose = TRUE, n_max = 100)
+
+
+# "taxis_coletivos", "asientos", "operaciones_semana"
+# "tarifa_microbus" "autos_hab"       "millones_total" 
+#"tarifa_metro"       "patrimonio_rieles3" "flota_automovil" 

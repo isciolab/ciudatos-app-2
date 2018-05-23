@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1527106547235.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "9AF900C3",
+    "lastKnownWriteTime" : 1527111327,
+    "last_content_update" : 1527111327610,
+    "path" : "~/Repos/ciudatos-app-2/dashboard/report-generator.R",
+    "project_path" : "report-generator.R",
+    "properties" : {
+        "cursorPosition" : "34,16",
+        "scrollLine" : "18"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Karla');
+
+html,
+body {
+  background: #F7F9F4;
+  font-family: 'Karla';
+  margin-top: 1%;
+  padding: 0;
+  height: 100%;
+}
+
+.contInfo {
+  margin-left: 27%;
+  margin-right: 27%;
+  /* max-width: 600px;*/
+}
+
+.main-container {
+    max-width: none !important;
+}
+
+p {
+  font-size: 15px;
+  font-family: 'Source Sans Pro';
+  font-weight: lighter;
+}
+
+.nombTem {
+  font-size: 21px;
+  font-weight: 600;
+  text-align: left;
+  font-family: 'Karla';
+}
+
+.highcharts-credits {
+  display: none;
+}
+
+.highchart, .html-widget, .html-widget-static-bound{
+  width: auto !important;
+  height: auto !important;
+  text-align: -webkit-center !important;
+}
+
+h2, h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.aligGraf {
+  text-align: center;
+}
+
+.col2 {
+   display: grid;
+}
+
+.conAll {
+  margin: 0px 15px 0px 15px;
+}
+
+
+#vizPar1 {
+ float: left;
+ display:inline-block;
+ margin-left: -10%;
+}
+
+#vizPar2 {
+ display: flex;
+}
+
+
+.secloloo {
+  display: grid;
+  grid-template-columns: 40% 60% !important;
+  align-items: center;
+}
+
+/*.secloloo2 {
+  display: grid;
+  grid-template-columns: 40% 60% !important;
+  align-items: center;
+}
+*/
+
+
+.col-md-3 {
+  left: -9%;
+}
+
+.allEducacion{
+  background: red;
+}
+
+.secvizPar1 {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.aparrCol1 {
+  padding: 5%;
+}

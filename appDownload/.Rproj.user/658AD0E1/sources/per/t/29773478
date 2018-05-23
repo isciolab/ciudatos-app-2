@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1519141248747.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2473328985",
+    "id" : "29773478",
+    "lastKnownWriteTime" : 1527094070,
+    "last_content_update" : 1527094070550,
+    "path" : "~/Repos/ciudatos-app-2/appDownload/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+        "cursorPosition" : "298,90",
+        "scrollLine" : "287",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

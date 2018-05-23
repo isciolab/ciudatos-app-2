@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1527089109884.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "FAF42241",
+    "lastKnownWriteTime" : 1527106093,
+    "last_content_update" : 1527106093208,
+    "path" : "~/Repos/ciudatos-app-2/dashboard/seleccionVariables.R",
+    "project_path" : "seleccionVariables.R",
+    "properties" : {
+        "cursorPosition" : "42,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

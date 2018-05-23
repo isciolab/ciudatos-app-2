@@ -1,0 +1,3 @@
+sub("[0-9]\\.[0-9]\\.", "", "10.1.1.1 Frozen Niagara1 Entrance 2.55 sds")
+gsub("a?", 'hola', "a?lala")
+

@@ -1,0 +1,124 @@
+base,id,indicador,id_comp,idlabel,Tema
+Datos de percepción,GG3,Gestión del alcalde (%),GG6,Percepción de transparencia de la gestión pública (%),BUEN GOBIERNO Y CIUDADANÍA
+Datos de percepción,GG1,Imágen del alcalde (%),GG6,Percepción de transparencia de la gestión pública (%),BUEN GOBIERNO Y CIUDADANÍA
+Datos oficiales,v8_ma_03,Porcentaje de aguas residuales que reciben tratamiento de acuerdo a normas nacionales,v8_ma_07,Porcentaje de residuos sólidos de la ciudad que son separados y clasificados para reciclado,MEDIO AMBIENTE
+Datos oficiales,v8_ma_04,Generación de residuos sólidos urbanos (Kg diarios por habitante),v8_ma_07,Porcentaje de residuos sólidos de la ciudad que son separados y clasificados para reciclado,MEDIO AMBIENTE
+Datos oficiales,v8_ma_05,Nivel de concentración media anual de partículas de polvo en 10 micras (PM10),v8_ma_042,Porcentaje de residuos sólidos de la ciudad que son separados y clasificados para reciclado,MEDIO AMBIENTE
+Datos oficiales,v8_ma_05,Nivel de concentración media anual de partículas de polvo en 10 micras (PM10),v9_m_005,No. de automóviles por cada 100 hab.,MEDIO AMBIENTE
+Datos oficiales,v8_ma_05,Nivel de concentración media anual de partículas de polvo en 10 micras (PM10),v9_m_006,No. de motos por cada 100 hab.,MEDIO AMBIENTE
+Datos oficiales,v4_e_007,Tasa de deserción escolar - sector público,v4_e_015,Tasa bruta de cobertura en básica secundaria,EDUCACIÓN
+Datos oficiales,v13_gp_002,Ingresos propios como porcentaje de ingresos totales,v13_gp_005,Gasto inversión como porcentaje del gasto total,BUEN GOBIERNO Y CIUDADANÍA
+Datos oficiales,v13_gp_002,Ingresos propios como porcentaje de ingresos totales,v13_gp_003,Transferencias totales como porcentaje del ingreso total,BUEN GOBIERNO Y CIUDADANÍA
+Datos oficiales,v13_gp_002,Ingresos propios como porcentaje de ingresos totales,v13_gp_004,Gasto inversión como porcentaje del gasto total,BUEN GOBIERNO Y CIUDADANÍA
+Datos oficiales,v13_gp_006,Inversión total por habitante,v13_gp_003,Transferencias totales como porcentaje del ingreso total,BUEN GOBIERNO Y CIUDADANÍA
+Datos oficiales,v5_ml_001,Tasa global de participacion,v5_ml_002,Tasa de ocupación,ENTORNO ECONÓMICO
+Datos oficiales,v5_ml_002,Tasa de ocupación,v5_ml_003,Tasa de informalidad,ENTORNO ECONÓMICO
+Datos oficiales,v5_ml_003,Tasa de informalidad,v5_ml_004,Tasa de desempleo,ENTORNO ECONÓMICO
+Datos oficiales,v5_ml_005,Tasa de desempleo juvenil (15 - 25 años),v6_sc_008,Tasa de adolescentes capturados por cada mil adolescentes (14 a 17 años),ENTORNO ECONÓMICO
+Datos oficiales,v9_m_007,Tasa de mortalidad por accidentes de tránsito,v9_m_016,Total accidentes de tránsito,MOVILIDAD
+Datos oficiales,v9_m_007,Tasa de mortalidad por accidentes de tránsito,v6_sc_029,Tasa de muertes violentas por 100.000 habitantes,MOVILIDAD
+Datos oficiales,v2_p_001,Incidencia pobreza monetaria,v4_e_012,Porcentaje de estudiantes de 11° con dominio del inglés con nivel B1 o B+,POBREZA Y EQUIDAD
+Datos oficiales,v2_p_001,Incidencia pobreza monetaria,v6_sc_005,Tasa de Homicidios por cada 100 mil habitantes,POBREZA Y EQUIDAD
+Datos oficiales,v2_p_001,Incidencia pobreza monetaria,v2_p_004,coeficiente de Gini de los ingresos,POBREZA Y EQUIDAD
+Datos oficiales,v2_p_001,Incidencia pobreza monetaria,v5_ml_004,Tasa de desempleo,POBREZA Y EQUIDAD
+Datos oficiales,v6_sc_005,Tasa de homicidios por 100.000 habitantes,v6_sc_007,Tasa de homicidios de personas entre 15 y 24 años de edad,SEGURIDAD Y CONVIVENCIA
+Datos oficiales,v6_sc_005,Tasa de homicidios por 100.000 habitantes,v6_sc_029,Tasa de muertes violentas por 100.000 habitantes,SEGURIDAD Y CONVIVENCIA
+Datos oficiales,v6_sc_030,Tasa de suicidios (por 100.000 habitantes),v6_sc_029,Tasa de muertes violentas por 100.000 habitantes,SEGURIDAD Y CONVIVENCIA
+Datos oficiales,v8_ma_07,Porcentaje de residuos sólidos de la ciudad que son separados y clasificados para reciclado,v8_ma_03,Porcentaje de aguas residuales que reciben tratamiento de acuerdo a normas nacionales,MEDIO AMBIENTE
+Datos oficiales,v8_ma_07,Porcentaje de residuos sólidos de la ciudad que son separados y clasificados para reciclado,v8_ma_04,Generación de residuos sólidos urbanos (Kg diarios por habitante),MEDIO AMBIENTE
+Datos oficiales,v9_m_005,No. de automóviles por cada 100 hab.,v8_ma_05,Nivel de concentración media anual de partículas de polvo en 10 micras (PM10),MOVILIDAD
+Datos oficiales,v9_m_006,No. de motos por cada 100 hab.,v8_ma_05,Nivel de concentración media anual de partículas de polvo en 10 micras (PM10),MOVILIDAD
+Datos oficiales,v4_e_015,Tasa bruta de cobertura en básica secundaria,v4_e_007,Tasa de deserción escolar - sector público,EDUCACIÓN
+Datos oficiales,v13_gp_005,Gasto inversión como porcentaje del gasto total,v13_gp_002,Ingresos propios como porcentaje de ingresos totales,BUEN GOBIERNO Y CIUDADANÍA
+Datos oficiales,v13_gp_003,Transferencias totales como porcentaje del ingreso total,v13_gp_002,Ingresos propios como porcentaje de ingresos totales,BUEN GOBIERNO Y CIUDADANÍA
+Datos oficiales,v13_gp_004,Gasto inversión como porcentaje del gasto total,v13_gp_002,Ingresos propios como porcentaje de ingresos totales,BUEN GOBIERNO Y CIUDADANÍA
+Datos oficiales,v13_gp_003,Transferencias totales como porcentaje del ingreso total,v13_gp_006,Inversión total por habitante,BUEN GOBIERNO Y CIUDADANÍA
+Datos oficiales,v5_ml_002,Tasa de ocupación,v5_ml_001,Tasa global de participacion,ENTORNO ECONÓMICO
+Datos oficiales,v5_ml_003,Tasa de informalidad,v5_ml_002,Tasa de ocupación,ENTORNO ECONÓMICO
+Datos oficiales,v5_ml_004,Tasa de desempleo,v5_ml_003,Tasa de informalidad,ENTORNO ECONÓMICO
+Datos oficiales,v6_sc_008,Tasa de adolescentes capturados por cada mil adolescentes (14 a 17 años),v5_ml_005,Tasa de desempleo juvenil (15 - 25 años),SEGURIDAD Y CONVIVENCIA
+Datos oficiales,v9_m_016,Total accidentes de tránsito,v9_m_007,Tasa de mortalidad por accidentes de tránsito,MOVILIDAD
+Datos oficiales,v6_sc_029,Tasa de muertes violentas por 100.000 habitantes,v9_m_007,Tasa de mortalidad por accidentes de tránsito,SEGURIDAD Y CONVIVENCIA
+Datos oficiales,v4_e_012,Porcentaje de estudiantes de 11° con dominio del inglés con nivel B1 o B+,v2_p_001,Incidencia pobreza monetaria,EDUCACIÓN
+Datos oficiales,v6_sc_005,Tasa de Homicidios por cada 100 mil habitantes,v2_p_001,Incidencia pobreza monetaria,SEGURIDAD Y CONVIVENCIA
+Datos oficiales,v2_p_004,coeficiente de Gini de los ingresos,v2_p_001,Incidencia pobreza monetaria,POBREZA Y EQUIDAD
+Datos oficiales,v5_ml_004,Tasa de desempleo,v2_p_001,Incidencia pobreza monetaria,ENTORNO ECONÓMICO
+Datos oficiales,v6_sc_007,Tasa de homicidios de personas entre 15 y 24 años de edad,v6_sc_005,Tasa de homicidios por 100.000 habitantes,SEGURIDAD Y CONVIVENCIA
+Datos oficiales,v6_sc_029,Tasa de muertes violentas por 100.000 habitantes,v6_sc_005,Tasa de homicidios por 100.000 habitantes,SEGURIDAD Y CONVIVENCIA
+Datos oficiales,v6_sc_029,Tasa de muertes violentas por 100.000 habitantes,v6_sc_030,Tasa de suicidios (por 100.000 habitantes),SEGURIDAD Y CONVIVENCIA
+Datos oficiales,v8_ma_03,Porcentaje de aguas residuales que reciben tratamiento de acuerdo a normas nacionales,MA3_2,"Satisfacción con aspectos relacionados con la gestión en medio ambiente: La contaminación del agua; ríos, humedales, quebradas (%)",MEDIO AMBIENTE
+Datos oficiales,v8_ma_04,Generación de residuos sólidos urbanos (Kg diarios por habitante),MA3_6,Satisfacción con aspectos relacionados con la gestión en medio ambiente: Las basuras en las calles (%),MEDIO AMBIENTE
+Datos oficiales,v8_ma_05,Nivel de concentración media anual de partículas de polvo en 10 micras (PM10),MA3_1,Satisfacción con aspectos relacionados con la gestión en medio ambiente: contaminación del aire (%),MEDIO AMBIENTE
+Datos oficiales,v8_ma_06,"Existencia, monitoreo y cumplimiento de regulaciones sobre polución acústica",MA3_3,Satisfacción con aspectos relacionados con la gestión en medio ambiente: nivel de ruido de la ciudad (%),MEDIO AMBIENTE
+Datos oficiales,v4_e_003,Tasa de cobertura neta en básica primaria,ED4,Satisfacción con la educación que reciben niños y jóvenes (%),EDUCACIÓN
+Datos oficiales,v4_e_004,Tasa de cobertura neta en básica secundaria,ED4,Satisfacción con la educación que reciben niños y jóvenes (%),EDUCACIÓN
+Datos oficiales,v10_ep_001,Espacio público efectivo por habitante,EP1,Satisfacción con el espacio público (%),HÁBITAT URBANO
+Datos oficiales,v13_gp_001,Índice de Gobierno Abierto,GG6,Percepción de transparencia de la gestión pública (%),BUEN GOBIERNO Y CIUDADANÍA
+Datos oficiales,v9_m_002,Pasajeros diarios movilizados por transporte público masivo,MV4,Satisfacción con el principal medio de transporte utilizado (%) - únicamente opciones 1 y 2,MOVILIDAD
+Datos oficiales,v9_m_005,No. de automóviles por cada 1000 hab.,MV4,Satisfacción con el principal medio de transporte utilizado (%) - únicamente opción 9,MOVILIDAD
+Datos oficiales,v9_m_006,No. de motos por cada 1000 hab.,MV4,Satisfacción con el principal medio de transporte utilizado (%) - únicamente opción 7,MOVILIDAD
+Datos oficiales,v9_m_007,Tasa de mortalidad por accidentes de tránsito,MV13_9,Satisfacción con aspectos relacionados con el tránsito: el control al cumplimiento de normas de tránsito (%),MOVILIDAD
+Datos oficiales,v9_m_009,Kilómetros de ciclovías exclusivas existentes,MV3,Medio de transporte más usado para desplazarse a las actividades habituales (%),MOVILIDAD
+Datos oficiales,v9_m_011,Porcentaje de víctimas peatones,MV3,Medio de transporte más usado para desplazarse a las actividades habituales (%),MOVILIDAD
+Datos oficiales,v2_p_001,Incidencia pobreza monetaria,CO4,Autopercepción de pobreza,POBREZA Y EQUIDAD
+Datos oficiales,v6_sc_020,Tasa de hurto a personas,VS15,Victimización en la ciudad (%),SEGURIDAD Y CONVIVENCIA
+Datos de percepción,MA3_2,"Satisfacción con aspectos relacionados con la gestión en medio ambiente: La contaminación del agua; ríos, humedales, quebradas (%)",v8_ma_03,Porcentaje de aguas residuales que reciben tratamiento de acuerdo a normas nacionales,MEDIO AMBIENTE
+Datos de percepción,MA3_6,Satisfacción con aspectos relacionados con la gestión en medio ambiente: Las basuras en las calles (%),v8_ma_04,Generación de residuos sólidos urbanos (Kg diarios por habitante),MEDIO AMBIENTE
+Datos de percepción,MA3_1,Satisfacción con aspectos relacionados con la gestión en medio ambiente: contaminación del aire (%),v8_ma_05,Nivel de concentración media anual de partículas de polvo en 10 micras (PM10),MEDIO AMBIENTE
+Datos de percepción,MA3_3,Satisfacción con aspectos relacionados con la gestión en medio ambiente: nivel de ruido de la ciudad (%),v8_ma_06,"Existencia, monitoreo y cumplimiento de regulaciones sobre polución acústica",MEDIO AMBIENTE
+Datos de percepción,ED4,Satisfacción con la educación que reciben niños y jóvenes (%),v4_e_003,Tasa de cobertura neta en básica primaria,EDUCACIÓN
+Datos de percepción,ED4,Satisfacción con la educación que reciben niños y jóvenes (%),v4_e_004,Tasa de cobertura neta en básica secundaria,EDUCACIÓN
+Datos de percepción,EP1,Satisfacción con el espacio público (%),v10_ep_001,Espacio público efectivo por habitante,HÁBITAT URBANO
+Datos de percepción,GG6,Percepción de transparencia de la gestión pública (%),v13_gp_001,Índice de Gobierno Abierto,BUEN GOBIERNO Y CIUDADANÍA
+Datos de percepción,MV4,Satisfacción con el principal medio de transporte utilizado (%) - únicamente opciones 1 y 2,v9_m_002,Pasajeros diarios movilizados por transporte público masivo,MOVILIDAD
+Datos de percepción,MV4,Satisfacción con el principal medio de transporte utilizado (%) - únicamente opción 9,v9_m_005,No. de automóviles por cada 1000 hab.,MOVILIDAD
+Datos de percepción,MV4,Satisfacción con el principal medio de transporte utilizado (%) - únicamente opción 7,v9_m_006,No. de motos por cada 1000 hab.,MOVILIDAD
+Datos de percepción,MV13_9,Satisfacción con aspectos relacionados con el tránsito: el control al cumplimiento de normas de tránsito (%),v9_m_007,Tasa de mortalidad por accidentes de tránsito,MOVILIDAD
+Datos de percepción,MV3,Medio de transporte más usado para desplazarse a las actividades habituales (%),v9_m_009,Kilómetros de ciclovías exclusivas existentes,MOVILIDAD
+Datos de percepción,MV3,Medio de transporte más usado para desplazarse a las actividades habituales (%),v9_m_011,Porcentaje de víctimas peatones,MOVILIDAD
+Datos de percepción,CO4,Autopercepción de pobreza,v2_p_001,Incidencia pobreza monetaria,POBREZA Y EQUIDAD
+Datos de percepción,VS15,Victimización en la ciudad (%),v6_sc_020,Tasa de hurto a personas,SEGURIDAD Y CONVIVENCIA
+Datos de percepción,AG1,Las cosas en la ciudad van por buen o por mal camino (%),CV4,Percepción de seguridad (%),BIENESTAR SUBJETIVO
+Datos de percepción,AG1,Las cosas en la ciudad van por buen o por mal camino (%),GG2,Confianza en el alcalde (%),BIENESTAR SUBJETIVO
+Datos de percepción,AG1,Las cosas en la ciudad van por buen o por mal camino (%),CV5,Satisfacción con la inversión en obras públicas en la ciudad (%),BIENESTAR SUBJETIVO
+Datos de percepción,AG1,Las cosas en la ciudad van por buen o por mal camino (%),VS15,Victimización en la ciudad (%),BIENESTAR SUBJETIVO
+Datos de percepción,AG2,Sentimiento de orgullo con la ciudad (%),PC1_1,Acciones realizadas para resolver problemas de la comunidad (%),BIENESTAR SUBJETIVO
+Datos de percepción,CO2,Percepción de situación económica del hogar (%),CO4,Autopercepción de pobreza (%),ENTORNO ECONÓMICO
+Datos de percepción,SA3,Días que transcurrieron entre la solicitud de la cita y la prestación del servicio de salud en consulta externa (%),SA4,Satisfacción con el servicio de salud en la ciudad (%),SALUD
+Datos de percepción,MV14,Satisfacción con el estado de las vías en general en la ciudad (%),CV5,Satisfacción con la inversión en obras públicas en la ciudad (%),MOVILIDAD
+Datos de percepción,VS3,Satisfacción con el alumbrado público en el barrio (%),CV5,Satisfacción con la inversión en obras públicas en la ciudad (%),HÁBITAT URBANO
+Datos de percepción,VS3,Satisfacción con el alumbrado público en el barrio (%),VS8,Autopercepción de seguridad en el barrio en el que habita (%),HÁBITAT URBANO
+Datos de percepción,VS4,Satisfacción con los parques y zonas verdes en el barrio (%),CV5,Satisfacción con la inversión en obras públicas en la ciudad (%),HÁBITAT URBANO
+Datos de percepción,VS5,Satisfacción con los andenes y separadores en el barrio (%),CV5,Satisfacción con la inversión en obras públicas en la ciudad (%),HÁBITAT URBANO
+Datos de percepción,VS5,Satisfacción con los andenes y separadores en el barrio (%),VS8,Autopercepción de seguridad en el barrio en el que habita (%),HÁBITAT URBANO
+Datos de percepción,VS18,Percepción de la probabilidad de sanción de los delitos (%),VS17,Denuncia del delíto (%),SEGURIDAD Y CONVIVENCIA
+Datos de percepción,RC3_1,Percepción frente al cumplimiento de las normas por parte de los habitantes en la ciudad: en el cuidado y respeto de los espacios públicos (%),RC5_10,Percepción frente a la posibilidad de sufrir una amonestación por parte de las autoridades si: invade espacios públicos con vehículos (%),BUEN GOBIERNO Y CIUDADANÍA
+Datos de percepción,RC3_3,Percepción frente al cumplimiento de las normas por parte de los habitantes en la ciudad: respeto de las normas básicas de tránsito (%),RC5_16,Percepción frente a la posibilidad de sufrir una amonestación por parte de las autoridades si: incumple normas y señales de tránsito (%),BUEN GOBIERNO Y CIUDADANÍA
+Datos de percepción,RC3_9,Percepción frente al cumplimiento de las normas por parte de los habitantes en la ciudad: respeto de las normas ambientales (%),RC5_6,Percepción frente a la posibilidad de sufrir una amonestación por parte de las autoridades si: arroja basura a la calle/Ríos o caños (%),BUEN GOBIERNO Y CIUDADANÍA
+Datos de percepción,RC3_9,Percepción frente al cumplimiento de las normas por parte de los habitantes en la ciudad: respeto de las normas ambientales (%),RC5_13,Percepción frente a la posibilidad de sufrir una amonestación por parte de las autoridades si: incumple las normas ambientales (%),BUEN GOBIERNO Y CIUDADANÍA
+Datos de percepción,RC4_1,Percepción frente al cumplimiento de las normas por parte de los habitantes en la ciudad: respeto de las normas básicas de convivencia (%),RC5_24,Percepción frente a la posibilidad de sufrir una amonestación por parte de las autoridades si: agrede a otra persona (%),BUEN GOBIERNO Y CIUDADANÍA
+Datos de percepción,RC4_2,Percepción frente al cumplimiento de las normas por parte de los habitantes en la ciudad: respeto por la vida (%),RC5_23,Percepción frente a la posibilidad de sufrir una amonestación por parte de las autoridades si: porta un arma ilegalmente (%),BUEN GOBIERNO Y CIUDADANÍA
+Datos de percepción,GG6,Percepción de transparencia de la gestión pública (%),GG2,Confianza en el alcalde (%),BUEN GOBIERNO Y CIUDADANÍA
+Datos de percepción,GG6,Percepción de transparencia de la gestión pública (%),GG3,Gestión del alcalde (%),BUEN GOBIERNO Y CIUDADANÍA
+Datos de percepción,GG6,Percepción de transparencia de la gestión pública (%),GG1,Imágen del alcalde (%),BUEN GOBIERNO Y CIUDADANÍA
+Datos de percepción,CV4,Percepción de seguridad (%),AG1,Las cosas en la ciudad van por buen o por mal camino (%),BIENESTAR SUBJETIVO
+Datos de percepción,GG2,Confianza en el alcalde (%),AG1,Las cosas en la ciudad van por buen o por mal camino (%),BUEN GOBIERNO Y CIUDADANÍA
+Datos de percepción,CV5,Satisfacción con la inversión en obras públicas en la ciudad (%),AG1,Las cosas en la ciudad van por buen o por mal camino (%),BIENESTAR SUBJETIVO
+Datos de percepción,VS15,Victimización en la ciudad (%),AG1,Las cosas en la ciudad van por buen o por mal camino (%),SEGURIDAD Y CONVIVENCIA
+Datos de percepción,PC1_1,Acciones realizadas para resolver problemas de la comunidad (%),AG2,Sentimiento de orgullo con la ciudad (%),BUEN GOBIERNO Y CIUDADANÍA
+Datos de percepción,CO4,Autopercepción de pobreza (%),CO2,Percepción de situación económica del hogar (%),POBREZA Y EQUIDAD
+Datos de percepción,SA4,Satisfacción con el servicio de salud en la ciudad (%),SA3,Días que transcurrieron entre la solicitud de la cita y la prestación del servicio de salud en consulta externa (%),SALUD
+Datos de percepción,CV5,Satisfacción con la inversión en obras públicas en la ciudad (%),MV14,Satisfacción con el estado de las vías en general en la ciudad (%),BIENESTAR SUBJETIVO
+Datos de percepción,CV5,Satisfacción con la inversión en obras públicas en la ciudad (%),VS3,Satisfacción con el alumbrado público en el barrio (%),BIENESTAR SUBJETIVO
+Datos de percepción,VS8,Autopercepción de seguridad en el barrio en el que habita (%),VS3,Satisfacción con el alumbrado público en el barrio (%),SEGURIDAD Y CONVIVENCIA
+Datos de percepción,CV5,Satisfacción con la inversión en obras públicas en la ciudad (%),VS4,Satisfacción con los parques y zonas verdes en el barrio (%),BIENESTAR SUBJETIVO
+Datos de percepción,CV5,Satisfacción con la inversión en obras públicas en la ciudad (%),VS5,Satisfacción con los andenes y separadores en el barrio (%),BIENESTAR SUBJETIVO
+Datos de percepción,VS8,Autopercepción de seguridad en el barrio en el que habita (%),VS5,Satisfacción con los andenes y separadores en el barrio (%),SEGURIDAD Y CONVIVENCIA
+Datos de percepción,VS17,Denuncia del delíto (%),VS18,Percepción de la probabilidad de sanción de los delitos (%),SEGURIDAD Y CONVIVENCIA
+Datos de percepción,RC5_10,Percepción frente a la posibilidad de sufrir una amonestación por parte de las autoridades si: invade espacios públicos con vehículos (%),RC3_1,Percepción frente al cumplimiento de las normas por parte de los habitantes en la ciudad: en el cuidado y respeto de los espacios públicos (%),BUEN GOBIERNO Y CIUDADANÍA
+Datos de percepción,RC5_16,Percepción frente a la posibilidad de sufrir una amonestación por parte de las autoridades si: incumple normas y señales de tránsito (%),RC3_3,Percepción frente al cumplimiento de las normas por parte de los habitantes en la ciudad: respeto de las normas básicas de tránsito (%),BUEN GOBIERNO Y CIUDADANÍA
+Datos de percepción,RC5_6,Percepción frente a la posibilidad de sufrir una amonestación por parte de las autoridades si: arroja basura a la calle/Ríos o caños (%),RC3_9,Percepción frente al cumplimiento de las normas por parte de los habitantes en la ciudad: respeto de las normas ambientales (%),BUEN GOBIERNO Y CIUDADANÍA
+Datos de percepción,RC5_13,Percepción frente a la posibilidad de sufrir una amonestación por parte de las autoridades si: incumple las normas ambientales (%),RC3_9,Percepción frente al cumplimiento de las normas por parte de los habitantes en la ciudad: respeto de las normas ambientales (%),BUEN GOBIERNO Y CIUDADANÍA
+Datos de percepción,RC5_24,Percepción frente a la posibilidad de sufrir una amonestación por parte de las autoridades si: agrede a otra persona (%),RC4_1,Percepción frente al cumplimiento de las normas por parte de los habitantes en la ciudad: respeto de las normas básicas de convivencia (%),BUEN GOBIERNO Y CIUDADANÍA
+Datos de percepción,RC5_23,Percepción frente a la posibilidad de sufrir una amonestación por parte de las autoridades si: porta un arma ilegalmente (%),RC4_2,Percepción frente al cumplimiento de las normas por parte de los habitantes en la ciudad: respeto por la vida (%),BUEN GOBIERNO Y CIUDADANÍA
+Datos de percepción,GG2,Confianza en el alcalde (%),GG6,Percepción de transparencia de la gestión pública (%),BUEN GOBIERNO Y CIUDADANÍA

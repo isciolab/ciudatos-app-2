@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1527094364101.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "51884F12",
+    "lastKnownWriteTime" : 3327989019294068343,
+    "last_content_update" : 1527094364101,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "7C95AE3C",
+        "caption" : "hdic",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=hdic&cache_key=7C95AE3C",
+        "displayedObservations" : 103,
+        "environment" : "",
+        "object" : "hdic",
+        "preview" : 0,
+        "totalObservations" : 103,
+        "variables" : 7
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

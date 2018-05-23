@@ -1,0 +1,156 @@
+---
+---
+
+```{r global_options, include=FALSE} 
+knitr::opts_chunk$set( message = FALSE , warning = FALSE, 
+                       error = FALSE , tidy = FALSE ,
+                       cache = FALSE
+                       ) 
+
+library(tidyverse)
+library(hgchmagic)
+library(knitr)
+
+```
+
+
+
+<!-- <h1 style="text-align: center;font-size:25px;margin-bottom: 19px;">{{titulo}}</h1> -->
+
+<div class = "contInfo">
+
+<div class = "row">
+  <div class = "col-md-3">
+```{r cars,  warning = FALSE, echo = FALSE, dev=c('svg'), results='asis', fig.align = "left"}
+  dataDsp <- read_csv('data/ciudades.csv')
+  ciudad <- "{{Ciudad}}"
+  dataDsp <- dataDsp %>% filter(Ciudad == ciudad)
+  dataTem <- read_csv('data/temas.csv')
+  dataTem <- dataTem %>% filter(Ciudad == ciudad)
+  
+  
+  bubbles <- data.frame(
+    lat = dataDsp$lat,
+    lon = dataDsp$lng,
+    z = 100,
+    color = '#00cef6',
+    name = dataDsp$Ciudad
+  )
+  
+  viz <- hcmap("countries/co/co-all",
+               nullColor = "#D8E0E8", borderColor = '#D8E0E8') %>%
+    hc_chart(width= 175, height = 170, tickWidth= 0,
+             minPadding= 0, renderTo='container', margin=0, position =list(
+               align= 'right'),
+             maxPadding= 0) %>%
+    hc_add_series(data = bubbles, type = "mapbubble",
+                  minSize = 0, maxSize = 15, tooltip= list(
+                    headerFormat= '',
+                    pointFormat='<b>{point.name}</b>'
+                  ),
+                  borderWidth = 0) %>%
+    hc_plotOptions(series = list(showInLegend = FALSE))
+  viz
+```
+  </div>
+  
+<p>{{descripcion}}</p>
+<p>{{desGeneral}}</p>
+</br>
+{{#sections}}
+ <hr>
+<p class = "nombTem">{{sectionTitle}}</p>
+
+{{#subsections}}
+
+<div class = sec{{sectionBlock}}>
+<p class = a{{parId}}>{{subsectionTitle}}</p>
+
+
+
+
+```{r include=FALSE}
+
+#Tema 
+
+color <- "{{sectCol}}"
+color
+ if(color!='NA') {
+  paleta <- rep(color, 10)
+  } else {
+  paleta <- c('#26327e', '#00cef6', '#d4dd23', '#db3b4a', '#9dcf9c', '#d0854e', '#d8e0e8',                     '#7919eb', '#71c9c6', '#d6c5a0')
+  }
+
+cid_theme <- hc_theme(
+  colors = paleta,
+  chart = list(
+     width = 370,
+     height = 230,
+     backgroundColor = 'transparent',
+    style = list(
+      fontFamily= 'Karla',
+      fontSize = '9px'
+    )
+  ),
+  legend = list(
+    itemStyle = list(
+      fontFamily = '',
+      color = 'black'
+    )
+  )
+)
+
+
+# Gráficos subjetivos
+
+```
+
+
+
+```{r, echo=FALSE}
+a <- '{{Base}}'
+b <- '{{Ciudad}}'
+if (a != 'NA') {
+nameTab <- paste0('data/seleccion/', a, '_', b, '_data.csv')
+data <- read_csv(nameTab)
+}
+```
+
+```{r, echo=FALSE, fig.align='center', include=FALSE}
+            
+columns <- "{{sectionColumns}}"
+
+if (columns != 'NA') {
+cols <- strsplit(columns,",")[[1]]
+df <- data %>% select(one_of(cols)) %>% drop_na()
+            
+ if ('{{Base}}' == 'subjetivos') {
+   if (length(unique(df$AÑO)) == 1) {
+   df <- df[df$AÑO == max(df$AÑO),]
+   df <- df[,-1]
+   df <- df %>% group_by_(cols[3]) %>% summarise(total = n())
+   } else {
+  df <- df %>% 
+          group_by_('AÑO', cols[3]) %>% 
+            summarise(total = n())%>% 
+              mutate(prop = total/sum(total)) 
+  df <- df %>% select_(cols[3], 'AÑO', 'prop')
+   }
+ }
+df     
+}
+            # {{sectionGraph}}(df, theme=cid_theme, verLabel = '', horLabel = '') %>%  hc_chart(width= 450, height = 300,  backgroundColor = "transparent")
+            
+```
+
+
+<div id="{{sectionNumber}}">
+```{r echo=FALSE, fig.align='center', out.width='55px', out.height= '55px'}
+try({{sectionGraph}}(df, theme = cid_theme, verLabel = "{{dicHor}}", horLabel = "{{dicVer}}", colors = paleta, tooltip = list(headerFormat = ' ', pointFormat = '<b>{point.a}:</b> {point.b}')))
+```
+</div>
+</div>
+{{/subsections}}
+
+{{/sections}}
+</div>

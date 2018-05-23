@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1527111456035.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "3C030A18",
+    "lastKnownWriteTime" : 1527111692,
+    "last_content_update" : 1527111692786,
+    "path" : "~/Repos/ciudatos-app-2/dashboard/template.rmd",
+    "project_path" : "template.rmd",
+    "properties" : {
+        "cursorPosition" : "148,179",
+        "scrollLine" : "132"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

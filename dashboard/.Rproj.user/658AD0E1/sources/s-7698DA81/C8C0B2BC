@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1527106359426.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4075851398",
+    "id" : "C8C0B2BC",
+    "lastKnownWriteTime" : 1527111183,
+    "last_content_update" : 1527111183333,
+    "path" : "~/Repos/ciudatos-app-2/dashboard/template.html",
+    "project_path" : "template.html",
+    "properties" : {
+        "cursorPosition" : "232,41",
+        "scrollLine" : "225"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "html"
+}

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"$if(lang)$ lang="$lang$" xml:lang="$lang$"$endif$>
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+$for(author-meta)$
+<meta name="author" content="$author-meta$" />
+$endfor$
+
+$if(date-meta)$
+<meta name="date" content="$date-meta$" />
+$endif$
+
+<title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
+
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+$if(highlightjs)$
+<style type="text/css">code{white-space: pre;}</style>
+<link rel="stylesheet"
+      href="$highlightjs$/$if(highlightjs-theme)$$highlightjs-theme$$else$default$endif$.css"
+      $if(html5)$$else$type="text/css" $endif$/>
+<script src="$highlightjs$/highlight.js"></script>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+$endif$
+
+$if(highlighting-css)$
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+$highlighting-css$
+</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+
+$endif$
+
+
+$for(css)$
+<link rel="stylesheet" href="$css$" $if(html5)$$else$type="text/css" $endif$/>
+$endfor$
+
+
+
+<!-- tabsets -->
+<script>
+$$(document).ready(function () {
+  window.buildTabsets("$idprefix$TOC");
+});
+</script>
+
+<!-- code folding -->
+$if(code_folding)$
+<script>
+$$(document).ready(function () {
+  window.initializeCodeFolding("$code_folding$" === "show");
+});
+</script>
+$endif$
+
+<script src="js/iframeSizer.contentWindow.min.js">
+</script>
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+
+
+</head>
+
+<body>
+
+$if(theme)$
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+</style>
+
+
+
+
+
+<div class="container-fluid main-container">
+  <div class="row">
+     <div class="col-md-12">
+$endif$
+
+
+$for(include-before)$
+$include-before$
+$endfor$
+
+$if(code_folding)$
+<div class="btn-group pull-right">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="text-muted">Code</span> <span class="text-muted caret"></span></button>
+<ul class="dropdown-menu" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All</a></li>
+</ul>
+</div>
+$endif$
+
+$if(title)$
+<div id="$idprefix$header">
+<h1 class="title">$title$</h1>
+$if(subtitle)$
+<h1 class="subtitle">$subtitle$</h1>
+$endif$
+$for(author)$
+$if(author.name)$
+<h4 class="author"><em>$author.name$</em></h4>
+$if(author.affiliation)$
+<address class="author_afil">
+$author.affiliation$<br>$endif$
+$if(author.email)$
+<a class="author_email" href="mailto:#">$author.email$</a>
+</address>
+$endif$
+$else$
+<h4 class="author"><em>$author$</em></h4>
+$endif$
+$endfor$
+$if(date)$
+<h4 class="date"><em>$date$</em></h4>
+$endif$
+</div>
+$endif$
+
+<div id="content">
+$body$
+</div>
+
+$for(include-after)$
+$include-after$
+$endfor$
+
+
+
+$if(theme)$
+    </div>
+    <div class="col-md-2">
+      $if(toc)$
+      <div id="toc">
+      	<button type="button" class="close">×</button>
+        $toc$
+      </div>
+      $endif$
+    </div>
+  </div>
+</div>
+
+<script>
+$$(document).ready(function () {
+  // add bootstrap table styles to pandoc tables
+  $$('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+</script>
+$endif$
+
+<script>
+$$(document).ready(function () {
+ 	$if(thumbnails)$
+ 	$$('#content img')
+ 	  .addClass("image-thumb");
+  $endif$
+  $if(lightbox)$
+  $$('#content img')
+ 	  .addClass("image-lb");
+  $$('#content').magnificPopup({
+	      type:'image',
+	      closeOnContentClick: false,
+	      delegate: 'img',
+	      gallery: {enabled: $gallery$ },
+	      image: {
+	        verticalFit: true,
+          titleSrc: 'alt'
+	      }
+ 	    });
+ 	$endif$
+});
+</script>
+
+
+
+$if(mathjax-url)$
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "$mathjax-url$";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+$endif$
+
+
+<script>
+document.getElementsByTagName('strong')[0].style.color = '#00cef6'
+document.getElementsByTagName('strong')[1].style.color = '#26327e'
+document.getElementsByTagName('strong')[2].style.color = '#d4dd23'
+document.getElementsByTagName('strong')[3].style.color = '#db3b4a'
+document.getElementsByTagName('strong')[4].style.color = '#9dcf9c'
+document.getElementsByTagName('strong')[5].style.color = '#d0854e'
+
+
+
+var element = document.getElementsByClassName("secvizPar1");
+/*
+element[0].querySelector('#vizPar1').removeAttribute('id')
+var elementTwo = document.getElementsByClassName("secvizPar");
+elementTwo[0].querySelector('#vizPar2').removeAttribute('id')
+elementTwo[0].classList.remove("secvizPar")
+*/
+var secvizPar1 = document.getElementsByClassName("secvizPar1")[0];
+var vizContainer = document.createElement('div')
+vizContainer.classList.add('vizContainer')
+
+var vizPar1 = document.getElementById("vizPar1")
+var vizPar2 = document.getElementById("vizPar2")
+vizPar1.parentNode.insertBefore(vizPar2, vizPar1.nextSibling);
+
+vizContainer.appendChild(vizPar1)
+vizContainer.appendChild(vizPar2)
+
+secvizPar1.appendChild(vizContainer)
+
+element[0].querySelector('#vizPar1').removeAttribute('id')
+
+
+
+/*elementTwo[0].querySelector('#vizPar2').removeAttribute('id');*/
+
+
+var secvizPar2 = document.querySelector(".secvizPar2");
+secvizPar2.classList.remove("secvizPar2");
+
+var elementTwo = document.getElementsByClassName("vizContainer");
+elementTwo[0].querySelector('#vizPar2').removeAttribute('id')
+
+
+</script>
+
+
+</body>
+</html>
