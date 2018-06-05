@@ -624,11 +624,13 @@ img {
 
 #fselCruc .selectize-control.single .selectize-input, .selectize-control.single .selectize-input input {
     cursor: pointer;
-    width: 390px;
+    width: 400px;
+    margin-left: -30%;
 }
 #TselCruc .selectize-control.single .selectize-input, .selectize-control.single .selectize-input input {
     cursor: pointer;
-    width: 390px;
+    width: 400px;
+    margin-left: -70px;
 }
 
 #ciudadPcom {
@@ -659,6 +661,11 @@ img {
 
 #grafCrucesD, #grafCrucesDS{
   margin-top: -5% !important;
+}
+
+.selectize-input, .selectize-control.single .selectize-input {
+    max-height: 10px;
+    overflow-y: auto;
 }
 
 
