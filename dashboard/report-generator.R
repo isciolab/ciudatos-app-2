@@ -2,7 +2,7 @@
 library(whisker)
 library(tidyverse)
 temas <- read_csv('data/temas.csv') #%>% drop_na(id)
-cy <- 'Santa Marta'
+cy <- 'Manizales'
 temas <- temas %>% filter(Ciudad == cy)
 temas$BASE <- tolower(temas$BASE)
 temas <- temas %>% select(sectionTitle = Tema, everything())
