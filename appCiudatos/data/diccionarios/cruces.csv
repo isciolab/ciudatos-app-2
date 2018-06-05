@@ -54,7 +54,7 @@ Datos oficiales,v4_e_003,Tasa de cobertura neta en básica primaria,ED4,Satisfac
 Datos oficiales,v4_e_004,Tasa de cobertura neta en básica secundaria,ED4,Satisfacción con la educación que reciben niños y jóvenes (%),EDUCACIÓN
 Datos oficiales,v10_ep_001,Espacio público efectivo por habitante,EP1,Satisfacción con el espacio público (%),HÁBITAT URBANO
 Datos oficiales,v13_gp_001,Índice de Gobierno Abierto,GG6,Percepción de transparencia de la gestión pública (%),BUEN GOBIERNO Y CIUDADANÍA
-Datos oficiales,v9_m_002,Pasajeros diarios movilizados por transporte público masivo,MV4,Satisfacción con el principal medio de transporte utilizado (%) - únicamente opciones 1 y 2,MOVILIDAD
+Datos oficiales,v9_m_002,Pasajeros diarios movilizados por transporte público masivo,MV4,Satisfacción con el principal medio de transporte utilizado (%),MOVILIDAD
 Datos oficiales,v9_m_005,No. de automóviles por cada 1000 hab.,MV4,Satisfacción con el principal medio de transporte utilizado (%) - únicamente opción 9,MOVILIDAD
 Datos oficiales,v9_m_006,No. de motos por cada 1000 hab.,MV4,Satisfacción con el principal medio de transporte utilizado (%) - únicamente opción 7,MOVILIDAD
 Datos oficiales,v9_m_007,Tasa de mortalidad por accidentes de tránsito,MV13_9,Satisfacción con aspectos relacionados con el tránsito: el control al cumplimiento de normas de tránsito (%),MOVILIDAD
@@ -102,7 +102,11 @@ Datos de percepción,GG6,Percepción de transparencia de la gestión pública (%
 Datos de percepción,GG6,Percepción de transparencia de la gestión pública (%),GG3,Gestión del alcalde (%),BUEN GOBIERNO Y CIUDADANÍA
 Datos de percepción,GG6,Percepción de transparencia de la gestión pública (%),GG1,Imágen del alcalde (%),BUEN GOBIERNO Y CIUDADANÍA
 Datos de percepción,CV4,Percepción de seguridad (%),AG1,Las cosas en la ciudad van por buen o por mal camino (%),BIENESTAR SUBJETIVO
+Datos de percepción,CV4,Percepción de seguridad (%),GG2,Confianza en el alcalde (%),BUEN GOBIERNO Y CIUDADANÍA
+Datos de percepción,CV4,Percepción de seguridad (%),VS15,Victimización en la ciudad (%),SEGURIDAD Y CONVIVENCIA
 Datos de percepción,GG2,Confianza en el alcalde (%),AG1,Las cosas en la ciudad van por buen o por mal camino (%),BUEN GOBIERNO Y CIUDADANÍA
+Datos de percepción,VS15,Victimización en la ciudad (%),CV4,Percepción de seguridad (%),SEGURIDAD Y CONVIVENCIA
+Datos de percepción,GG2,Confianza en el alcalde (%),CV4,Percepción de seguridad (%),SEGURIDAD Y CONVIVENCIA
 Datos de percepción,CV5,Satisfacción con la inversión en obras públicas en la ciudad (%),AG1,Las cosas en la ciudad van por buen o por mal camino (%),BIENESTAR SUBJETIVO
 Datos de percepción,VS15,Victimización en la ciudad (%),AG1,Las cosas en la ciudad van por buen o por mal camino (%),SEGURIDAD Y CONVIVENCIA
 Datos de percepción,PC1_1,Acciones realizadas para resolver problemas de la comunidad (%),AG2,Sentimiento de orgullo con la ciudad (%),BUEN GOBIERNO Y CIUDADANÍA

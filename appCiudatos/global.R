@@ -8,7 +8,10 @@ library(lfltmagic)
 library(leaflet.minicharts)
 library(RSQLite)
 library(scales)
-library(shinyURL)
+
+
+hcoptslang <- getOption("highcharter.lang")
+hcoptslang$thousandsSep <- ","
 
 # Bases de datos ----------------------------------------------------------
 

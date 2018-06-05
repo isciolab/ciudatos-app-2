@@ -544,7 +544,14 @@ insuficiente desarrollo de competencias de los estudiantes y la desarticulación
   observe({
     query <- parseQueryString(session$clientData$url_search)
     if (!is.null(query$data)) {
-      updateSelectInput(session, 'basechoose', label = NULL, choices = query$data,
+      df <- data.frame(lab  = c('Datos oficiales', 
+                          'Datos de percepción ciudadana',
+                          'Índice de progreso social',
+                          'Índice de ciudades universitarias',
+                          'Objetivos de desarrollo sostenible',
+                          'Educación orientada al trabajo'),
+                       id = c('do', 'pc', 'ips', 'icu', 'ods', 'eot'))
+      updateSelectInput(session, 'basechoose', label = NULL, choices = setNames(query$data, as.character(df$lab[df$id == query$data])),
                         selected = NULL)
     }
   })
