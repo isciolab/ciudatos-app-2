@@ -10,9 +10,10 @@ library(RSQLite)
 library(scales)
 
 
-hcoptslang <- getOption("highcharter.lang")
-hcoptslang$thousandsSep <- ","
-
+lang <- getOption("highcharter.lang")
+lang$thousandsSep <- ","
+lang$numericSymbols <- highcharter::JS("null")
+options(highcharter.lang = lang)
 # Bases de datos ----------------------------------------------------------
 
 
