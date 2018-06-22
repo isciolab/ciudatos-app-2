@@ -66,9 +66,6 @@ library(knitr)
 <div class = sec{{sectionBlock}}>
 <p class = a{{parId}}>{{subsectionTitle}}</p>
 
-
-
-
 ```{r include=FALSE}
 
 #Tema 

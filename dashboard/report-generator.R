@@ -9,10 +9,6 @@ temas <- temas %>% select(sectionTitle = Tema, everything())
 desCid <- read_csv('data/ciudades.csv')
 
 
-#vizPos <- c('hgch_line_YeaNum', 'hgch_bar_YeaNum', 'hgch_area_YeaNum', 'hgch_donut_CatNum', 'hgch_pie_CatNum')
-#temas$graf <- ifelse(temas$BASE == 'objetivos', vizPos[grep('YeaNum', vizPos)], vizPos[grep('CatNum', vizPos)])
-
-
 a <- map(unique(temas$sectionTitle), function(z) {
   df <- temas 
   df$numdt <- 1:nrow(df)

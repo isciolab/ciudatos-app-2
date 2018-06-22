@@ -197,7 +197,7 @@ insuficiente desarrollo de competencias de los estudiantes y la desarticulación
       dic$id_tema <- iconv(gsub(' ', '_', tolower(dic$Tema)), to="ASCII//TRANSLIT")}
 
     if (idb == 'pc') {
-      dcom <- data.frame(id = c('CIUDAD', 'AÑO'), label = c('Ciudad', 'Año')) }
+      dcom <- data.frame(id = c('CIUDAD', 'AÑO', 'PON', 'NSE', 'SEXO', 'EDAD'), label = c('Ciudad', 'Año', 'Ponderación', 'Estrato', 'Género', 'Edad')) }
     if (idb == 'do') {
       dcom <- data.frame(id = c('Ciudad', 'Año'), label = c('Ciudad', 'Año')) }
     if (idb == 'icu') {
