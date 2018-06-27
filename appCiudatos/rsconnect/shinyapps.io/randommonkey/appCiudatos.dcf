@@ -5,8 +5,8 @@ account: randommonkey
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 282005
-bundleId: 1415528
+bundleId: 1452769
 url: https://randommonkey.shinyapps.io/appCiudatos/
-when: 1528318398.61217
+when: 1530120045.27658
 asMultiple: FALSE
 asStatic: FALSE

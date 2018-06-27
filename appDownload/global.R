@@ -96,10 +96,10 @@ pagOne <- function(data, ruta, ciudadE, Tbase){
     columnaUno = c('Técnica de recolección:', 
                    'Contenido:', 
                    'Ciudades/Municipio:',
-                   rep('',length(unique(data$Ciudad))-1), 
+                   rep(' ',length(unique(data$Ciudad))-1), 
                    'Años:', 
                    'Temas generales:', 
-                   rep('', 14), 
+                   rep(' ', 14), 
                    'Total variables:', 
                    'Total filas:')
     columnaDos = c('Recolección de información de diversas fuentes.',
@@ -108,9 +108,9 @@ pagOne <- function(data, ruta, ciudadE, Tbase){
                    paste0(minYear, '-', maxYear),
                    'd', 'p','s', 'e', 'ml', 'sc', 'v', 'ma',
                    'm','ep','cr','pc','gp','ee',
-                   '', nFil, nCol)
+                   ' ', nFil, nCol)
     columnaTres = c(
-      rep('',25),
+      rep(' ',25),
       'Demografía',
       'Pobreza y equidad',
       'Salud',
@@ -125,19 +125,19 @@ pagOne <- function(data, ruta, ciudadE, Tbase){
       'Participación ciudadana',
       'Finanzas y gestión pública',
       'Entorno Económico',
-      '', '', '')
+      ' ', ' ', ' ')
     info <- data.frame(columnaUno, columnaDos, columnaTres) }
   if(ciudadE == 'comparada' & Tbase == 'subjetivos') {
     columnaUno = c('Técnica de recolección:', 
                    'Unidades de observación', 
                    'Contenido:', 
-                   '', 
+                   ' ', 
                    'Ciudades',
-                   rep('',length(unique(data$CIUDAD))-1), 
+                   rep(' ',length(unique(data$CIUDAD))-1), 
                    'Años:', 
                    'Temas generales:', 
-                   rep('', 16), 
-                   '',
+                   rep(' ', 16), 
+                   ' ',
                    'Total variables:', 
                    'Total filas:')
     columnaDos = c('Entrevistas cara a cara, en hogares.',
@@ -148,10 +148,10 @@ pagOne <- function(data, ruta, ciudadE, Tbase){
                    paste0(minYear, '-', maxYear),
                    'F', 'AG','CV', 'CO', 'AL', 'ED', 'SA', 'SP',
                    'VS','PC','RC','MV','EP','MA', 'GP','CC','GG',
-                   '', nFil, nCol
+                   ' ', nFil, nCol
     )
     columnaTres = c(
-      rep('',26),
+      rep(' ',26),
       'Información personal',
       'Optimismo y orgullo',
       'Calidad de vida',
@@ -169,8 +169,8 @@ pagOne <- function(data, ruta, ciudadE, Tbase){
       'Gestión pública',
       'Concejo de la ciudad',
       'Transparencia',
-      '', '',
-      '')
+      ' ', ' ',
+      ' ')
     info <- data.frame(columnaUno, columnaDos, columnaTres) }
   if (ciudadE != 'comparada' & Tbase == 'objetivos') {                     
     columnaUno = c('Técnica de recolección:', 
@@ -178,7 +178,7 @@ pagOne <- function(data, ruta, ciudadE, Tbase){
                    'Ciudad/Municipio:',
                    'Años:', 
                    'Temas generales:', 
-                   rep('', 14), 
+                   rep(' ', 14), 
                    'Total variables:', 
                    'Total filas:')
     columnaDos = c('Recolección de información de diversas fuentes.',
@@ -187,9 +187,9 @@ pagOne <- function(data, ruta, ciudadE, Tbase){
                    paste0(minYear, '-', maxYear),
                    'd', 'p','s', 'e', 'ml', 'sc', 'v', 'ma',
                    'm','ep','cr','pc','gp','ee',
-                   '', nFil, nCol)
+                   ' ', nFil, nCol)
     columnaTres = c(
-      rep('',4),
+      rep(' ',4),
       'Demografía',
       'Pobreza y equidad',
       'Salud',
@@ -204,18 +204,18 @@ pagOne <- function(data, ruta, ciudadE, Tbase){
       'Participación ciudadana',
       'Finanzas y gestión pública',
       'Entorno Económico',
-      '', '', '')
+      ' ', ' ', ' ')
     info <- data.frame(columnaUno, columnaDos, columnaTres) }
   if (ciudadE != 'comparada' & Tbase == 'subjetivos') { 
     columnaUno = c('Técnica de recolección:', 
                    'Unidades de observación', 
                    'Contenido:', 
-                   '', 
+                   ' ', 
                    'Ciudad:',
                    'Años:', 
                    'Temas generales:', 
-                   rep('', 16), 
-                   '',
+                   rep(' ', 16), 
+                   ' ',
                    'Total variables:', 
                    'Total filas:')
     columnaDos = c('Entrevistas cara a cara, en hogares.',
@@ -226,10 +226,10 @@ pagOne <- function(data, ruta, ciudadE, Tbase){
                    paste0(minYear, '-', maxYear),
                    'F', 'AG','CV', 'CO', 'AL', 'ED', 'SA', 'SP',
                    'VS','PC','RC','MV','EP','MA', 'GP','CC','GG',
-                   '', nFil, nCol
+                   ' ', nFil, nCol
     )
     columnaTres = c(
-      rep('',6),
+      rep(' ',6),
       'Información personal',
       'Optimismo y orgullo',
       'Calidad de vida',
@@ -247,23 +247,23 @@ pagOne <- function(data, ruta, ciudadE, Tbase){
       'Gestión pública',
       'Concejo de la ciudad',
       'Transparencia',
-      '', '',
-      '')
+      ' ', ' ',
+      ' ')
     info <- data.frame(columnaUno, columnaDos, columnaTres) }
   if (ciudadE == 'comparada' & Tbase == 'ods') { 
     columnaUno = c('Técnica de recolección:', 
                    'Contenido:', 
                    'Ciudades/Municipio:',
-                   rep('',length(unique(data$Ciudad))-1), 
+                   rep(' ',length(unique(data$Ciudad))-1), 
                    'Objetivos:', 
-                   rep('', 14))
+                   rep(' ', 14))
     columnaDos = c('Recolección de información de distintas fuentes',
                    'Se presenta el estado para el año 2015 de los indicadores definidos para el monitoreo de las metas correspondientes a los 17 Objetivos del Desarrollo Sostenible en las ciudades colombianas',
                    unique(data$Ciudad),
                    '1. Fin de la pobreza', '2. Hambre cero','3. Salud y bienestar', '4. Educación de calidad', '5. Igualdad de género', '6. Agua limpia y Saneamiento', '7. Energía sostenible y no contaminante', '8. Trabajo decente y crecimiento económico',
                    '9. Industria, innovación e infraestructura', '10. Reducción de las desigualdades', '11. Ciudades y comunidades sostenibles', '12. Producción y consumo responsables', '13. Acción por el clima',  '16. Paz, justicia e institucione sólidas', '17. Alianzas para lograr los objetivos')
     columnaTres = c(
-      rep('',13),
+      rep(' ',13),
       'Erradicar la pobreza en todas sus formas en todo el mundo',
       'Poner fin al hambre, conseguir la seguridad alimentaria y una mejor nutrición, y promover la agricultura sostenible',
       'Garantizar una vida saludable y promover el bienestar para todos para todas las edades',
@@ -285,14 +285,14 @@ pagOne <- function(data, ruta, ciudadE, Tbase){
                    'Contenido:', 
                    'Ciudades:',
                    'Objetivos:', 
-                   rep('', 14))
+                   rep(' ', 14))
     columnaDos = c('Recolección de información de distintas fuentes',
                    'Se presenta el estado para el año 2015 de los indicadores definidos para el monitoreo de las metas correspondientes a los 17 Objetivos del Desarrollo Sostenible en las ciudades colombianas',
                    unique(data$Ciudad), 
                    '1. Fin de la pobreza', '2. Hambre cero','3. Salud y bienestar', '4. Educación de calidad', '5. Igualdad de género', '6. Agua limpia y Saneamiento', '7. Energía sostenible y no contaminante', '8. Trabajo decente y crecimiento económico',
                    '9. Industria, innovación e infraestructura', '10. Reducción de las desigualdades', '11. Ciudades y comunidades sostenibles', '12. Producción y consumo responsables', '13. Acción por el clima',  '16. Paz, justicia e institucione sólidas', '17. Alianzas para lograr los objetivos')
     columnaTres = c(
-      rep('',3),
+      rep(' ',3),
       'Erradicar la pobreza en todas sus formas en todo el mundo',
       'Poner fin al hambre, conseguir la seguridad alimentaria y una mejor nutrición, y promover la agricultura sostenible',
       'Garantizar una vida saludable y promover el bienestar para todos para todas las edades',
@@ -313,10 +313,10 @@ pagOne <- function(data, ruta, ciudadE, Tbase){
     columnaUno = c('Técnica de recolección:', 
                    'Contenido:', 
                    'Ciudades:',
-                   rep('',length(unique(data$ciudad))-1), 
+                   rep(' ',length(unique(data$ciudad))-1), 
                    'Años:', 
                    'Temas generales:', 
-                   rep('', 5), 
+                   rep(' ', 5), 
                    'Total variables:', 
                    'Total filas:')
     columnaDos = c('Recolección de información de diversas fuentes.',
@@ -333,7 +333,7 @@ pagOne <- function(data, ruta, ciudadE, Tbase){
                    'Ciudad',
                    'Años:', 
                    'Temas generales:', 
-                   rep('', 5), 
+                   rep(' ', 5), 
                    'Total variables:', 
                    'Total filas:')
     columnaDos = c('Recolección de información de diversas fuentes.',
@@ -347,24 +347,24 @@ pagOne <- function(data, ruta, ciudadE, Tbase){
   columnaUno = c('Técnica de recolección:', 
                  'Contenido:', 
                  'Departamento/Ciudad:',
-                 rep('', lT),
+                 rep(' ', lT),
                  'Componentes:', 
-                 rep('', 11))
+                 rep(' ', 11))
   columnaDos = c(' ',
                  ' ',
                  lisC, 
                  'Necesidades Humanas Básicas',
-                 rep('',3),
+                 rep(' ',3),
                  'Fundamentos del bienestar',
-                 rep('',3),
+                 rep(' ',3),
                  'Oportunidades',
-                 '',
+                 ' ',
                  'Total variables:', 
                  'Total filas:'
   )
   columnaTres = c(
-    rep('',3),
-    rep('', lT),
+    rep(' ',3),
+    rep(' ', lT),
     'Nutrición y cuidados básicos de Salud',
     'Agua y saneamiento básico',
     'Vivienda y Servicios públicos',
@@ -383,21 +383,21 @@ pagOne <- function(data, ruta, ciudadE, Tbase){
                    'Contenido:', 
                    'Ciudad:',
                    'Componentes:', 
-                   rep('', 11))
+                   rep(' ', 11))
     columnaDos = c(' ',
                    ' ',
                    'Bogotá', 
                    'Necesidades Humanas Básicas',
-                   rep('',3),
+                   rep(' ',3),
                    'Fundamentos del bienestar',
-                   rep('',3),
+                   rep(' ',3),
                    'Oportunidades',
-                   '',
+                   ' ',
                    'Total variables:', 
                    'Total filas:'
     )
     columnaTres = c(
-      rep('',3),
+      rep(' ',3),
       'Nutrición y cuidados básicos de Salud',
       'Agua y saneamiento básico',
       'Vivienda y Servicios públicos',
@@ -415,7 +415,7 @@ pagOne <- function(data, ruta, ciudadE, Tbase){
     columnaUno = c('Técnica de recolección:', 
                    'Contenido:', 
                    'Ciudades',
-                   rep('',length(unique(data$Ciudad))-1), 
+                   rep(' ',length(unique(data$Ciudad))-1), 
                    'Años:', 
                    'Total variables:', 
                    'Total filas:')

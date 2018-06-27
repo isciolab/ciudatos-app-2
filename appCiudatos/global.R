@@ -22,7 +22,7 @@ codigos <- read_csv('data/diccionarios/codigos.csv')
 
 db <- src_sqlite("data/bases/db.sqlite3")
 subjDat <-  tbl(db, sql("SELECT * FROM subjetivos_comparada_data"))
-subjDat <- subjDat %>% select(-PON)
+#subjDat <- subjDat %>% select(-PON)
 objDat <-  tbl(db, sql("SELECT * FROM objetivos_comparada_data"))
 objDat <- objDat %>% select(CIUDAD = Ciudad, AÑO = Año, everything())
 
@@ -143,13 +143,12 @@ dicCiudad <- function(id_ci, data, dic){
 
 BaseGeneral <- function(idElg, data, anioElg){
 
-
 subjData <- data %>% 
-             select_('CIUDAD', 'AÑO', idElg) %>%
+             select_('CIUDAD', 'AÑO', 'PON', idElg) %>%
                collect() %>% 
                  drop_na(idElg) %>% 
                    group_by_('CIUDAD', 'AÑO', idElg) %>% 
-                     summarise(total = n()) %>% 
+                     summarise(total = sum(PON)) %>% 
                       mutate(prop = total/sum(total)) %>% filter(AÑO %in% anioElg) 
 
 
@@ -164,11 +163,11 @@ subjData
 BaseGeneralCiudad <- function(idElg, data, anioElg){
   
   subjData <- data %>% 
-    select_('CIUDAD', 'AÑO', idElg) %>%
+    select_('CIUDAD', 'AÑO', 'PON', idElg) %>%
     collect() %>% 
     drop_na(idElg) %>% 
     group_by_('CIUDAD', 'AÑO', idElg) %>% 
-    summarise(total = n()) %>% 
+    summarise(total = sum(PON)) %>% 
     mutate(prop = total/sum(total)) 
   
   
@@ -229,6 +228,8 @@ stackGraph <- function(df, horLabel){
 
   if (is.null(df)) return()
   if (is.null(horLabel)) return()
+  
+  df$d <- round(df$d, 0)
   
   hc <- hchart(df, type = "bar", hcaes(x = a, y = d, group = index)) %>% 
          hc_plotOptions(bar = list(stacking = "percent")) %>% 

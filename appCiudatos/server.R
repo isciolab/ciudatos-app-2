@@ -504,11 +504,11 @@ output$baks <- renderPrint({
   dataSubCruces <- reactive({
     bs <- subjDat %>% 
             filter(CIUDAD == input$cidCruc) %>% 
-              select_('AÑO', input$varPerC) %>% collect()
+              select_('AÑO', 'PON', input$varPerC) %>% collect()
     
     bs <- bs %>% 
            group_by_('AÑO', input$varPerC) %>% drop_na() %>% 
-            summarise(total = n()) %>%
+            summarise(total = sum(PON)) %>%
              mutate(Porcentaje = (total/sum(total))*100) %>% 
               select(c=input$varPerC, 'AÑO', Porcentaje)
     bs <- bs %>% left_join(dic_ind)
@@ -642,11 +642,11 @@ output$baks <- renderPrint({
     varSe <- input$SelvarElgC
     ciuSe <- input$ciudadOpCru
     if (cruces$base[cruces$id == varSe] == 'Datos de percepción') {
-      data <- subjDat %>% select_('CIUDAD', 'AÑO', varSe) %>% filter(CIUDAD == ciuSe) %>% collect()
+      data <- subjDat %>% select_('CIUDAD', 'AÑO', 'PON', varSe) %>% filter(CIUDAD == ciuSe) %>% collect()
       data <- data %>% drop_na()  %>% select(-CIUDAD)
       data <- data %>%
                 group_by_('AÑO', varSe) %>% drop_na() %>%
-                 summarise(total = n()) %>%
+                 summarise(total = sum(PON)) %>%
                   mutate(Porcentaje = (total/sum(total))*100) %>%
                    select(c=varSe, 'AÑO', Porcentaje)
       data <- data %>% left_join(dic_ind)
@@ -674,11 +674,11 @@ output$baks <- renderPrint({
     varSe <- input$SelSegVar
     ciuSe <- input$ciudadOpCru
     if (cruces$base[cruces$id == varSe] == 'Datos de percepción') {
-      data <- subjDat %>% select_('CIUDAD', 'AÑO', varSe) %>% filter(CIUDAD == ciuSe) %>% collect()
+      data <- subjDat %>% select_('CIUDAD', 'AÑO', 'PON', varSe) %>% filter(CIUDAD == ciuSe) %>% collect()
       data <- data %>% drop_na() 
       data <- data %>% 
         group_by_('AÑO', varSe) %>% drop_na() %>% 
-        summarise(total = n()) %>%
+        summarise(total = sum(PON)) %>%
         mutate(Porcentaje = (total/sum(total))*100) %>% 
         select(c=varSe, 'AÑO', Porcentaje)
       data <- data %>% left_join(dic_ind)
