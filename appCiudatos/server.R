@@ -51,7 +51,8 @@ shinyServer(function(input, output, session) {
   
   idElg <- input$VariablesSubjetivos
   data <- BaseGeneral(idElg, subjDat, input$anioSubjSel)
-  stackGraph(data, dicSbj$label[dicSbj$id == idElg])
+  stackGraph(data, dicSbj$label[dicSbj$id == idElg]) %>% 
+    hc_credits(enabled = TRUE, text = "Resultados sobre el total de encuestados")
   })
   
 
@@ -116,12 +117,14 @@ shinyServer(function(input, output, session) {
   
   output$vizLine <- renderHighchart({
     idElg<- input$varCiudadSubjSel
-    vizLineCiudad(baseCiud(),  dicSbj$label[dicSbj$id == idElg])
+    vizLineCiudad(baseCiud(),  dicSbj$label[dicSbj$id == idElg]) %>% 
+      hc_credits(enabled = TRUE, text = "Resultados sobre el total de encuestados")
   })
   
   output$vizStackCiudad<- renderHighchart({
     idElg<- input$varCiudadSubjSel
-    vizStackCiudad(baseCiud(),  dicSbj$label[dicSbj$id == idElg])
+    vizStackCiudad(baseCiud(),  dicSbj$label[dicSbj$id == idElg]) %>% 
+      hc_credits(enabled = TRUE, text = "Resultados sobre el total de encuestados")
   })
   
   output$anioCiudad <- renderUI({
@@ -141,7 +144,8 @@ shinyServer(function(input, output, session) {
   output$CityTree <- renderHighchart({
     idElg <- input$varCiudadSubjSel
     data <- baseCiud() %>% filter(b == input$anoSelctCiudad)
-    vizTreeCiudad(data, dicSbj$label[dicSbj$id == idElg], minColor = '#cb4c55', maxColor = '#26327e')
+    vizTreeCiudad(data, dicSbj$label[dicSbj$id == idElg], minColor = '#cb4c55', maxColor = '#26327e') %>% 
+      hc_credits(enabled = TRUE, text = "Resultados sobre el total de encuestados")
   })
   
 

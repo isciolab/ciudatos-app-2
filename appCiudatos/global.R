@@ -1,3 +1,14 @@
+if (!require("devtools")) install.packages("shiny")
+if (!require("shiny")) install.packages("shiny")
+if (!require("tidyverse")) install.packages("tidyverse")
+if (!require("datafringe")) devtools::install_github("jpmarindiaz/datafringe")
+if (!require("hgchmagic")) devtools::install_github("randommonkey/hgchmagic")
+if (!require("geojsonio")) install.packages("geojsonio")
+if (!require("lfltmagic")) devtools::install_github("randommonkey/lfltmagic")
+if (!require("leaflet.minicharts")) install.packages("leaflet.minicharts")
+if (!require("RSQLit")) install.packages("RSQLit")
+if (!require("scales")) install.packages("scales")
+
 library(shiny)
 library(tidyverse)
 library(datafringe)
@@ -244,7 +255,7 @@ stackGraph <- function(df, horLabel){
                            pointFormat = paste0("<b>{point.a}</b><br/>", 
                                          horLabel, "<br/>
                                          <b>{point.c} </b>: {point.d} ({point.percentage:.1f}%)")) 
-  hc %>% hc_add_theme(custom_theme(custom = cid_theme)) %>%   hc_exporting(enabled = TRUE)
+  hc %>% hc_add_theme(custom_theme(custom = cid_theme)) %>%   hc_exporting(enabled = TRUE) 
   
 }
 
