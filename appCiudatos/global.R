@@ -6,7 +6,7 @@ if (!require("hgchmagic")) devtools::install_github("randommonkey/hgchmagic")
 if (!require("geojsonio")) install.packages("geojsonio")
 if (!require("lfltmagic")) devtools::install_github("randommonkey/lfltmagic")
 if (!require("leaflet.minicharts")) install.packages("leaflet.minicharts")
-if (!require("RSQLit")) install.packages("RSQLit")
+if (!require("RSQLite")) install.packages("RSQLite")
 if (!require("scales")) install.packages("scales")
 
 library(shiny)
