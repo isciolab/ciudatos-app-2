@@ -1,4 +1,4 @@
-if (!require("devtools")) install.packages("shiny")
+if (!require("devtools")) install.packages("devtools")
 if (!require("shiny")) install.packages("shiny")
 if (!require("tidyverse")) install.packages("tidyverse")
 if (!require("datafringe")) devtools::install_github("jpmarindiaz/datafringe")
