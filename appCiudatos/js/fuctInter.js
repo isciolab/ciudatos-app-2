@@ -51,6 +51,7 @@ $(document).on('click', '.buttonStyleGraphCity', function () {
         if(this.id == 'linea'){
           
               vizLine.dispose();
+               $("#vizLine").html('');
               vizLine = undefined;
                 
            changeSUbjCiudad();
