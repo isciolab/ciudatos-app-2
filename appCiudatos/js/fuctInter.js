@@ -46,7 +46,7 @@ $(document).on('click', '.BuGraphIcu', function () {
    });
   
 $(document).on('click', '.buttonStyleGraphCity', function () {
-       Shiny.onInputChange('lastGraphCity',this.id);
+    
        
         if(this.id == 'linea'){
           
@@ -54,7 +54,8 @@ $(document).on('click', '.buttonStyleGraphCity', function () {
                $("#vizLine").html('');
               vizLine = undefined;
                 
-           changeSUbjCiudad();
+           Shiny.onInputChange('lastGraphCity',this.id);
+           //changeSUbjCiudad();
         }
         
    });
