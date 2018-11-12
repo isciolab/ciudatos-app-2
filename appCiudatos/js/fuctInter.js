@@ -15,6 +15,14 @@ $(document).on('click', '.buttonObj', function () {
 $(document).on('click', '.buttonObjCty', function () {
         Shiny.onInputChange('last_ObjCty',this.id);
    });
+  
+  
+$(document).on("shiny:inputchanged", function(event) {
+               
+                  alert(event);
+               
+              });
+              
 
 $(document).on('click', '.buttonStyleGraph', function () {
        //Shiny.onInputChange('lastGraph',this.id);
