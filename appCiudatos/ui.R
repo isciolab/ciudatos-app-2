@@ -50,12 +50,12 @@ fluidPage(
                       
           uiOutput('grafSubj')))),
           div(class = 'contViz',
-              div(id = 'VizObj', style='width: 100%; max-height:400px',
-         #uiOutput('VizSubj'),
+              div(id = 'VizSubj',style='width: 100%; max-height:400px',
+          
           div(class = 'botMapSub',
           uiOutput('anioSubj')
           )
-             )
+             ))
          ),
          conditionalPanel(
            condition = "input.theTabs== 'tabCiud'", 
