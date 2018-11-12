@@ -3,6 +3,7 @@ fluidPage(
   tags$head(
     tags$link(rel="stylesheet", type="text/css", href="style.css"),
     includeScript("js/iframeSizer.contentWindow.min.js"),
+    includeScript("js/tableau-2.2.2.min.js"), 
     includeScript("js/fuctInter.js")
   ),
   tabsetPanel(id = 'menuSup',
