@@ -146,13 +146,14 @@ function changeSUbj(){
 
 function changeSUbjCiudad(){
   
-    if (vizLine == null) {
+    if (vizLine == null || vizLine==undefined) {
        var containerDiv = document.getElementById("vizLine"),
                         url = "https://public.tableau.com/views/CiudatosGraficos/Hoja2?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
 
-                            "Name": $("#ciudadSubj").val(),
+                            "Name": $("#varCiudadSubjSel").val(),
+                            "ciudad": $("#ciudadSubj").val(),
                             //"AÑO(Anio)": $("#anioSubjSel").val(),
                             onFirstInteractive: function () {
 
