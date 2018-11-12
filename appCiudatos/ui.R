@@ -50,7 +50,8 @@ fluidPage(
                       
           uiOutput('grafSubj')))),
           div(class = 'contViz',
-          uiOutput('VizSubj'),
+              div(id = 'VizObj', style='width: 100%; max-height:400px',
+         #uiOutput('VizSubj'),
           div(class = 'botMapSub',
           uiOutput('anioSubj')
           )
@@ -107,7 +108,7 @@ HTML("<img src='img/menu/datosoficiales.png' class = 'imgTab'>
                        div(class = 'row',
                            div(class="col-xs-12 col-md-9", style="text-align: center;",  
                  uiOutput('grafObj')))),
-                 div(class = 'contViz', style='width: 100%; max-height:400px',
+                 div(class = 'contViz',
                  uiOutput('VizObj'),
                  uiOutput('anioObj')
                  )
