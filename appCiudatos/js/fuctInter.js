@@ -15,7 +15,24 @@ $(document).on('click', '.buttonObjCty', function () {
    });
 
 $(document).on('click', '.buttonStyleGraph', function () {
-       Shiny.onInputChange('lastGraph',this.id);
+       //Shiny.onInputChange('lastGraph',this.id);
+       var viz;
+       
+       var containerDiv = document.getElementById("odsgrupoodsgrupociudades1"),
+                        url = "https://public.tableau.com/views/Ciudatos/IndicadordeODSporgrupodeciudades?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                        options = {
+                            hideTabs: true,
+
+                            "Name": $("#VariablesSubjetivos").val(),
+                            "AÑO (Anio)": $("#anioSubjSel").val(),
+                            onFirstInteractive: function () {
+
+                                //changeGrupoodsgrupociudades1();
+                                //changeYearodsgrupociudades();
+
+                            }
+                        };
+                    viz = new tableau.Viz(containerDiv, url, options);
       
    });
 
