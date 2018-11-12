@@ -46,7 +46,8 @@ $(document).on('click', '.BuGraphIcu', function () {
    });
   
 $(document).on('click', '.buttonStyleGraphCity', function () {
-        Shiny.onInputChange('lastGraphCity',this.id);
+       // Shiny.onInputChange('lastGraphCity',this.id);
+        changeSUbjCiudad();
    });
 
 $(document).on('click', '.buttonStyleGraphObj', function () {
