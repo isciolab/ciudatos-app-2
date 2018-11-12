@@ -154,12 +154,17 @@ function changeSUbjCiudad(){
                             hideTabs: true,
 
                             "Name": $("#varCiudadSubjSel").val(),
-                            "ciudad": $("#ciudadSubj").val(),
-                            //"AÑO(Anio)": $("#anioSubjSel").val(),
+                           
+                      
                             onFirstInteractive: function () {
-
-                                  var sheet = vizLine.getWorkbook().getActiveSheet();
-                                  
+                               var sheet = vizLine.getWorkbook().getActiveSheet();
+                                 fieldname = "Ciudad";
+                               value = $("#ciudadSubj").val();
+            
+                                 if (value !== "") {
+                                    sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+                                }
+                                                      
                             }
                         };
                     vizLine = new tableau.Viz(containerDiv, url, options);
@@ -171,8 +176,8 @@ function changeSUbjCiudad(){
             if (value !== "") {
                 sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
             }
-             fieldname = "AÑO(Anio)";
-            value = $("#anioSubjSel").val();
+             fieldname = "Ciudad";
+            value = $("#ciudadSubj").val();
             
              if (value !== "") {
                 sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
