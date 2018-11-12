@@ -15,7 +15,8 @@ $(document).on('click', '.buttonObjCty', function () {
    });
 
 $(document).on('click', '.buttonStyleGraph', function () {
-        Shiny.onInputChange('lastGraph',this.id);
+       // Shiny.onInputChange('lastGraph',this.id);
+       
    });
 
 $(document).on('click', '.BuGraphIcu', function () {
