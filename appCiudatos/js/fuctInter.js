@@ -26,11 +26,18 @@ $(document).on("shiny:inputchanged", function(event) {
 
 $(document).on('click', '.buttonStyleGraph', function () {
        //Shiny.onInputChange('lastGraph',this.id);
-       alert('chanheeee');
+       console.log('chanheeee');
       changeSUbj();
       
    });
 
+
+ $(document).on('change', 'VariablesSubjetivos', function(){
+    console.log('change');
+     changeSUbj();
+    
+  });
+  
 $(document).on('click', '.BuGraphIcu', function () {
         Shiny.onInputChange('lastGraphICU',this.id);
    });
@@ -64,11 +71,7 @@ $(document).on('click', '.buttonStyleODS', function () {
 $(document).ready(function(){
   
   
-  $("#VariablesSubjetivos").on('change', function(){
-    alert('change');
-     changeSUbj();
-    
-  });
+ 
   
   $(document).on("click", ".buttonStyle,.buttonStyleCity, .buttonObj, .buttonObjCty,.buttonStyleCruces", function(evt) {
 	  $(".buttonStyle,.buttonStyleCity,.buttonObj,.buttonObjCty,.buttonStyleCruces").css('background-color', '#26327E');
