@@ -1,3 +1,5 @@
+var vizsubj;
+
 $(document).on('click', '.buttonStyle', function () {
         Shiny.onInputChange('last_btn',this.id);
    });
@@ -16,23 +18,8 @@ $(document).on('click', '.buttonObjCty', function () {
 
 $(document).on('click', '.buttonStyleGraph', function () {
        //Shiny.onInputChange('lastGraph',this.id);
-       var viz;
        
-       var containerDiv = document.getElementById("odsgrupoodsgrupociudades1"),
-                        url = "https://public.tableau.com/views/CiudatosGraficos/Hoja1?:embed=y&:display_count=yes&publish=yes",
-                        options = {
-                            hideTabs: true,
-
-                            "Name": $("#VariablesSubjetivos").val(),
-                            "AÑO (Anio)": $("#anioSubjSel").val(),
-                            onFirstInteractive: function () {
-
-                                //changeGrupoodsgrupociudades1();
-                                //changeYearodsgrupociudades();
-
-                            }
-                        };
-                    viz = new tableau.Viz(containerDiv, url, options);
+      changeSUbj();
       
    });
 
@@ -67,6 +54,13 @@ $(document).on('click', '.buttonStyleODS', function () {
    });
 
 $(document).ready(function(){
+  
+  
+  $("#VariablesSubjetivos").on('change', function(){
+     changeSUbj();
+    
+  });
+  
   $(document).on("click", ".buttonStyle,.buttonStyleCity, .buttonObj, .buttonObjCty,.buttonStyleCruces", function(evt) {
 	  $(".buttonStyle,.buttonStyleCity,.buttonObj,.buttonObjCty,.buttonStyleCruces").css('background-color', '#26327E');
 	    const btnActual = evt.target;
@@ -83,6 +77,26 @@ $(document).ready(function(){
 });
 
 
+function changeSUbj(){
+  
+   
+       var containerDiv = document.getElementById("VizSubj"),
+                        url = "https://public.tableau.com/views/CiudatosGraficos/Hoja1?:embed=y&:display_count=yes&publish=yes",
+                        options = {
+                            hideTabs: true,
+
+                            "Name": $("#VariablesSubjetivos").val(),
+                            "AÑO (Anio)": $("#anioSubjSel").val(),
+                            onFirstInteractive: function () {
+
+                                //changeGrupoodsgrupociudades1();
+                                //changeYearodsgrupociudades();
+
+                            }
+                        };
+                    vizsubj = new tableau.Viz(containerDiv, url, options);
+  
+}
 
 
 
