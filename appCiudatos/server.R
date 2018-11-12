@@ -64,21 +64,21 @@ shinyServer(function(input, output, session) {
   })
   
   
-  output$VizSubj <- renderUI({
-    idG <- if (is.null(input$lastGraph)){
-     'barras'
-    } else {
-      input$lastGraph
-    }
+  #output$VizSubj <- renderUI({
+  # idG <- if (is.null(input$lastGraph)){
+  #   'barras'
+  #  } else {
+  #    input$lastGraph
+  #  }
     
  
-    if (idG == 'mapa') 
-      g <- leafletOutput('vizMap')
-    if (idG == 'barras') 
-      g <- highchartOutput('vizStack')
+  #  if (idG == 'mapa') 
+  #    g <- leafletOutput('vizMap')
+  #  if (idG == 'barras') 
+  #    g <- highchartOutput('vizStack')
       
-    g
-  })
+  #  g
+  #})
   
   output$CiudSubj <- renderUI({
      variables <- subjDat %>% select(CIUDAD) %>% collect() %>% .$CIUDAD
