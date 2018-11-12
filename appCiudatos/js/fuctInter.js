@@ -19,7 +19,7 @@ $(document).on('click', '.buttonStyleGraph', function () {
        var viz;
        
        var containerDiv = document.getElementById("odsgrupoodsgrupociudades1"),
-                        url = "https://public.tableau.com/views/Ciudatos/IndicadordeODSporgrupodeciudades?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                        url = "https://public.tableau.com/views/CiudatosGraficos/Hoja1?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
 
