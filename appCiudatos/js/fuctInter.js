@@ -20,7 +20,7 @@ $(document).on('click', '.buttonObjCty', function () {
 $(document).on("shiny:inputchanged", function(event) {
                
                   console.log(event);
-                  if(event.name=='VariablesSubjetivos'){
+                  if(event.name=='VariablesSubjetivos' || event.name=='anioSubjSel'){
                      changeSUbj();
                   }
                
