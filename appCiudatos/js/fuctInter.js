@@ -15,20 +15,8 @@ $(document).on('click', '.buttonObjCty', function () {
    });
 
 $(document).on('click', '.buttonStyleGraph', function () {
-       // Shiny.onInputChange('lastGraph',this.id);
-       var viz;
-       var containerDiv = document.getElementById("contViz"),
-                        url = "https://public.tableau.com/views/CiudatosGraficos/Hoja1?:embed=y&:display_count=yes&publish=yes",
-                        options = {
-                            hideTabs: true,
-                            "Name": $("#VariablesSubjetivos").val(),
-                            "Año(Anio)": $("#anioSubjSel").val(),
-                            onFirstInteractive: function () {
-
-
-                            }
-                        };
-                    viz = new tableau.Viz(containerDiv, url, options);
+        Shiny.onInputChange('lastGraph',this.id);
+      
        
    });
 
