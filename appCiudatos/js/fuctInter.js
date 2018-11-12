@@ -1,5 +1,5 @@
 var vizsubj;
-
+var vizLine;
 $(document).on('click', '.buttonStyle', function () {
         Shiny.onInputChange('last_btn',this.id);
    });
@@ -23,6 +23,11 @@ $(document).on("shiny:inputchanged", function(event) {
                   if(event.name=='VariablesSubjetivos' || event.name=='anioSubjSel'){
                      changeSUbj();
                   }
+                  
+                  
+                   if(event.name=='varCiudadSubjSel' || event.name=='ciudadSubj'){
+                     changeSUbjCiudad();
+                  }
                
               });
               
@@ -35,11 +40,6 @@ $(document).on('click', '.buttonStyleGraph', function () {
    });
 
 
- $(document).on('change', 'VariablesSubjetivos', function(){
-    console.log('change');
-     changeSUbj();
-    
-  });
   
 $(document).on('click', '.BuGraphIcu', function () {
         Shiny.onInputChange('lastGraphICU',this.id);
@@ -117,6 +117,47 @@ function changeSUbj(){
                     vizsubj = new tableau.Viz(containerDiv, url, options);
     }else{
          var sheet = vizsubj.getWorkbook().getActiveSheet();
+            var fieldname = "Name";
+            var value = $("#VariablesSubjetivos").val();
+           
+            if (value !== "") {
+                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+            }
+             fieldname = "AÑO(Anio)";
+            value = $("#anioSubjSel").val();
+            
+             if (value !== "") {
+                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+            }
+           
+    }
+  
+}
+
+function changeSUbjCiudad(){
+  
+    if (vizLine == null) {
+       var containerDiv = document.getElementById("vizLine"),
+                        url = "https://public.tableau.com/views/CiudatosGraficos/Hoja2?:embed=y&:display_count=yes&publish=yes",
+                        options = {
+                            hideTabs: true,
+
+                            "Name": $("#VariablesSubjetivos").val(),
+                            //"AÑO(Anio)": $("#anioSubjSel").val(),
+                            onFirstInteractive: function () {
+
+                                  var sheet = vizLine.getWorkbook().getActiveSheet();
+                                   fieldname = "AÑO(Anio)";
+                                  value = $("#anioSubjSel").val();
+                                  
+                                   if (value !== "") {
+                                      sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+                                  }
+                            }
+                        };
+                    vizLine = new tableau.Viz(containerDiv, url, options);
+    }else{
+         var sheet = vizLine.getWorkbook().getActiveSheet();
             var fieldname = "Name";
             var value = $("#VariablesSubjetivos").val();
            
