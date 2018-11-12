@@ -20,6 +20,9 @@ $(document).on('click', '.buttonObjCty', function () {
 $(document).on("shiny:inputchanged", function(event) {
                
                   console.log(event);
+                  if(event.name=='VariablesSubjetivos'){
+                     changeSUbj();
+                  }
                
               });
               
@@ -92,7 +95,7 @@ $(document).ready(function(){
 function changeSUbj(){
   
   console.log($("#VariablesSubjetivos").val());
-   
+    if (vizsubj == null) {
        var containerDiv = document.getElementById("VizSubj"),
                         url = "https://public.tableau.com/views/CiudatosGraficos/Hoja1?:embed=y&:display_count=yes&publish=yes",
                         options = {
@@ -105,6 +108,7 @@ function changeSUbj(){
                             }
                         };
                     vizsubj = new tableau.Viz(containerDiv, url, options);
+    }
   
 }
 
