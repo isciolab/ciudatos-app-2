@@ -108,6 +108,15 @@ function changeSUbj(){
                             }
                         };
                     vizsubj = new tableau.Viz(containerDiv, url, options);
+    }else{
+         var sheet = vizsubj.getWorkbook().getActiveSheet();
+            var fieldname = "Name";
+            var value = $("#VariablesSubjetivos").val();
+           
+            if (value != "") {
+                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+            }
+           
     }
   
 }
