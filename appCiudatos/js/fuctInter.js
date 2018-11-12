@@ -102,7 +102,7 @@ function changeSUbj(){
                             hideTabs: true,
 
                             "Name": $("#VariablesSubjetivos").val(),
-                            "AÑO (Anio)": $("#anioSubjSel").val(),
+                            //"AÑO (Anio)": $("#anioSubjSel").val(),
                             onFirstInteractive: function () {
 
                             }
