@@ -102,9 +102,15 @@ function changeSUbj(){
                             hideTabs: true,
 
                             "Name": $("#VariablesSubjetivos").val(),
-                            "AÑO(Anio)": $("#anioSubjSel").val(),
+                            //"AÑO(Anio)": $("#anioSubjSel").val(),
                             onFirstInteractive: function () {
 
+                                   fieldname = "AÑO(Anio)";
+                                  value = $("#anioSubjSel").val();
+                                  
+                                   if (value !== "") {
+                                      sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+                                  }
                             }
                         };
                     vizsubj = new tableau.Viz(containerDiv, url, options);
