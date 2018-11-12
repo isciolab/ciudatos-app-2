@@ -55,7 +55,7 @@ $(document).on('click', '.buttonStyleGraphCity', function () {
               vizLine = undefined;
                 
            Shiny.onInputChange('lastGraphCity',this.id);
-           //changeSUbjCiudad();
+           changeSUbjCiudad();
         }
         
    });
