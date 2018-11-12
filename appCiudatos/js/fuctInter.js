@@ -79,6 +79,7 @@ $(document).ready(function(){
 
 function changeSUbj(){
   
+  console.log($("#VariablesSubjetivos").val());
    
        var containerDiv = document.getElementById("VizSubj"),
                         url = "https://public.tableau.com/views/CiudatosGraficos/Hoja1?:embed=y&:display_count=yes&publish=yes",
@@ -88,9 +89,6 @@ function changeSUbj(){
                             "Name": $("#VariablesSubjetivos").val(),
                             "AÑO (Anio)": $("#anioSubjSel").val(),
                             onFirstInteractive: function () {
-
-                                //changeGrupoodsgrupociudades1();
-                                //changeYearodsgrupociudades();
 
                             }
                         };
