@@ -26,7 +26,7 @@ $(document).on("shiny:inputchanged", function(event) {
 
 $(document).on('click', '.buttonStyleGraph', function () {
        //Shiny.onInputChange('lastGraph',this.id);
-       
+       alert('chanheeee');
       changeSUbj();
       
    });
