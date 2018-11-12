@@ -116,13 +116,7 @@ function changeSUbj(){
                             //"AÑO(Anio)": $("#anioSubjSel").val(),
                             onFirstInteractive: function () {
 
-                                  var sheet = vizsubj.getWorkbook().getActiveSheet();
-                                   fieldname = "AÑO(Anio)";
-                                  value = $("#anioSubjSel").val();
-                                  
-                                   if (value !== "") {
-                                      sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
-                                  }
+                                  changeSUbj();
                             }
                         };
                     vizsubj = new tableau.Viz(containerDiv, url, options);
@@ -153,17 +147,11 @@ function changeSUbjCiudad(){
                         options = {
                             hideTabs: true,
 
-                            "Name": $("#varCiudadSubjSel").val(),
+                            "Ciudad": $("#ciudadSubj").val(),
                            
                       
                             onFirstInteractive: function () {
-                               var sheet = vizLine.getWorkbook().getActiveSheet();
-                                 fieldname = "Ciudad";
-                               value = $("#ciudadSubj").val();
-            
-                                 if (value !== "") {
-                                    sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
-                                }
+                               changeSUbjCiudad();
                                                       
                             }
                         };
@@ -171,7 +159,7 @@ function changeSUbjCiudad(){
     }else{
          var sheet = vizLine.getWorkbook().getActiveSheet();
             var fieldname = "Name";
-            var value = $("#ciudadSubj").val();
+            var value = $("#varCiudadSubjSel").val();
            
             if (value !== "") {
                 sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
