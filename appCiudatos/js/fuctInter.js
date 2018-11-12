@@ -19,7 +19,7 @@ $(document).on('click', '.buttonObjCty', function () {
   
 $(document).on("shiny:inputchanged", function(event) {
                
-                  alert(event);
+                  //alert(event);
                
               });
               
