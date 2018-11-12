@@ -105,6 +105,7 @@ function changeSUbj(){
                             //"AÑO(Anio)": $("#anioSubjSel").val(),
                             onFirstInteractive: function () {
 
+                                  var sheet = vizsubj.getWorkbook().getActiveSheet();
                                    fieldname = "AÑO(Anio)";
                                   value = $("#anioSubjSel").val();
                                   
