@@ -57,6 +57,7 @@ $(document).ready(function(){
   
   
   $("#VariablesSubjetivos").on('change', function(){
+    alert('change');
      changeSUbj();
     
   });
