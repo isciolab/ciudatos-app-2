@@ -102,7 +102,7 @@ function changeSUbj(){
                             hideTabs: true,
 
                             "Name": $("#VariablesSubjetivos").val(),
-                            "AÑO (Anio)": $("#anioSubjSel").val(),
+                            "AÑO(Anio)": $("#anioSubjSel").val(),
                             onFirstInteractive: function () {
 
                             }
@@ -116,7 +116,7 @@ function changeSUbj(){
             if (value != "") {
                 sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
             }
-             var fieldname = "AÑO (Anio)";
+             var fieldname = "AÑO(Anio)";
             var value = $("#anioSubjSel").val();
             
              if (value != "") {
