@@ -15,29 +15,8 @@ $(document).on('click', '.buttonObjCty', function () {
    });
 
 $(document).on('click', '.buttonStyleGraph', function () {
-       // Shiny.onInputChange('lastGraph',this.id);
-       var viz;
-       var containerDiv = document.getElementById("odsgrupoodsgrupociudades1"),
-                        url = "https://public.tableau.com/views/Ciudatos/IndicadordeODSporgrupodeciudades?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
-                        options = {
-                            hideTabs: true,
-
-                            "Date From": $("#changeYearodsgrupociudades").val(),
-                            "Id (Group Cities)": Grupoodsgrupociudades1,
-                            "ods concat": $("#changeOdsConcat option:selected").text(),
-                            "Id (Targets)": $("#changeMeta").val(),
-                            "Indicador": $("#changeIndicador option:selected").text(),
-
-
-                            onFirstInteractive: function () {
-
-                                //changeGrupoodsgrupociudades1();
-                                //changeYearodsgrupociudades();
-
-                            }
-                        };
-                    vizodsgrupoodsgrupociudades1 = new tableau.Viz(containerDiv, url, options);
-       
+       Shiny.onInputChange('lastGraph',this.id);
+      
    });
 
 $(document).on('click', '.BuGraphIcu', function () {
