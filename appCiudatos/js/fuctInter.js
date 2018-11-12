@@ -113,13 +113,13 @@ function changeSUbj(){
             var fieldname = "Name";
             var value = $("#VariablesSubjetivos").val();
            
-            if (value != "") {
+            if (value !== "") {
                 sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
             }
-             var fieldname = "AÑO(Anio)";
-            var value = $("#anioSubjSel").val();
+             fieldname = "AÑO(Anio)";
+            value = $("#anioSubjSel").val();
             
-             if (value != "") {
+             if (value !== "") {
                 sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
             }
            
