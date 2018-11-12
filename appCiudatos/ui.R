@@ -3,7 +3,8 @@ fluidPage(
   tags$head(
     tags$link(rel="stylesheet", type="text/css", href="style.css"),
     includeScript("js/iframeSizer.contentWindow.min.js"),
-    includeScript("js/tableau-2.min.js"),
+    tags$script (src="https://public.tableau.com/javascripts/api/tableau-2.min.js"),
+
     includeScript("js/jquery-2.2.4.min.js"),
     includeScript("js/fuctInter.js")
   ),
