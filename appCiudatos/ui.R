@@ -107,7 +107,7 @@ HTML("<img src='img/menu/datosoficiales.png' class = 'imgTab'>
                        div(class = 'row',
                            div(class="col-xs-12 col-md-9", style="text-align: center;",  
                  uiOutput('grafObj')))),
-                 div(class = 'contViz',
+                 div(class = 'contViz', style='height:400px, width:400px',
                  uiOutput('VizObj'),
                  uiOutput('anioObj')
                  )
