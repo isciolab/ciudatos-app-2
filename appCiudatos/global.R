@@ -125,6 +125,12 @@ selectorVar <- function(dic, var, id_sel) {
   
   selectizeInput(id_sel, 'Selección de variables', variables)
   
+  paste0("
+        <script type='text/javascript'>
+        changeSUbjCiudad();
+      	</script>
+      ")
+  
 }
 
 
@@ -151,15 +157,6 @@ dicCiudad <- function(id_ci, data, dic){
   dic
 }
 
-dicCiudad2 <- function(data, dic){
-  
-  
-  df <- data collect()
-  df <- Filter(function(x)!all(is.na(x)), df)
-  varInf <- data.frame(id = names(df))
-  dic <- varInf %>% left_join(dic)
-  dic
-}
 
 
 
