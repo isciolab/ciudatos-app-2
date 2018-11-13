@@ -83,7 +83,9 @@ shinyServer(function(input, output, session) {
   output$CiudSubj <- renderUI({
      variables <- subjDat %>% select(CIUDAD) %>% collect() %>% .$CIUDAD
      variables <- unique(variables)
-     selectizeInput('ciudadSubj','Selección de ciudad',  variables)
+     selectizeInput('ciudadSubj', 
+                   'Selección de ciudad',
+                    variables)
   })
   
   output$BotCiudadSubj <- renderUI({
@@ -114,8 +116,8 @@ shinyServer(function(input, output, session) {
   })
   
   output$vizLine <- renderHighchart({
-    #idElg<- input$varCiudadSubjSel
-    #vizLineCiudad(baseCiud(),  dicSbj$label[dicSbj$id == idElg]) %>% 
+    idElg<- input$varCiudadSubjSel
+    vizLineCiudad(baseCiud(),  dicSbj$label[dicSbj$id == idElg]) %>% 
       hc_credits(enabled = TRUE, text = "Resultados sobre el total de encuestados")
   })
   
