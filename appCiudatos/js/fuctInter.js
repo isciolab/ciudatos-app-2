@@ -1,5 +1,6 @@
 var vizsubj;
 var vizLine;
+var vizStackCiudad;
 $(document).on('click', '.buttonStyle', function () {
         Shiny.onInputChange('last_btn',this.id);
    });
@@ -53,6 +54,15 @@ $(document).on('click', '.buttonStyleGraphCity', function () {
               vizLine.dispose();
                $("#vizLine").html('');
               vizLine = undefined;
+                
+           Shiny.onInputChange('lastGraphCity',this.id);
+           changeSUbjCiudad();
+        }
+        if(this.id == 'barras'){
+          
+              vizStackCiudad.dispose();
+               $("#vizStackCiudad").html('');
+              vizStackCiudad = undefined;
                 
            Shiny.onInputChange('lastGraphCity',this.id);
            changeSUbjCiudad();
@@ -141,7 +151,7 @@ function changeSUbj(){
 
 function changeSUbjCiudad(){
   
-  console.log('cambioooooooooooooooooooo');
+  
   
     if (vizLine == null || vizLine==undefined) {
        var containerDiv = document.getElementById("vizLine"),
@@ -159,6 +169,41 @@ function changeSUbjCiudad(){
          console.log($("#ciudadSubj").val());
          console.log($("#varCiudadSubjSel").val());
          var sheet = vizLine.getWorkbook().getActiveSheet();
+            var fieldname = "Name";
+            var value = $("#varCiudadSubjSel").val();
+           
+            if (value !== "") {
+                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+            }
+             fieldname = "Ciudad";
+            value = $("#ciudadSubj").val();
+            
+             if (value !== "") {
+                sheet.applyFilterAsync(fieldname, value.toUpperCase(), tableau.FilterUpdateType.REPLACE);
+            }
+           
+    }
+    
+    
+    
+    
+    
+    if (vizStackCiudad == null || vizStackCiudad==undefined) {
+       var containerDiv = document.getElementById("vizStackCiudad"),
+                        url = "https://public.tableau.com/views/CiudatosGraficos/Hoja3?:embed=y&:display_count=yes&publish=yes",
+                        options = {
+                            hideTabs: true,
+
+                           onFirstInteractive: function () {
+                               changeSUbjCiudad();
+                                                      
+                            }
+                        };
+                    vizStackCiudad = new tableau.Viz(containerDiv, url, options);
+    }else{
+         console.log($("#ciudadSubj").val());
+         console.log($("#varCiudadSubjSel").val());
+         var sheet = vizStackCiudad.getWorkbook().getActiveSheet();
             var fieldname = "Name";
             var value = $("#varCiudadSubjSel").val();
            
