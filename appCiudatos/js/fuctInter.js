@@ -63,7 +63,10 @@ $(document).on('click', '.buttonStyleGraphCity', function () {
         if(this.id == 'barras'){
            Shiny.onInputChange('lastGraphCity',this.id);
           currentButton = 'barras';
-              vizStackCiudad.dispose();
+          if(vizStackCiudad !=undefined){
+            vizStackCiudad.dispose();
+          }
+              
                $("#vizStackCiudad").html('');
               vizStackCiudad = undefined;
                 
