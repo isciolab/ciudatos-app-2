@@ -1,7 +1,7 @@
 var vizsubj;
 var vizLine;
 var vizStackCiudad;
-var currentButton;
+var currentButton = 'linea';
 $(document).on('click', '.buttonStyle', function () {
         Shiny.onInputChange('last_btn',this.id);
    });
