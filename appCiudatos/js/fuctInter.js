@@ -169,7 +169,7 @@ function changeSUbjCiudad(){
             value = $("#ciudadSubj").val();
             
              if (value !== "") {
-                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+                sheet.applyFilterAsync(fieldname, value.toUpperCase(), tableau.FilterUpdateType.REPLACE);
             }
            
     }
