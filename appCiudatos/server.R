@@ -101,18 +101,18 @@ shinyServer(function(input, output, session) {
   })
   
   output$grafSubjCiud <- renderUI({
-    BotonesGraficas(c('linea', 'barras', 'treemap'), 'buttonStyleGraphCity')
+   # BotonesGraficas(c('linea', 'barras', 'treemap'), 'buttonStyleGraphCity')
   })
   
 
   
   baseCiud <- reactive({
-    #BaseGeneralCiudad(idElg = input$varCiudadSubjSel, subjDat) %>% 
-    #  filter(a == input$ciudadSubj) %>% mutate(percentage = e*100)
+    BaseGeneralCiudad(idElg = input$varCiudadSubjSel, subjDat) %>% 
+      filter(a == input$ciudadSubj) %>% mutate(percentage = e*100)
   })
 
   output$salida <- renderPrint({
-    #baseCiud()
+    baseCiud()
   })
   
   output$vizLine <- renderHighchart({
