@@ -33,7 +33,7 @@ fluidPage(
                                            div(class="containerButtonsCiudad", id="styleScroll",
                                              uiOutput('BotCiudadSubj')
                                            ),
-                                           uiOutput('varCiudadSubj')
+                                            uiOutput('varCiudadSubj')
                                        )
                                    
                           )
