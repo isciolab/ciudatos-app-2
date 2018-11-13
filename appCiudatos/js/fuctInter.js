@@ -49,7 +49,7 @@ $(document).on('click', '.BuGraphIcu', function () {
   
 $(document).on('click', '.buttonStyleGraphCity', function () {
     
-       
+        Shiny.onInputChange('lastGraphCity',this.id);
         if(this.id == 'linea'){
           
           currentButton = 'linea';
@@ -57,16 +57,17 @@ $(document).on('click', '.buttonStyleGraphCity', function () {
                $("#vizLine").html('');
               vizLine = undefined;
                 
-           Shiny.onInputChange('lastGraphCity',this.id);
+          
            changeSUbjCiudad();
         }
         if(this.id == 'barras'){
+           Shiny.onInputChange('lastGraphCity',this.id);
           currentButton = 'barras';
               vizStackCiudad.dispose();
                $("#vizStackCiudad").html('');
               vizStackCiudad = undefined;
                 
-           Shiny.onInputChange('lastGraphCity',this.id);
+          
            changeSUbjCiudad();
         }
         
