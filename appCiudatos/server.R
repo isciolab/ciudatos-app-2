@@ -83,7 +83,7 @@ shinyServer(function(input, output, session) {
   output$CiudSubj <- renderUI({
      variables <- subjDat %>% select(CIUDAD) %>% collect() %>% .$CIUDAD
      variables <- unique(variables)
-     #selectizeInput('ciudadSubj','Selección de ciudad',  variables)
+     selectizeInput('ciudadSubj','Selección de ciudad',  variables)
   })
   
   output$BotCiudadSubj <- renderUI({
@@ -93,8 +93,8 @@ shinyServer(function(input, output, session) {
   })
   
   output$varCiudadSubj <- renderUI({
-    id_c <- input$ciudadSubj
-    dicS <- dicCiudad(id_c, subjDat, dicSbj)
+  #  id_c <- input$ciudadSubj
+   # dicS <- dicCiudad(id_c, subjDat, dicSbj)
     #selectorVar(dicS, input$last_btnCity, 'varCiudadSubjSel')
   })
   
