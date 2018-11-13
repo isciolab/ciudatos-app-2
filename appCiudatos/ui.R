@@ -30,7 +30,7 @@ fluidPage(
                                            div(class="tab-content", id = "cajaDivCiudad",
                                            uiOutput('CiudSubj'),
                                            
-                                            div(class="containerButtonsCiudad", id="styleScroll",
+                                           div(class="containerButtonsCiudad", id="styleScroll",
                                              uiOutput('BotCiudadSubj')
                                            ),
                                            uiOutput('varCiudadSubj')
