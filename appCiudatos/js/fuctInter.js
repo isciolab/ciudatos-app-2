@@ -73,7 +73,7 @@ $(document).on('click', '.buttonStyleGraphCity', function () {
           
            changeSUbjCiudad();
         }
-        consle.log('currentButton');
+        console.log('currentButton');
         
    });
 
@@ -200,7 +200,7 @@ function changeSUbjCiudad(){
     if(currentButton=='barras'){
       
       console.log('son barras');
-    
+    console.log(vizStackCiudad);
     if (vizStackCiudad == null || vizStackCiudad==undefined) {
        var containerDiv = document.getElementById("vizStackCiudad"),
                         url = "https://public.tableau.com/views/CiudatosGraficos/Hoja3?:embed=y&:display_count=yes&publish=yes",
@@ -230,7 +230,7 @@ function changeSUbjCiudad(){
                 sheet.applyFilterAsync(fieldname, value.toUpperCase(), tableau.FilterUpdateType.REPLACE);
             }
            
-    }
+     }
     }
   
 }
