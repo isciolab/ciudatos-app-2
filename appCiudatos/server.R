@@ -114,8 +114,8 @@ shinyServer(function(input, output, session) {
   })
   
   output$vizLine <- renderHighchart({
-    idElg<- input$varCiudadSubjSel
-    vizLineCiudad(baseCiud(),  dicSbj$label[dicSbj$id == idElg]) %>% 
+    #idElg<- input$varCiudadSubjSel
+    #vizLineCiudad(baseCiud(),  dicSbj$label[dicSbj$id == idElg]) %>% 
       hc_credits(enabled = TRUE, text = "Resultados sobre el total de encuestados")
   })
   
@@ -160,7 +160,7 @@ shinyServer(function(input, output, session) {
         uiOutput('anioCiudad')
       )
     if (idG == 'linea') 
-      g <- highchartOutput('vizLine')
+      #g <- highchartOutput('vizLine')
     if (idG == 'barras') 
       g <- highchartOutput('vizStackCiudad')
     
