@@ -125,11 +125,7 @@ selectorVar <- function(dic, var, id_sel) {
   
   selectizeInput(id_sel, 'Selección de variables', variables)
   
-  paste0("
-        <script type='text/javascript'>
-        changeSUbjCiudad();
-      	</script>
-      ")
+  
   
 }
 
