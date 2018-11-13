@@ -89,7 +89,7 @@ shinyServer(function(input, output, session) {
   })
   
   output$BotCiudadSubj <- renderUI({
-    #id_c <- input$ciudadSubj
+    id_c <- input$ciudadSubj
     dic <- dicCiudad(id_c, subjDat, dicSbj)
     BotonesGenerales(dic, cscl = 'buttonStyleCity')
   })
@@ -107,8 +107,8 @@ shinyServer(function(input, output, session) {
 
   
   baseCiud <- reactive({
-    BaseGeneralCiudad(idElg = input$varCiudadSubjSel, subjDat) %>% 
-      filter(a == input$ciudadSubj) %>% mutate(percentage = e*100)
+    #BaseGeneralCiudad(idElg = input$varCiudadSubjSel, subjDat) %>% 
+    #  filter(a == input$ciudadSubj) %>% mutate(percentage = e*100)
   })
 
   output$salida <- renderPrint({
