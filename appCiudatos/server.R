@@ -160,7 +160,7 @@ shinyServer(function(input, output, session) {
         uiOutput('anioCiudad')
       )
     if (idG == 'linea') 
-      #g <- highchartOutput('vizLine')
+      g <- highchartOutput('vizLine')
     if (idG == 'barras') 
       g <- highchartOutput('vizStackCiudad')
     
