@@ -157,6 +157,7 @@ function changeSUbjCiudad(){
                         };
                     vizLine = new tableau.Viz(containerDiv, url, options);
     }else{
+      console.log($("#ciudadSubj").val());
          var sheet = vizLine.getWorkbook().getActiveSheet();
             var fieldname = "Name";
             var value = $("#varCiudadSubjSel").val();
