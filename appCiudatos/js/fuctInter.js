@@ -26,7 +26,7 @@ $(document).on("shiny:inputchanged", function(event) {
                   
                   
                    if(event.name=='varCiudadSubjSel'){
-                    // changeSUbjCiudad();
+                     changeSUbjCiudad();
                   }
                
               });
@@ -147,10 +147,7 @@ function changeSUbjCiudad(){
                         options = {
                             hideTabs: true,
 
-                            "Ciudad": $("#ciudadSubj").val(),
-                           
-                      
-                            onFirstInteractive: function () {
+                           onFirstInteractive: function () {
                                changeSUbjCiudad();
                                                       
                             }
