@@ -13,13 +13,13 @@ $(document).on('click', '.buttonObj', function () {
    });
    
 $(document).on('click', '.buttonObjCty', function () {
-        Shiny.onInputChange('last_ObjCty',this.id);
+       // Shiny.onInputChange('last_ObjCty',this.id);
    });
   
   
 $(document).on("shiny:inputchanged", function(event) {
                
-                  console.log(event);
+                  //console.log(event);
                   if(event.name=='VariablesSubjetivos' || event.name=='anioSubjSel'){
                      changeSUbj();
                   }

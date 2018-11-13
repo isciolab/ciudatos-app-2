@@ -101,7 +101,7 @@ shinyServer(function(input, output, session) {
   })
   
   output$grafSubjCiud <- renderUI({
-   # BotonesGraficas(c('linea', 'barras', 'treemap'), 'buttonStyleGraphCity')
+    BotonesGraficas(c('linea', 'barras', 'treemap'), 'buttonStyleGraphCity')
   })
   
 
