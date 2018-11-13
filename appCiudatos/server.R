@@ -107,12 +107,12 @@ shinyServer(function(input, output, session) {
 
   
   baseCiud <- reactive({
-    #BaseGeneralCiudad(idElg = input$varCiudadSubjSel, subjDat) %>% 
-     # filter(a == input$ciudadSubj) %>% mutate(percentage = e*100)
+    BaseGeneralCiudad(idElg = input$varCiudadSubjSel, subjDat) %>% 
+      filter(a == input$ciudadSubj) %>% mutate(percentage = e*100)
   })
 
   output$salida <- renderPrint({
-    #baseCiud()
+    baseCiud()
   })
   
   output$vizLine <- renderHighchart({
