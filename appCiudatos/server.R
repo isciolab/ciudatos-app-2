@@ -99,8 +99,8 @@ shinyServer(function(input, output, session) {
   output$varCiudadSubj <- renderUI({
     id_c <- input$ciudadSubj
     dicS <- dicCiudad(id_c, subjDat, dicSbj)
-    selectorVar(dicSbj, input$last_btnCity, 'varCiudadSubjSel')
-    #selectorVar(dicS, input$last_btnCity, 'varCiudadSubjSel')
+    #selectorVar(dicSbj, input$last_btnCity, 'varCiudadSubjSel')
+    selectorVar(dicS, input$last_btnCity, 'varCiudadSubjSel')
   })
   
   output$grafSubjCiud <- renderUI({
