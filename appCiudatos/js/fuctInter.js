@@ -25,7 +25,7 @@ $(document).on("shiny:inputchanged", function(event) {
                   }
                   
                   
-                   if(event.name=='varCiudadSubjSel' || event.name=='ciudadSubj'){
+                   if(event.name=='varCiudadSubjSel'){
                      changeSUbjCiudad();
                   }
                
