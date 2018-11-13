@@ -73,6 +73,7 @@ $(document).on('click', '.buttonStyleGraphCity', function () {
           
            changeSUbjCiudad();
         }
+        consle.log('currentButton');
         
    });
 
@@ -197,6 +198,8 @@ function changeSUbjCiudad(){
     
     
     if(currentButton=='barras'){
+      
+      console.log('son barras');
     
     if (vizStackCiudad == null || vizStackCiudad==undefined) {
        var containerDiv = document.getElementById("vizStackCiudad"),
