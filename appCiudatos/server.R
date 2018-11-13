@@ -92,8 +92,8 @@ shinyServer(function(input, output, session) {
   output$BotCiudadSubj <- renderUI({
     id_c <- input$ciudadSubj
     dic <- dicCiudad(id_c, subjDat, dicSbj)
-    BotonesGenerales(dic, cscl = 'buttonStyleCity')
-    #BotonesGenerales(dicSbj, cscl = "buttonStyleCity")
+    #BotonesGenerales(dic, cscl = 'buttonStyleCity')
+    BotonesGenerales(dicSbj, cscl = 'buttonStyleCity')
   })
   
   output$varCiudadSubj <- renderUI({
