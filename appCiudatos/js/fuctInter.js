@@ -25,7 +25,7 @@ $(document).on("shiny:inputchanged", function(event) {
                   }
                   
                   
-                   if(event.name=='varCiudadSubjSel' || event.name=='ciudadSubj'){
+                   if(event.name=='varCiudadSubjSel' || event.name=='.clientdata_output_CiudSubj_hidden'){
                      changeSUbjCiudad();
                   }
                
