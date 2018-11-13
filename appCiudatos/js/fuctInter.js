@@ -1,6 +1,7 @@
 var vizsubj;
 var vizLine;
 var vizStackCiudad;
+var currentButton;
 $(document).on('click', '.buttonStyle', function () {
         Shiny.onInputChange('last_btn',this.id);
    });
@@ -51,6 +52,7 @@ $(document).on('click', '.buttonStyleGraphCity', function () {
        
         if(this.id == 'linea'){
           
+          currentButton = 'linea';
               vizLine.dispose();
                $("#vizLine").html('');
               vizLine = undefined;
@@ -59,7 +61,7 @@ $(document).on('click', '.buttonStyleGraphCity', function () {
            changeSUbjCiudad();
         }
         if(this.id == 'barras'){
-          
+          currentButton = 'barras';
               vizStackCiudad.dispose();
                $("#vizStackCiudad").html('');
               vizStackCiudad = undefined;
@@ -153,6 +155,7 @@ function changeSUbjCiudad(){
   
   
   
+  if(currentButton=='linea'){
     if (vizLine == null || vizLine==undefined) {
        var containerDiv = document.getElementById("vizLine"),
                         url = "https://public.tableau.com/views/CiudatosGraficos/Hoja2?:embed=y&:display_count=yes&publish=yes",
@@ -183,10 +186,13 @@ function changeSUbjCiudad(){
             }
            
     }
+  }
+  
+  
     
     
     
-    
+    if(currentButton=='barras'){
     
     if (vizStackCiudad == null || vizStackCiudad==undefined) {
        var containerDiv = document.getElementById("vizStackCiudad"),
@@ -217,6 +223,7 @@ function changeSUbjCiudad(){
                 sheet.applyFilterAsync(fieldname, value.toUpperCase(), tableau.FilterUpdateType.REPLACE);
             }
            
+    }
     }
   
 }
