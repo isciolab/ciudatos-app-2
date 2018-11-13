@@ -112,7 +112,7 @@ shinyServer(function(input, output, session) {
   })
 
   output$salida <- renderPrint({
-    baseCiud()
+    #baseCiud()
   })
   
   output$vizLine <- renderHighchart({
