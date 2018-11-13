@@ -125,8 +125,6 @@ selectorVar <- function(dic, var, id_sel) {
   
   selectizeInput(id_sel, 'Selección de variables', variables)
   
-  
-  
 }
 
 
@@ -152,8 +150,6 @@ dicCiudad <- function(id_ci, data, dic){
   dic <- varInf %>% left_join(dic)
   dic
 }
-
-
 
 
 BaseGeneral <- function(idElg, data, anioElg){

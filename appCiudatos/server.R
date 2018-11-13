@@ -86,6 +86,7 @@ shinyServer(function(input, output, session) {
      selectizeInput('ciudadSubj', 
                    'Selección de ciudad',
                     variables)
+     
   })
   
   output$BotCiudadSubj <- renderUI({
