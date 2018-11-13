@@ -153,7 +153,8 @@ dicCiudad <- function(id_ci, data, dic){
 
 dicCiudad2 <- function(data, dic){
   
-  df <- data 
+  
+  df <- data collect()
   df <- Filter(function(x)!all(is.na(x)), df)
   varInf <- data.frame(id = names(df))
   dic <- varInf %>% left_join(dic)
