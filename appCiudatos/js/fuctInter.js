@@ -13,7 +13,7 @@ $(document).on('click', '.buttonObj', function () {
    });
    
 $(document).on('click', '.buttonObjCty', function () {
-       // Shiny.onInputChange('last_ObjCty',this.id);
+        Shiny.onInputChange('last_ObjCty',this.id);
    });
   
   
