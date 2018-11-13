@@ -95,8 +95,7 @@ shinyServer(function(input, output, session) {
   })
   
   output$varCiudadSubj <- renderUI({
-    id_c <- input$ciudadSubj
-    dicS <- dicCiudad(id_c, subjDat, dicSbj)
+    dicS <- dicCiudad2(subjDat, dicSbj)
     selectorVar(dicS, input$last_btnCity, 'varCiudadSubjSel')
   })
   
@@ -112,7 +111,7 @@ shinyServer(function(input, output, session) {
   })
 
   output$salida <- renderPrint({
-    #baseCiud()
+    baseCiud()
   })
   
   output$vizLine <- renderHighchart({
