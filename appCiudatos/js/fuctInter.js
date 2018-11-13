@@ -141,6 +141,8 @@ function changeSUbj(){
 
 function changeSUbjCiudad(){
   
+  console.log('cambioooooooooooooooooooo');
+  
     if (vizLine == null || vizLine==undefined) {
        var containerDiv = document.getElementById("vizLine"),
                         url = "https://public.tableau.com/views/CiudatosGraficos/Hoja2?:embed=y&:display_count=yes&publish=yes",
