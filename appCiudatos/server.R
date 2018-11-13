@@ -96,12 +96,12 @@ shinyServer(function(input, output, session) {
     BotonesGenerales(dicSbj, cscl = 'buttonStyleCity')
   })
   
-  output$varCiudadSubj <- renderUI({
-    id_c <- input$ciudadSubj
-    dicS <- dicCiudad(id_c, subjDat, dicSbj)
-    selectorVar(dicS, input$last_btnCity, 'varCiudadSubjSel')
+  #output$varCiudadSubj <- renderUI({
+  #  id_c <- input$ciudadSubj
+  #  dicS <- dicCiudad(id_c, subjDat, dicSbj)
+  #  selectorVar(dicSbj, input$last_btnCity, 'varCiudadSubjSel')
     #selectorVar(dicSbj, input$last_btnCity, 'varCiudadSubjSel')
-  })
+  #})
   
   output$grafSubjCiud <- renderUI({
     BotonesGraficas(c('linea', 'barras', 'treemap'), 'buttonStyleGraphCity')
