@@ -19,7 +19,7 @@ $(document).on('click', '.buttonObjCty', function () {
   
 $(document).on("shiny:inputchanged", function(event) {
                
-                  console.log(event);
+                  //console.log(event);
                   if(event.name=='VariablesSubjetivos' || event.name=='anioSubjSel'){
                      changeSUbj();
                   }
@@ -157,7 +157,8 @@ function changeSUbjCiudad(){
                         };
                     vizLine = new tableau.Viz(containerDiv, url, options);
     }else{
-      console.log($("#ciudadSubj").val());
+         console.log($("#ciudadSubj").val());
+         console.log($("#varCiudadSubjSel").val());
          var sheet = vizLine.getWorkbook().getActiveSheet();
             var fieldname = "Name";
             var value = $("#varCiudadSubjSel").val();
