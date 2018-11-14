@@ -48,26 +48,22 @@ $(document).on('click', '.BuGraphIcu', function () {
    });
   
 $(document).on('click', '.buttonStyleGraphCity', function () {
-    
+     Shiny.onInputChange('lastGraphCity',this.id);
+        currentButton = this.id;
         
-        if(this.id == 'linea'){
-              Shiny.onInputChange('lastGraphCity',this.id);
-              currentButton = 'linea';
-              vizLine.dispose();
-              $("#VizSubjCity").html('');
-              vizLine = undefined;
-              changeSUbjCiudad();
+        if(vizLine !=undefined)
+        {
+         vizLine.dispose();
+         vizLine = undefined;
         }
-        if(this.id == 'barras'){
-              Shiny.onInputChange('lastGraphCity',this.id);
-              currentButton = 'barras';
-              if(vizStackCiudad !=undefined){
+        if(vizStackCiudad !=undefined){
                 vizStackCiudad.dispose();
-              }
-              $("#VizSubjCity").html('');
-              vizStackCiudad = undefined;
-              changeSUbjCiudad();
+                vizStackCiudad = undefined;
         }
+        
+        $("#VizSubjCity").html('');
+      
+        changeSUbjCiudad();
         
         console.log(currentButton);
         
