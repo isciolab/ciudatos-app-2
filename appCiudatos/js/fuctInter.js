@@ -73,7 +73,7 @@ $(document).on('click', '.buttonStyleGraphCity', function () {
           
            changeSUbjCiudad();
         }
-        console.log('currentButton');
+        console.log(currentButton);
         
    });
 
