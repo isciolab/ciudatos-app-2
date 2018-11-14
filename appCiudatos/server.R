@@ -157,19 +157,18 @@ shinyServer(function(input, output, session) {
       'linea'
     } else {
       input$lastGraphCity
-    }
     
-    if (idG == 'treemap') 
-      g <- list(
-        highchartOutput('CityTree'),
-        uiOutput('anioCiudad')
-      )
-    if (idG == 'linea') 
-      g <- highchartOutput('vizLine')
-    if (idG == 'barras') 
-      g <- highchartOutput('vizStackCiudad')
+    #if (idG == 'treemap') 
+    #  g <- list(
+    #    highchartOutput('CityTree'),
+    #    uiOutput('anioCiudad')
+    #  )
+    #if (idG == 'linea') 
+    #  g <- highchartOutput('vizLine')
+    #if (idG == 'barras') 
+    #  g <- highchartOutput('vizStackCiudad')
     
-    g
+    #g
   })
   
   output$botDataSub <- renderUI({

@@ -51,29 +51,24 @@ $(document).on('click', '.buttonStyleGraphCity', function () {
     
         
         if(this.id == 'linea'){
-          Shiny.onInputChange('lastGraphCity',this.id);
-          
-          currentButton = 'linea';
+              Shiny.onInputChange('lastGraphCity',this.id);
+              currentButton = 'linea';
               vizLine.dispose();
-               $("#vizLine").html('');
+              $("#VizSubjCity").html('');
               vizLine = undefined;
-                
-          
-           changeSUbjCiudad();
+              changeSUbjCiudad();
         }
         if(this.id == 'barras'){
-           Shiny.onInputChange('lastGraphCity',this.id);
-          currentButton = 'barras';
-          if(vizStackCiudad !=undefined){
-            vizStackCiudad.dispose();
-          }
-              
-               $("#vizStackCiudad").html('');
+              Shiny.onInputChange('lastGraphCity',this.id);
+              currentButton = 'barras';
+              if(vizStackCiudad !=undefined){
+                vizStackCiudad.dispose();
+              }
+              $("#VizSubjCity").html('');
               vizStackCiudad = undefined;
-                
-          
-           changeSUbjCiudad();
+              changeSUbjCiudad();
         }
+        
         console.log(currentButton);
         
    });
@@ -165,7 +160,7 @@ function changeSUbjCiudad(){
     
     console.log(vizLine);
     if (vizLine == null || vizLine==undefined) {
-       var containerDiv = document.getElementById("vizLine"),
+       var containerDiv = document.getElementById("VizSubjCity"),
                         url = "https://public.tableau.com/views/CiudatosGraficos/Hoja2?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
@@ -205,7 +200,7 @@ function changeSUbjCiudad(){
       console.log('son barras');
     console.log(vizStackCiudad);
     if (vizStackCiudad == null || vizStackCiudad==undefined) {
-       var containerDiv = document.getElementById("vizStackCiudad"),
+       var containerDiv = document.getElementById("VizSubjCity"),
                         url = "https://public.tableau.com/views/CiudatosGraficos/Hoja3?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
