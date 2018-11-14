@@ -36,9 +36,15 @@ $(document).on("shiny:inputchanged", function(event) {
               
 
 $(document).on('click', '.buttonStyleGraph', function () {
-       //Shiny.onInputChange('lastGraph',this.id);
-       console.log('chanheeee');
+       
+      
+      if(this.id=='barras'){
+        console.log('chanheeee');
       changeSUbj();
+      } else{
+        shiny.onInputChange('lastGraph',this.id);
+      }
+      
       
    });
 
