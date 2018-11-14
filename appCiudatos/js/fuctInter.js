@@ -36,13 +36,9 @@ $(document).on("shiny:inputchanged", function(event) {
               
 
 $(document).on('click', '.buttonStyleGraph', function () {
-       shiny.onInputChange('lastGraph',this.id);
-      
-      if(this.id=='barras'){
-        console.log('chanheeee');
-        changeSUbj();
-      } 
-      
+       //Shiny.onInputChange('lastGraph',this.id);
+       console.log('chanheeee');
+      changeSUbj();
       
    });
 
@@ -126,7 +122,7 @@ function changeSUbj(){
   
   console.log($("#VariablesSubjetivos").val());
     if (vizsubj == null) {
-       var containerDiv = document.getElementById("vizStack"),
+       var containerDiv = document.getElementById("VizSubj"),
                         url = "https://public.tableau.com/views/CiudatosGraficos/Hoja1?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,

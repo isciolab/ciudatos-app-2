@@ -45,7 +45,15 @@ shinyServer(function(input, output, session) {
    input$lastGraph
  }) 
  
+  output$vizStack <- renderHighchart({
   
+  if(is.null(input$VariablesSubjetivos)) return()
+  
+  idElg <- input$VariablesSubjetivos
+  data <- BaseGeneral(idElg, subjDat, input$anioSubjSel)
+  stackGraph(data, dicSbj$label[dicSbj$id == idElg]) %>% 
+    hc_credits(enabled = TRUE, text = "Resultados sobre el total de encuestados")
+  })
   
 
   
@@ -56,21 +64,21 @@ shinyServer(function(input, output, session) {
   })
   
   
-  output$VizSubj <- renderUI({
-   idG <- if (is.null(input$lastGraph)){
-     'barras'
-    } else {
-      input$lastGraph
-    }
+  #output$VizSubj <- renderUI({
+  # idG <- if (is.null(input$lastGraph)){
+  #   'barras'
+  #  } else {
+  #    input$lastGraph
+  #  }
     
  
-    if (idG == 'mapa') 
-      g <- leafletOutput('vizMap')
-    if (idG == 'barras') 
-      g <- highchartOutput('vizStack')
+  #  if (idG == 'mapa') 
+  #    g <- leafletOutput('vizMap')
+  #  if (idG == 'barras') 
+  #    g <- highchartOutput('vizStack')
       
-    g
-  })
+  #  g
+  #})
   
   output$CiudSubj <- renderUI({
      variables <- subjDat %>% select(CIUDAD) %>% collect() %>% .$CIUDAD
