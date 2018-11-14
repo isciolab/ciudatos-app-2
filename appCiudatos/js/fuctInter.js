@@ -49,8 +49,9 @@ $(document).on('click', '.BuGraphIcu', function () {
   
 $(document).on('click', '.buttonStyleGraphCity', function () {
     
-        Shiny.onInputChange('lastGraphCity',this.id);
+        
         if(this.id == 'linea'){
+          Shiny.onInputChange('lastGraphCity',this.id);
           
           currentButton = 'linea';
               vizLine.dispose();
