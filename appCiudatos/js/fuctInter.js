@@ -62,6 +62,11 @@ $(document).on('click', '.buttonStyleGraphCity', function () {
                 vizStackCiudad = undefined;
         }
         
+         if(vizTreemap !=undefined){
+                vizTreemap.dispose();
+                vizTreemap = undefined;
+        }
+        
         $("#VizSubjCity").html('');
       
         changeSUbjCiudad();
@@ -236,7 +241,7 @@ function changeSUbjCiudad(){
    
     if (vizTreemap == null || vizTreemap==undefined) {
        var containerDiv = document.getElementById("VizSubjCity"),
-                        url = "https://public.tableau.com/views/CiudatosGraficos/Hoja3?:embed=y&:display_count=yes&publish=yes",
+                        url = "https://public.tableau.com/views/CiudatosGraficos/Hoja4?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
 
