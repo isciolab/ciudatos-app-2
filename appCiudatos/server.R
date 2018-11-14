@@ -38,7 +38,7 @@ shinyServer(function(input, output, session) {
  
  output$grafSubj <- renderUI({
    print(shiny:::hasCurrentRestoreContext())
-   BotonesGraficas(c('barras', 'mapa'))
+   BotonesGraficas(c('barras'))
  })  
  
  output$salida <- renderUI({
