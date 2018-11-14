@@ -1,6 +1,7 @@
 var vizsubj;
 var vizLine;
 var vizStackCiudad;
+var vizTreemap;
 var currentButton = 'linea';
 $(document).on('click', '.buttonStyle', function () {
         Shiny.onInputChange('last_btn',this.id);
@@ -211,6 +212,44 @@ function changeSUbjCiudad(){
          console.log($("#ciudadSubj").val());
          console.log($("#varCiudadSubjSel").val());
          var sheet = vizStackCiudad.getWorkbook().getActiveSheet();
+            var fieldname = "Name";
+            var value = $("#varCiudadSubjSel").val();
+           
+            if (value !== "") {
+                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+            }
+             fieldname = "Ciudad";
+            value = $("#ciudadSubj").val();
+            
+             if (value !== "") {
+                sheet.applyFilterAsync(fieldname, value.toUpperCase(), tableau.FilterUpdateType.REPLACE);
+            }
+           
+     }
+    }
+    
+    
+    
+    
+    if(currentButton=='treemap'){
+      
+   
+    if (vizTreemap == null || vizTreemap==undefined) {
+       var containerDiv = document.getElementById("VizSubjCity"),
+                        url = "https://public.tableau.com/views/CiudatosGraficos/Hoja3?:embed=y&:display_count=yes&publish=yes",
+                        options = {
+                            hideTabs: true,
+
+                           onFirstInteractive: function () {
+                               changeSUbjCiudad();
+                                                      
+                            }
+                        };
+                    vizTreemap = new tableau.Viz(containerDiv, url, options);
+    }else{
+         console.log($("#ciudadSubj").val());
+         console.log($("#varCiudadSubjSel").val());
+         var sheet = vizTreemap.getWorkbook().getActiveSheet();
             var fieldname = "Name";
             var value = $("#varCiudadSubjSel").val();
            
