@@ -157,6 +157,7 @@ shinyServer(function(input, output, session) {
       'linea'
     } else {
       input$lastGraphCity
+    }
     
     #if (idG == 'treemap') 
     #  g <- list(
