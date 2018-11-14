@@ -50,8 +50,8 @@ fluidPage(
                       
           uiOutput('grafSubj')))),
           div(class = 'contViz',
-              uiOutput('VizSubj'),
-              #div(id = 'VizSubj',style='width: 100%; height:400px'),
+              #uiOutput('VizSubj'),
+              div(id = 'VizSubj',style='width: 100%; height:300px'),
               div(class = 'botMapSub',
                 uiOutput('anioSubj')
           )
