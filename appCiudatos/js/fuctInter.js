@@ -2,6 +2,9 @@ var vizsubj;
 var vizLine;
 var vizStackCiudad;
 var vizTreemap;
+var vizLineObj;
+var vizStackObj;
+var vizTreemapObj;
 var currentButton = 'linea';
 $(document).on('click', '.buttonStyle', function () {
         Shiny.onInputChange('last_btn',this.id);
@@ -77,6 +80,29 @@ $(document).on('click', '.buttonStyleGraphCity', function () {
 
 $(document).on('click', '.buttonStyleGraphObj', function () {
         Shiny.onInputChange('lastGraphObj',this.id);
+        
+        currentButton = this.id;
+        
+        if(vizLineObj !=undefined)
+        {
+         vizLineObj.dispose();
+         vizLineObj = undefined;
+        }
+        if(vizStackObj !=undefined){
+                vizStackObj.dispose();
+                vizStackObj = undefined;
+        }
+        
+         if(vizTreemapObj !=undefined){
+                vizTreemapObj.dispose();
+                vizTreemapObj = undefined;
+        }
+        
+        $("#VizObj").html('');
+      
+        changeObj();
+        
+        
    });
    
 $(document).on('click', '.buttonStyleGraphObjCiud', function () {
@@ -272,6 +298,124 @@ function changeSUbjCiudad(){
     }
   
 }
+
+
+
+
+function changeObj(){
+  
+  
+  
+  if(currentButton=='linea'){
+    
+
+    if (vizLineObj == null || vizLineObj==undefined) {
+       var containerDiv = document.getElementById("VizObj"),
+                        url = "https://public.tableau.com/views/CiudatosGraficos/Hoja2?:embed=y&:display_count=yes&publish=yes",
+                        options = {
+                            hideTabs: true,
+
+                           onFirstInteractive: function () {
+                               changeObj();
+                                                      
+                            }
+                        };
+                    vizLineObj = new tableau.Viz(containerDiv, url, options);
+    }else{
+        
+         var sheet = vizLineObj.getWorkbook().getActiveSheet();
+            var fieldname = "Name";
+            var value = $("#VariablesObjtivos").val();
+           
+            if (value !== "") {
+                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+            }
+            
+           
+    }
+  }
+  
+  
+    
+    
+    
+    if(currentButton=='barras'){
+      
+      console.log('son barras');
+    console.log(vizStackCiudad);
+    if (vizStackCiudad == null || vizStackCiudad==undefined) {
+       var containerDiv = document.getElementById("VizSubjCity"),
+                        url = "https://public.tableau.com/views/CiudatosGraficos/Hoja3?:embed=y&:display_count=yes&publish=yes",
+                        options = {
+                            hideTabs: true,
+
+                           onFirstInteractive: function () {
+                               changeSUbjCiudad();
+                                                      
+                            }
+                        };
+                    vizStackCiudad = new tableau.Viz(containerDiv, url, options);
+    }else{
+         console.log($("#ciudadSubj").val());
+         console.log($("#varCiudadSubjSel").val());
+         var sheet = vizStackCiudad.getWorkbook().getActiveSheet();
+            var fieldname = "Name";
+            var value = $("#varCiudadSubjSel").val();
+           
+            if (value !== "") {
+                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+            }
+             fieldname = "Ciudad";
+            value = $("#ciudadSubj").val();
+            
+             if (value !== "") {
+                sheet.applyFilterAsync(fieldname, value.toUpperCase(), tableau.FilterUpdateType.REPLACE);
+            }
+           
+     }
+    }
+    
+    
+    
+    
+    if(currentButton=='treemap'){
+      
+   
+    if (vizTreemap == null || vizTreemap==undefined) {
+       var containerDiv = document.getElementById("VizSubjCity"),
+                        url = "https://public.tableau.com/views/CiudatosGraficos/Hoja4?:embed=y&:display_count=yes&publish=yes",
+                        options = {
+                            hideTabs: true,
+
+                           onFirstInteractive: function () {
+                               changeSUbjCiudad();
+                                                      
+                            }
+                        };
+                    vizTreemap = new tableau.Viz(containerDiv, url, options);
+    }else{
+         console.log($("#ciudadSubj").val());
+         console.log($("#varCiudadSubjSel").val());
+         var sheet = vizTreemap.getWorkbook().getActiveSheet();
+            var fieldname = "Name";
+            var value = $("#varCiudadSubjSel").val();
+           
+            if (value !== "") {
+                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+            }
+             fieldname = "Ciudad";
+            value = $("#ciudadSubj").val();
+            
+             if (value !== "") {
+                sheet.applyFilterAsync(fieldname, value.toUpperCase(), tableau.FilterUpdateType.REPLACE);
+            }
+           
+     }
+    }
+  
+}
+
+
 
 
 
