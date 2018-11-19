@@ -110,7 +110,7 @@ HTML("<img src='img/menu/datosoficiales.png' class = 'imgTab'>
                  uiOutput('grafObj')))),
                  div(class = 'contViz',
                  uiOutput('VizObj'),
-                 #uiOutput('anioObj')
+                 uiOutput('anioObj')
                  )
                  ),
                  conditionalPanel(
