@@ -383,7 +383,7 @@ function changeObj(){
    
     if (vizTreemap == null || vizTreemap==undefined) {
        var containerDiv = document.getElementById("VizSubjCity"),
-                        url = "https://public.tableau.com/views/CiudatosGraficos/Hoja4?:embed=y&:display_count=yes&publish=yes",
+                        url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja1?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
 
