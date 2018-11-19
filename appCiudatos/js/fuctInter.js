@@ -34,6 +34,10 @@ $(document).on("shiny:inputchanged", function(event) {
                    if(event.name=='varCiudadSubjSel' || event.name=='ciudadSubj'){
                      changeSUbjCiudad();
                   }
+                  
+                   if(event.name=='VariablesObjtivos'){
+                     changeObj();
+                  }
                
               });
               
@@ -304,7 +308,7 @@ function changeSUbjCiudad(){
 
 function changeObj(){
   
-  
+  console.log(currentButton);
   
   if(currentButton=='linea'){
     
