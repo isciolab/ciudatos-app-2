@@ -252,16 +252,16 @@ shinyServer(function(input, output, session) {
               input$lastGraphObj
               }         
     
-    #if (idG == 'treemap') 
-    #  g <- highchartOutput('vizTreeObjetive')
-    #if (idG == 'linea') 
-    #  g <- highchartOutput('vizLineObjetive')
-    #if (idG == 'barras') 
-    #  g <- highchartOutput('vizRankObj')
-    #if (idG == 'mapa') 
-    #  g <- leafletOutput('vizMapObj')
+    if (idG == 'treemap') 
+      g <- highchartOutput('vizTreeObjetive')
+    if (idG == 'linea') 
+      g <- highchartOutput('vizLineObjetive')
+    if (idG == 'barras') 
+      g <- highchartOutput('vizRankObj')
+    if (idG == 'mapa') 
+      g <- leafletOutput('vizMapObj')
     
-    #g
+    g
   })
   
   output$botDataObj <- renderUI({
