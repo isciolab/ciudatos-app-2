@@ -315,7 +315,7 @@ function changeObj(){
   
       if (vizLineObj == null || vizLineObj==undefined) {
          var containerDiv = document.getElementById("VizObj"),
-                          url = "https://public.tableau.com/views/CiudatosGraficos/Hoja2?:embed=y&:display_count=yes&publish=yes",
+                          url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja1?:embed=y&:display_count=yes&publish=yes",
                           options = {
                               hideTabs: true,
   
