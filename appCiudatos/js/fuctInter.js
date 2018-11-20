@@ -39,7 +39,7 @@ $(document).on("shiny:inputchanged", function(event) {
                      changeObj();
                   }
                
-              });
+  });
               
 
 $(document).on('click', '.buttonStyleGraph', function () {
@@ -312,31 +312,31 @@ function changeObj(){
   
   if(currentButton=='linea'){
     
-
-    if (vizLineObj == null || vizLineObj==undefined) {
-       var containerDiv = document.getElementById("VizObj"),
-                        url = "https://public.tableau.com/views/CiudatosGraficos/Hoja2?:embed=y&:display_count=yes&publish=yes",
-                        options = {
-                            hideTabs: true,
-
-                           onFirstInteractive: function () {
-                               changeObj();
-                                                      
-                            }
-                        };
-                    vizLineObj = new tableau.Viz(containerDiv, url, options);
-    }else{
-        
-         var sheet = vizLineObj.getWorkbook().getActiveSheet();
-            var fieldname = "Name";
-            var value = $("#VariablesObjtivos").val();
-           
-            if (value !== "") {
-                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
-            }
-            
-           
-    }
+  
+      if (vizLineObj == null || vizLineObj==undefined) {
+         var containerDiv = document.getElementById("VizObj"),
+                          url = "https://public.tableau.com/views/CiudatosGraficos/Hoja2?:embed=y&:display_count=yes&publish=yes",
+                          options = {
+                              hideTabs: true,
+  
+                             onFirstInteractive: function () {
+                                 changeObj();
+                                                        
+                              }
+                          };
+                      vizLineObj = new tableau.Viz(containerDiv, url, options);
+      }else{
+          
+           var sheet = vizLineObj.getWorkbook().getActiveSheet();
+              var fieldname = "Name";
+              var value = $("#VariablesObjtivos").val();
+             
+              if (value !== "") {
+                  sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+              }
+              
+             
+      }
   }
   
   
@@ -345,38 +345,38 @@ function changeObj(){
     
     if(currentButton=='barras'){
       
-      console.log('son barras');
-    console.log(vizStackCiudad);
-    if (vizStackCiudad == null || vizStackCiudad==undefined) {
-       var containerDiv = document.getElementById("VizSubjCity"),
-                        url = "https://public.tableau.com/views/CiudatosGraficos/Hoja3?:embed=y&:display_count=yes&publish=yes",
-                        options = {
-                            hideTabs: true,
-
-                           onFirstInteractive: function () {
-                               changeSUbjCiudad();
-                                                      
-                            }
-                        };
-                    vizStackCiudad = new tableau.Viz(containerDiv, url, options);
-    }else{
-         console.log($("#ciudadSubj").val());
-         console.log($("#varCiudadSubjSel").val());
-         var sheet = vizStackCiudad.getWorkbook().getActiveSheet();
-            var fieldname = "Name";
-            var value = $("#varCiudadSubjSel").val();
-           
-            if (value !== "") {
-                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
-            }
-             fieldname = "Ciudad";
-            value = $("#ciudadSubj").val();
-            
-             if (value !== "") {
-                sheet.applyFilterAsync(fieldname, value.toUpperCase(), tableau.FilterUpdateType.REPLACE);
-            }
-           
-     }
+        console.log('son barras');
+      console.log(vizStackCiudad);
+      if (vizStackCiudad == null || vizStackCiudad==undefined) {
+         var containerDiv = document.getElementById("VizSubjCity"),
+                          url = "https://public.tableau.com/views/CiudatosGraficos/Hoja3?:embed=y&:display_count=yes&publish=yes",
+                          options = {
+                              hideTabs: true,
+  
+                             onFirstInteractive: function () {
+                                 changeSUbjCiudad();
+                                                        
+                              }
+                          };
+                      vizStackCiudad = new tableau.Viz(containerDiv, url, options);
+      }else{
+           console.log($("#ciudadSubj").val());
+           console.log($("#varCiudadSubjSel").val());
+           var sheet = vizStackCiudad.getWorkbook().getActiveSheet();
+              var fieldname = "Name";
+              var value = $("#varCiudadSubjSel").val();
+             
+              if (value !== "") {
+                  sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+              }
+               fieldname = "Ciudad";
+              value = $("#ciudadSubj").val();
+              
+               if (value !== "") {
+                  sheet.applyFilterAsync(fieldname, value.toUpperCase(), tableau.FilterUpdateType.REPLACE);
+              }
+             
+       }
     }
     
     
@@ -385,36 +385,36 @@ function changeObj(){
     if(currentButton=='treemap'){
       
    
-    if (vizTreemap == null || vizTreemap==undefined) {
-       var containerDiv = document.getElementById("VizSubjCity"),
-                        url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja1?:embed=y&:display_count=yes&publish=yes",
-                        options = {
-                            hideTabs: true,
-
-                           onFirstInteractive: function () {
-                               changeSUbjCiudad();
-                                                      
-                            }
-                        };
-                    vizTreemap = new tableau.Viz(containerDiv, url, options);
-    }else{
-         console.log($("#ciudadSubj").val());
-         console.log($("#varCiudadSubjSel").val());
-         var sheet = vizTreemap.getWorkbook().getActiveSheet();
-            var fieldname = "Name";
-            var value = $("#varCiudadSubjSel").val();
-           
-            if (value !== "") {
-                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
-            }
-             fieldname = "Ciudad";
-            value = $("#ciudadSubj").val();
-            
-             if (value !== "") {
-                sheet.applyFilterAsync(fieldname, value.toUpperCase(), tableau.FilterUpdateType.REPLACE);
-            }
-           
-     }
+      if (vizTreemap == null || vizTreemap==undefined) {
+         var containerDiv = document.getElementById("VizSubjCity"),
+                          url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja1?:embed=y&:display_count=yes&publish=yes",
+                          options = {
+                              hideTabs: true,
+  
+                             onFirstInteractive: function () {
+                                 changeSUbjCiudad();
+                                                        
+                              }
+                          };
+                      vizTreemap = new tableau.Viz(containerDiv, url, options);
+      }else{
+           console.log($("#ciudadSubj").val());
+           console.log($("#varCiudadSubjSel").val());
+           var sheet = vizTreemap.getWorkbook().getActiveSheet();
+              var fieldname = "Name";
+              var value = $("#varCiudadSubjSel").val();
+             
+              if (value !== "") {
+                  sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+              }
+               fieldname = "Ciudad";
+              value = $("#ciudadSubj").val();
+              
+               if (value !== "") {
+                  sheet.applyFilterAsync(fieldname, value.toUpperCase(), tableau.FilterUpdateType.REPLACE);
+              }
+             
+       }
     }
   
 }
