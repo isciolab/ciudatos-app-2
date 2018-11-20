@@ -233,16 +233,16 @@ shinyServer(function(input, output, session) {
   })
   
   
-  output$anioObj <- renderUI({
+  #output$anioObj <- renderUI({
     
-    gr <- input$lastGraphObj
+  #  gr <- input$lastGraphObj
     
-    if(is.null(gr)) gr <- 'linea'
+  #  if(is.null(gr)) gr <- 'linea'
     
-    if(gr == 'linea') return()  
+  #  if(gr == 'linea') return()  
       
-    selectorAnio(objDat, input$VariablesObjtivos, 'anioObjSel')
-  })
+  #  selectorAnio(objDat, input$VariablesObjtivos, 'anioObjSel')
+  #})
   
   
   output$VizObj <- renderUI({
