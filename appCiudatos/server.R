@@ -155,9 +155,9 @@ shinyServer(function(input, output, session) {
   output$VizSubjCity <- renderUI({
     idG <- if (is.null(input$lastGraphCity)){
       #'linea'
-    ##} else {
+    } else {
       #input$lastGraphCity
-    #}
+    }
     
     #if (idG == 'treemap') 
     #  g <- list(
