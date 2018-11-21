@@ -419,7 +419,7 @@ function changeObj(){
    
       if (vizmapaObj == null || vizmapaObj==undefined) {
          var containerDiv = document.getElementById("VizSubjCity"),
-                          url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja2?:embed=y&:display_count=yes&publish=yes",
+                          url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja4?:embed=y&:display_count=yes&publish=yes",
                           options = {
                               hideTabs: true,
   

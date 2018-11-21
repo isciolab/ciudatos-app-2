@@ -20,18 +20,18 @@ shinyServer(function(input, output, session) {
    HTML('<p style="font-size: 11px; padding:5%;"><b>Datos Subjetivos:</b> Encuestas de Percepción Ciudadana realizadas por los Programas Cómo Vamos en Colombia </p>')
  })
   
- output$anioSubj <- renderUI({
+ #output$anioSubj <- renderUI({
   # selectorAnio(subjDat, input$VariablesSubjetivos, 'anioSubjSel')
-   data <- subjDat
-   variable <-  input$VariablesSubjetivos
-   df <- data %>% 
-     select_('AÑO', variable) %>% 
-     collect() %>% 
-     drop_na_(variable) 
-   anios <- sort(as.numeric(unique(df$AÑO)))
+  # data <- subjDat
+   #variable <-  input$VariablesSubjetivos
+   #df <- data %>% 
+    # select_('AÑO', variable) %>% 
+    # collect() %>% 
+    # drop_na_(variable) 
+   #anios <- sort(as.numeric(unique(df$AÑO)))
    #sliderInput(id_selector, 'Tiempo', min = min(anios), max = max(anios), value = anios[length(anios)] )
-   selectizeInput(inputId = 'anioSubjSel', label = 'Tiempo', choices = anios, selected = max(anios))
- })
+   #selectizeInput(inputId = 'anioSubjSel', label = 'Tiempo', choices = anios, selected = max(anios))
+ #})
 
  
 
@@ -233,16 +233,16 @@ shinyServer(function(input, output, session) {
   })
   
   
-  #output$anioObj <- renderUI({
+  output$anioObj <- renderUI({
     
-  #  gr <- input$lastGraphObj
+    gr <- input$lastGraphObj
     
-  #  if(is.null(gr)) gr <- 'linea'
+    if(is.null(gr)) gr <- 'linea'
     
-  #  if(gr == 'linea') return()  
+    if(gr == 'linea') return()  
       
-  #  selectorAnio(objDat, input$VariablesObjtivos, 'anioObjSel')
-  #})
+    selectorAnio(objDat, input$VariablesObjtivos, 'anioObjSel')
+  })
   
   
   output$VizObj <- renderUI({
