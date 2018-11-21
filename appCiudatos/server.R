@@ -45,15 +45,13 @@ shinyServer(function(input, output, session) {
    input$lastGraph
  }) 
  
-  output$vizStack <- renderHighchart({
-  
-  if(is.null(input$VariablesSubjetivos)) return()
-  
-  idElg <- input$VariablesSubjetivos
-  data <- BaseGeneral(idElg, subjDat, input$anioSubjSel)
-  stackGraph(data, dicSbj$label[dicSbj$id == idElg]) %>% 
-    hc_credits(enabled = TRUE, text = "Resultados sobre el total de encuestados")
-  })
+  #output$vizStack <- renderHighchart({
+  #if(is.null(input$VariablesSubjetivos)) return()
+  #idElg <- input$VariablesSubjetivos
+  #data <- BaseGeneral(idElg, subjDat, input$anioSubjSel)
+  #stackGraph(data, dicSbj$label[dicSbj$id == idElg]) %>% 
+  #   hc_credits(enabled = TRUE, text = "Resultados sobre el total de encuestados")
+  #})
   
 
   
