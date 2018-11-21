@@ -348,7 +348,7 @@ function changeObj(){
         console.log('son barras');
       console.log(vizStackObj);
       if (vizStackObj == null || vizStackObj==undefined) {
-         var containerDiv = document.getElementById("VizSubjCity"),
+         var containerDiv = document.getElementById("VizObj"),
                           url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja3?:embed=y&:display_count=yes&publish=yes",
                           options = {
                               hideTabs: true,
@@ -380,7 +380,7 @@ function changeObj(){
       
    
       if (vizTreemapObj == null || vizTreemapObj==undefined) {
-         var containerDiv = document.getElementById("VizSubjCity"),
+         var containerDiv = document.getElementById("VizObj"),
                           url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja2?:embed=y&:display_count=yes&publish=yes",
                           options = {
                               hideTabs: true,
@@ -412,7 +412,7 @@ function changeObj(){
       
    
       if (vizmapaObj == null || vizmapaObj==undefined) {
-         var containerDiv = document.getElementById("VizSubjCity"),
+         var containerDiv = document.getElementById("VizObj"),
                           url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja4?:embed=y&:display_count=yes&publish=yes",
                           options = {
                               hideTabs: true,
