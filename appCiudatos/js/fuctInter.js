@@ -213,7 +213,7 @@ function changeSUbjCiudad(){
             if (value !== "") {
                 sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
             }
-             fieldname = "Ciudad";
+             fieldname = "City";
             value = $("#ciudadSubj").val();
             
              if (value !== "") {
@@ -253,7 +253,7 @@ function changeSUbjCiudad(){
             if (value !== "") {
                 sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
             }
-             fieldname = "Ciudad";
+             fieldname = "City";
             value = $("#ciudadSubj").val();
             
              if (value !== "") {
@@ -291,7 +291,7 @@ function changeSUbjCiudad(){
             if (value !== "") {
                 sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
             }
-             fieldname = "Ciudad";
+             fieldname = "City";
             value = $("#ciudadSubj").val();
             
              if (value !== "") {
