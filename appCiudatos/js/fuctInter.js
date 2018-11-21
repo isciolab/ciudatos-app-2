@@ -164,7 +164,7 @@ function changeSUbj(){
                             hideTabs: true,
 
                             "Name": $("#VariablesSubjetivos").val(),
-                            //"AÑO(Anio)": $("#anioSubjSel").val(),
+                            
                             onFirstInteractive: function () {
 
                                   changeSUbj();
@@ -179,12 +179,7 @@ function changeSUbj(){
             if (value !== "") {
                 sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
             }
-             fieldname = "AÑO(Anio)";
-            value = $("#anioSubjSel").val();
-            
-             if (value !== "") {
-                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
-            }
+             
            
     }
   
@@ -210,8 +205,7 @@ function changeSUbjCiudad(){
                         };
                     vizLine = new tableau.Viz(containerDiv, url, options);
     }else{
-         console.log($("#ciudadSubj").val());
-         console.log($("#varCiudadSubjSel").val());
+        
          var sheet = vizLine.getWorkbook().getActiveSheet();
             var fieldname = "Name";
             var value = $("#varCiudadSubjSel").val();
