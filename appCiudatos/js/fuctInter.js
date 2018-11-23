@@ -481,7 +481,7 @@ function changeObjC(){
   if(currentButton=='linea'){
     
   
-      if (vizLineObj == null || vizLineObj==undefined) {
+      if (vizLineObjC == null || vizLineObjC==undefined) {
          var containerDiv = document.getElementById("VizObjCif"),
                           url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja5?:embed=y&:display_count=yes&publish=yes",
                           options = {
@@ -492,10 +492,10 @@ function changeObjC(){
                                                         
                               }
                           };
-                      vizLineObj = new tableau.Viz(containerDiv, url, options);
+                      vizLineObjC = new tableau.Viz(containerDiv, url, options);
       }else{
           
-           var sheet = vizLineObj.getWorkbook().getActiveSheet();
+           var sheet = vizLineObjC.getWorkbook().getActiveSheet();
               var fieldname = "Name";
               var value = $("#varObjCiudadE").val();
              
@@ -520,8 +520,8 @@ function changeObjC(){
     if(currentButton=='barras'){
       
         console.log('son barras');
-      console.log(vizStackObj);
-      if (vizStackObj == null || vizStackObj==undefined) {
+     
+      if (vizStackObjC == null || vizStackObjC==undefined) {
          var containerDiv = document.getElementById("VizObjCif"),
                           url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja6?:embed=y&:display_count=yes&publish=yes",
                           options = {
@@ -532,10 +532,10 @@ function changeObjC(){
                                                         
                               }
                           };
-                      vizStackObj = new tableau.Viz(containerDiv, url, options);
+                      vizStackObjC = new tableau.Viz(containerDiv, url, options);
       }else{
           
-           var sheet = vizStackObj.getWorkbook().getActiveSheet();
+           var sheet = vizStackObjC.getWorkbook().getActiveSheet();
               var fieldname = "Name";
               var value = $("#varObjCiudadE").val();
              
