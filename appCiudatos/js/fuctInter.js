@@ -42,6 +42,10 @@ $(document).on("shiny:inputchanged", function(event) {
                      changeObj();
                   }
                
+                if(event.name=='varObjCiudadE'){
+                     changeObjC();
+                  }
+               
   });
               
 
