@@ -482,7 +482,7 @@ function changeObjC(){
     
   
       if (vizLineObj == null || vizLineObj==undefined) {
-         var containerDiv = document.getElementById("contVizCiud"),
+         var containerDiv = document.getElementById("VizObjCif"),
                           url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja5?:embed=y&:display_count=yes&publish=yes",
                           options = {
                               hideTabs: true,
@@ -522,7 +522,7 @@ function changeObjC(){
         console.log('son barras');
       console.log(vizStackObj);
       if (vizStackObj == null || vizStackObj==undefined) {
-         var containerDiv = document.getElementById("contVizCiud"),
+         var containerDiv = document.getElementById("VizObjCif"),
                           url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja6?:embed=y&:display_count=yes&publish=yes",
                           options = {
                               hideTabs: true,
