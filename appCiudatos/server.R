@@ -380,8 +380,9 @@ output$baks <- renderPrint({
   output$VizObjCif <- renderUI({
     
     idG <- if (is.null(input$lastGraphObjC)){
-      'linea'} else {
-        input$lastGraphObjC
+      #'linea'
+      } else {
+        #input$lastGraphObjC
       }         
     
     # if (idG == 'treemap') 
