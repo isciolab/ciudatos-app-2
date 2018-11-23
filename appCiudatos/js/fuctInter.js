@@ -6,6 +6,8 @@ var vizLineObj;
 var vizStackObj;
 var vizTreemapObj;
 var vizmapaObj;
+var vizLineObjC;
+var vizStackObjC;
 var currentButton = 'linea';
 $(document).on('click', '.buttonStyle', function () {
         Shiny.onInputChange('last_btn',this.id);
@@ -83,6 +85,8 @@ $(document).on('click', '.buttonStyleGraphCity', function () {
         
    });
 
+
+
 $(document).on('click', '.buttonStyleGraphObj', function () {
         Shiny.onInputChange('lastGraphObj',this.id);
         
@@ -115,8 +119,30 @@ $(document).on('click', '.buttonStyleGraphObj', function () {
         
    });
    
+   
+   
 $(document).on('click', '.buttonStyleGraphObjCiud', function () {
         Shiny.onInputChange('lastGraphObjC',this.id);
+        
+        
+         currentButton = this.id;
+        
+        if(vizLineObjC !=undefined)
+        {
+         vizLineObjC.dispose();
+         vizLineObjC = undefined;
+        }
+        if(vizStackObjC !=undefined){
+                vizStackObjC.dispose();
+                vizStackObjC = undefined;
+        }
+        
+        
+        $("#VizObjCif").html('');
+      
+        changeObjC();
+        
+        
    });
 
 $(document).on('click', '.temasComunes', function () {
@@ -436,6 +462,84 @@ function changeObj(){
              
        }
     }
+  
+}
+
+
+
+
+
+
+function changeObjC(){
+  
+  console.log(currentButton);
+  
+  if(currentButton=='linea'){
+    
+  
+      if (vizLineObj == null || vizLineObj==undefined) {
+         var containerDiv = document.getElementById("VizObjCif"),
+                          url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja1?:embed=y&:display_count=yes&publish=yes",
+                          options = {
+                              hideTabs: true,
+  
+                             onFirstInteractive: function () {
+                                 changeObj();
+                                                        
+                              }
+                          };
+                      vizLineObj = new tableau.Viz(containerDiv, url, options);
+      }else{
+          
+           var sheet = vizLineObj.getWorkbook().getActiveSheet();
+              var fieldname = "Name";
+              var value = $("#VariablesObjtivos").val();
+             
+              if (value !== "") {
+                  sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+              }
+              
+             
+      }
+  }
+  
+  
+    
+    
+    
+    if(currentButton=='barras'){
+      
+        console.log('son barras');
+      console.log(vizStackObj);
+      if (vizStackObj == null || vizStackObj==undefined) {
+         var containerDiv = document.getElementById("VizObjCif"),
+                          url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja3?:embed=y&:display_count=yes&publish=yes",
+                          options = {
+                              hideTabs: true,
+  
+                             onFirstInteractive: function () {
+                                 changeSUbjCiudad();
+                                                        
+                              }
+                          };
+                      vizStackObj = new tableau.Viz(containerDiv, url, options);
+      }else{
+          
+           var sheet = vizStackObj.getWorkbook().getActiveSheet();
+              var fieldname = "Name";
+              var value = $("#VariablesObjtivos").val();
+             
+              if (value !== "") {
+                  sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+              }
+               
+             
+       }
+    }
+    
+    
+    
+    
   
 }
 
