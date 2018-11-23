@@ -497,7 +497,7 @@ function changeObjC(){
           
            var sheet = vizLineObj.getWorkbook().getActiveSheet();
               var fieldname = "Name";
-              var value = $("#VariablesObjtivos").val();
+              var value = $("#varObjCiudadE").val();
              
               if (value !== "") {
                   sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
@@ -537,7 +537,7 @@ function changeObjC(){
           
            var sheet = vizStackObj.getWorkbook().getActiveSheet();
               var fieldname = "Name";
-              var value = $("#VariablesObjtivos").val();
+              var value = $("#varObjCiudadE").val();
              
               if (value !== "") {
                   sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
