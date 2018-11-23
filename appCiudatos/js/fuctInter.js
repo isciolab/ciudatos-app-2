@@ -479,7 +479,7 @@ function changeObjC(){
   
       if (vizLineObj == null || vizLineObj==undefined) {
          var containerDiv = document.getElementById("VizObjCif"),
-                          url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja1?:embed=y&:display_count=yes&publish=yes",
+                          url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja5?:embed=y&:display_count=yes&publish=yes",
                           options = {
                               hideTabs: true,
   
@@ -494,6 +494,12 @@ function changeObjC(){
            var sheet = vizLineObj.getWorkbook().getActiveSheet();
               var fieldname = "Name";
               var value = $("#VariablesObjtivos").val();
+             
+              if (value !== "") {
+                  sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+              }
+              var fieldname = "City";
+              var value = $("#ciudadObjD").val();
              
               if (value !== "") {
                   sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
@@ -513,7 +519,7 @@ function changeObjC(){
       console.log(vizStackObj);
       if (vizStackObj == null || vizStackObj==undefined) {
          var containerDiv = document.getElementById("VizObjCif"),
-                          url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja3?:embed=y&:display_count=yes&publish=yes",
+                          url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja6?:embed=y&:display_count=yes&publish=yes",
                           options = {
                               hideTabs: true,
   
@@ -532,6 +538,14 @@ function changeObjC(){
               if (value !== "") {
                   sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
               }
+              
+              var fieldname = "City";
+              var value = $("#ciudadObjD").val();
+             
+              if (value !== "") {
+                  sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+              }
+              
                
              
        }
