@@ -228,7 +228,7 @@ function changeSUbjCiudad(){
                         options = {
                             hideTabs: true,
 
-                           onFirstInteractive: function () {
+                            onFirstInteractive: function () {
                                changeSUbjCiudad();
                                                       
                             }
@@ -247,7 +247,7 @@ function changeSUbjCiudad(){
             value = $("#ciudadSubj").val();
             console.log(value);
              if (value !== "") {
-                sheet.applyFilterAsync(fieldname, value.toUpperCase(), tableau.FilterUpdateType.REPLACE);
+                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
             }
            
     }
