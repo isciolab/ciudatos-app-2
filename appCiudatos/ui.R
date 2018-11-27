@@ -138,13 +138,13 @@ HTML("<img src='img/menu/datosoficiales.png' class = 'imgTab'>
                    div(class = 'row',
                        div(class = 'col-md-6 col-lg-6', style = 'text-align: -webkit-center;',
                            uiOutput('fselCruc'),
-                 div(id='grafCrucesD', height = 311),
-                 uiOutput(id='grafCrucesDHidden', style = 'display:none'),
+                 uiOutput('grafCrucesD', height = 311),
+                 uiOutput('grafCrucesDHidden', style = 'display:none'),
                  uiOutput('tabSelCom1')),
                  div(class = 'col-md-6 col-lg-6', style = 'text-align: -webkit-center;',
                    uiOutput('TselCruc'),
-                   uiOutput(id='grafCrucesDSHidden', style = 'display:none'),
-                   div(id='grafCrucesDS', height = 311),
+                   uiOutput('grafCrucesDSHidden', style = 'display:none'),
+                   uiOutput('grafCrucesDS', height = 311),
                    uiOutput('tabSelCom2'))
                  )),
                  tabPanel(
