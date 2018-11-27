@@ -733,6 +733,17 @@ output$baks <- renderPrint({
   h
   })
   
+  output$grafCrucesDHidden <- renderUI({
+    varSe <- input$SelvarElgC
+    if (cruces$base[cruces$id == varSe] == 'Datos de percepción') {
+        h<-'sub'
+      
+      } else {
+        h<-'obj'
+      }
+    h
+  })
+  
   output$grafCrucesDS <- renderHighchart({
     varSe <- input$SelSegVar
     if (cruces$base[cruces$id == varSe] == 'Datos de percepción') {
@@ -745,6 +756,16 @@ output$baks <- renderPrint({
       }
     } else {
       h <- crucLineObje(tablaCompDos(), dicObj$label[dicObj$id == varSe] )
+    }
+    h
+  })
+  
+  output$grafCrucesDSHidden <- renderHighchart({
+    varSe <- input$SelSegVar
+    if (cruces$base[cruces$id == varSe] == 'Datos de percepción') {
+      h <-'sub'
+    } else {
+      h <-'obj'
     }
     h
   })
