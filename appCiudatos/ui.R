@@ -143,7 +143,7 @@ HTML("<img src='img/menu/datosoficiales.png' class = 'imgTab'>
                  uiOutput('tabSelCom1')),
                  div(class = 'col-md-6 col-lg-6', style = 'text-align: -webkit-center;',
                    uiOutput('TselCruc'),
-                   uiOutput('grafCrucesDSHidden', style = 'display:none'),
+                   uiOutput('grafCrucesDSHidden'),
                    uiOutput('grafCrucesDS', height = 311),
                    uiOutput('tabSelCom2'))
                  )),
