@@ -760,7 +760,7 @@ output$baks <- renderPrint({
     h
   })
   
-  output$grafCrucesDSHidden <- renderHighchart({
+  output$grafCrucesDSHidden <- renderUI({
     varSe <- input$SelSegVar
     if (cruces$base[cruces$id == varSe] == 'Datos de percepción') {
       h <-'sub'
