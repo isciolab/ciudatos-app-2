@@ -741,7 +741,7 @@ output$baks <- renderPrint({
       } else {
         h<-'obj'
       }
-    uiOutput(h)
+    h
   })
   
   output$grafCrucesDS <- renderHighchart({
