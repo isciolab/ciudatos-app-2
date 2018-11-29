@@ -50,6 +50,11 @@ $(document).on("shiny:inputchanged", function(event) {
                   
                 if(event.name=='SelvarElgC'){
                   
+                   vizTreemap.dispose();
+                    vizTreemap = undefined;
+       
+        
+                  $("#grafCrucesD").html('');
                     var tipo=$("#grafCrucesDHidden").text();
                     if(tipo=='obj'){
                        changeObjCruces();
