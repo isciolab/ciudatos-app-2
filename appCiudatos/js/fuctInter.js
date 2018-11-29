@@ -60,7 +60,7 @@ $(document).on("shiny:inputchanged", function(event) {
                   }
         
                   $("#grafCrucesD").html('');
-                  $("#grafCrucesDs").html('');
+                 
                     
                     var tipo=$("#grafCrucesDHidden").text();
                     if(tipo=='obj'){
@@ -70,22 +70,27 @@ $(document).on("shiny:inputchanged", function(event) {
                     }
                 }
                 
-                /*if(event.name=='SelSegVar'){
-                  if(vizLineObjCruces!=undefined){
-                   vizLineObjCruces.dispose();
-                    vizLineObjCruces = undefined;
+                if(event.name=='SelSegVar'){
+                  if(vizLineObjCrucesDS!=undefined){
+                      vizLineObjCrucesDS.dispose();
+                      vizLineObjCrucesDS = undefined;
                   }
+                  if(vizLineSubjCrucesDS!=undefined){
+                      vizLineSubjCrucesDS.dispose();
+                      vizLineSubjCrucesDS = undefined;
+                  }
+        
        
        
         
                   $("#grafCrucesDS").html('');
                     var tipo=$("#grafCrucesDSHidden").text();
                     if(tipo=='obj'){
-                       changeObjCruces();
+                       changeObjCrucesDS();
                     }else{
-                      changeSubjCruces();
+                      changeSubjCrucesDS();
                     }
-                }*/
+                }
                
   });
               
@@ -655,7 +660,7 @@ function changeSubjCruces(){
  
     
     if (vizLineSubjCruces == null) {
-       var containerDiv = document.getElementById("grafCrucesDS"),
+       var containerDiv = document.getElementById("grafCrucesD"),
                         url = "https://public.tableau.com/views/CiudatosGraficos/Hoja2?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
@@ -694,6 +699,95 @@ function changeSubjCruces(){
 
 
 
+
+function changeObjCrucesDS(){
+  
+ 
+ 
+ 
+    
+    if (vizLineObjCrucesDS == null) {
+       var containerDiv = document.getElementById("grafCrucesDS"),
+                        url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja5?:embed=y&:display_count=yes&publish=yes",
+                        options = {
+                            hideTabs: true,
+
+                            
+                            onFirstInteractive: function () {
+
+                                  changeObjCrucesDS();
+                            }
+                        };
+                    vizLineObjCrucesDS = new tableau.Viz(containerDiv, url, options);
+    }else{
+         var sheet = vizLineObjCrucesDS.getWorkbook().getActiveSheet();
+            var fieldname = "Name";
+            var value = $("#SelSegVar").val();
+           
+            if (value !== "") {
+                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+            }
+             var fieldname = "City";
+            var value = $("#ciudadOpCru").val();
+           
+            if (value !== "") {
+                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+            }
+             
+           
+    }
+    
+  
+   
+    
+    
+  
+}
+
+
+function changeSubjCrucesDS(){
+  
+ 
+ 
+ 
+    
+    if (vizLineSubjCrucesDS == null) {
+       var containerDiv = document.getElementById("grafCrucesDS"),
+                        url = "https://public.tableau.com/views/CiudatosGraficos/Hoja2?:embed=y&:display_count=yes&publish=yes",
+                        options = {
+                            hideTabs: true,
+
+                            
+                            onFirstInteractive: function () {
+
+                                  changeSubjCrucesDS();
+                            }
+                        };
+                    vizLineSubjCrucesDS = new tableau.Viz(containerDiv, url, options);
+    }else{
+         var sheet = vizLineSubjCrucesDS.getWorkbook().getActiveSheet();
+            var fieldname = "Name";
+            var value = $("#SelSegVar").val();
+           
+            if (value !== "") {
+                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+            }
+            var fieldname = "City";
+            var value = $("#ciudadOpCru").val();
+           
+            if (value !== "") {
+                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+            }
+             
+           
+    }
+    
+  
+   
+    
+    
+  
+}
 
    /*
    
