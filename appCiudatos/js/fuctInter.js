@@ -50,11 +50,18 @@ $(document).on("shiny:inputchanged", function(event) {
                   
                 if(event.name=='SelvarElgC'){
                   
-                   vizLineObjCruces.dispose();
-                    vizLineObjCruces = undefined;
-       
+                  if(vizLineObjCruces!=undefined){
+                      vizLineObjCruces.dispose();
+                      vizLineObjCruces = undefined;
+                  }
+                  if(vizLineSubjCruces!=undefined){
+                      vizLineSubjCruces.dispose();
+                      vizLineSubjCruces = undefined;
+                  }
         
                   $("#grafCrucesD").html('');
+                  $("#grafCrucesDs").html('');
+                    
                     var tipo=$("#grafCrucesDHidden").text();
                     if(tipo=='obj'){
                        changeObjCruces();
@@ -63,10 +70,12 @@ $(document).on("shiny:inputchanged", function(event) {
                     }
                 }
                 
-                if(event.name=='SelSegVar'){
-                  
+                /*if(event.name=='SelSegVar'){
+                  if(vizLineObjCruces!=undefined){
                    vizLineObjCruces.dispose();
                     vizLineObjCruces = undefined;
+                  }
+       
        
         
                   $("#grafCrucesDS").html('');
@@ -76,7 +85,7 @@ $(document).on("shiny:inputchanged", function(event) {
                     }else{
                       changeSubjCruces();
                     }
-                }
+                }*/
                
   });
               
