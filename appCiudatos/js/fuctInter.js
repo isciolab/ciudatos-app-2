@@ -10,7 +10,7 @@ var vizLineObjC;
 var vizStackObjC;
 var vizLineObjCruces;
 var vizLineSubjCruces;
-var vizLineObjCrucesDS;
+var vizLineSubjCrucesDS;
 var vizLineObjCrucesDS;
 var currentButton = 'linea';
 $(document).on('click', '.buttonStyle', function () {
