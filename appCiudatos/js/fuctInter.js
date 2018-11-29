@@ -50,12 +50,27 @@ $(document).on("shiny:inputchanged", function(event) {
                   
                 if(event.name=='SelvarElgC'){
                   
-                   vizTreemap.dispose();
-                    vizTreemap = undefined;
+                   vizLineObjCruces.dispose();
+                    vizLineObjCruces = undefined;
        
         
                   $("#grafCrucesD").html('');
                     var tipo=$("#grafCrucesDHidden").text();
+                    if(tipo=='obj'){
+                       changeObjCruces();
+                    }else{
+                      changeSubjCruces();
+                    }
+                }
+                
+                if(event.name=='SelSegVar'){
+                  
+                   vizLineObjCruces.dispose();
+                    vizLineObjCruces = undefined;
+       
+        
+                  $("#grafCrucesDS").html('');
+                    var tipo=$("#grafCrucesDSHidden").text();
                     if(tipo=='obj'){
                        changeObjCruces();
                     }else{
@@ -631,7 +646,7 @@ function changeSubjCruces(){
  
     
     if (vizLineSubjCruces == null) {
-       var containerDiv = document.getElementById("grafCrucesD"),
+       var containerDiv = document.getElementById("grafCrucesDS"),
                         url = "https://public.tableau.com/views/CiudatosGraficos/Hoja2?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
