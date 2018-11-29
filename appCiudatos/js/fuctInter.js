@@ -10,6 +10,8 @@ var vizLineObjC;
 var vizStackObjC;
 var vizLineObjCruces;
 var vizLineSubjCruces;
+var vizLineObjCrucesDS;
+var vizLineObjCrucesDS;
 var currentButton = 'linea';
 $(document).on('click', '.buttonStyle', function () {
         Shiny.onInputChange('last_btn',this.id);
