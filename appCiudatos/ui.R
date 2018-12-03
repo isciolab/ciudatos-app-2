@@ -144,7 +144,7 @@ HTML("<img src='img/menu/datosoficiales.png' class = 'imgTab'>
                  div(class = 'col-md-6 col-lg-6', style = 'text-align: -webkit-center;',
                    uiOutput('TselCruc'),
                    highchartOutput('grafCrucesDS', height = 311),
-                   uiOutput('grafCrucesDSHidden', style = 'display:block'),
+                   uiOutput('grafCrucesDSHidden', style = 'display:hidden'),
                    uiOutput('tabSelCom2'))
                  )),
                  tabPanel(
