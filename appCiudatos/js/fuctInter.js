@@ -62,15 +62,16 @@ $(document).on("shiny:inputchanged", function(event) {
                   }
         
                   $("#grafCrucesD").html('');
-                 
-                    
-                    var tipo=$("#grafCrucesDHidden").text();
+                 setTimeout(function(){ 
+                   var tipo=$("#grafCrucesDHidden").text();
                     console.log(tipo);
                     if(tipo=='obj'){
                        changeObjCruces();
                     }else{
                       changeSubjCruces();
-                    }
+                    } }, 3000);
+                    
+                    
                 }
                 
                 if(event.name=='SelSegVar'){
@@ -84,15 +85,20 @@ $(document).on("shiny:inputchanged", function(event) {
                   }
         
        
-       
+               $("#grafCrucesDS").html('');
         
-                  $("#grafCrucesDS").html('');
-                    var tipo=$("#grafCrucesDSHidden").text();
+                 setTimeout(function(){ 
+                   var tipo=$("#grafCrucesDHidden").text();
+                     var tipo=$("#grafCrucesDSHidden").text();
                     if(tipo=='obj'){
                        changeObjCrucesDS();
                     }else{
                       changeSubjCrucesDS();
-                    }
+                    } }, 3000);
+                    
+                    
+                 
+                   
                 }
                
   });
