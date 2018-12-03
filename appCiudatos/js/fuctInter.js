@@ -65,6 +65,7 @@ $(document).on("shiny:inputchanged", function(event) {
                  
                     
                     var tipo=$("#grafCrucesDHidden").text();
+                    console.log(tipo);
                     if(tipo=='obj'){
                        changeObjCruces();
                     }else{
