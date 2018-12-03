@@ -139,7 +139,7 @@ HTML("<img src='img/menu/datosoficiales.png' class = 'imgTab'>
                        div(class = 'col-md-6 col-lg-6', style = 'text-align: -webkit-center;',
                            uiOutput('fselCruc'),
                  highchartOutput('grafCrucesD', height = 311),
-                 uiOutput('grafCrucesDHidden', style = 'display:block'),
+                 uiOutput('grafCrucesDHidden', style = 'display:none'),
                  uiOutput('tabSelCom1')),
                  div(class = 'col-md-6 col-lg-6', style = 'text-align: -webkit-center;',
                    uiOutput('TselCruc'),
