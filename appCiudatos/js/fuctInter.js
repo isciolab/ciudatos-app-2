@@ -885,7 +885,7 @@ function changeUniversidades(){
     console.log(vizUBarras);
     if (vizUBarras == null || vizUBarras==undefined) {
        var containerDiv = document.getElementById("vizElgICU"),
-                        url = "https://public.tableau.com/views/CiudatosGraficos/Hoja3?:embed=y&:display_count=yes&publish=yes",
+                        url = "https://public.tableau.com/views/Ciudatos-universidaes/Hoja2?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
 
