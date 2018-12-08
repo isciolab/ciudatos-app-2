@@ -865,7 +865,7 @@ function changeUniversidades(){
         
          var sheet = vizULineas.getWorkbook().getActiveSheet();
             var fieldname = "Name";
-            var value = $("#indEOT").val();
+            var value = $("#indCCU").val();
          
             if (value !== "") {
                 sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
@@ -899,7 +899,7 @@ function changeUniversidades(){
       
          var sheet = vizUBarras.getWorkbook().getActiveSheet();
             var fieldname = "Name";
-            var value = $("#indEOT").val();
+            var value = $("#indCCU").val();
            
             if (value !== "") {
                 sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
