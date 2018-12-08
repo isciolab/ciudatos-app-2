@@ -843,17 +843,12 @@ function changeUniversidades(){
         
          var sheet = vizLine.getWorkbook().getActiveSheet();
             var fieldname = "Name";
-            var value = $("#varCiudadSubjSel").val();
+            var value = $("#indEOT").val();
            console.log(value);
             if (value !== "") {
                 sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
             }
-             fieldname = "City";
-            value = $("#ciudadSubj").val();
-            console.log(value);
-             if (value !== "") {
-                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
-            }
+            
            
     }
   }
@@ -883,15 +878,9 @@ function changeUniversidades(){
          console.log($("#varCiudadSubjSel").val());
          var sheet = vizStackCiudad.getWorkbook().getActiveSheet();
             var fieldname = "Name";
-            var value = $("#varCiudadSubjSel").val();
+            var value = $("#indEOT").val();
            
             if (value !== "") {
-                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
-            }
-             fieldname = "City";
-            value = $("#ciudadSubj").val();
-            
-             if (value !== "") {
                 sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
             }
            
