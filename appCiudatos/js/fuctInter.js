@@ -102,6 +102,26 @@ $(document).on("shiny:inputchanged", function(event) {
                  
                    
                 }
+                
+                if(event.name=='indEOT'){
+                  
+                    currentButton = this.id;
+         
+                    if(vizULineas !=undefined){
+                            vizULineas.dispose();
+                            vizULineas = undefined;
+                    }
+                    
+                     if(vizUBarras !=undefined){
+                            vizUBarras.dispose();
+                            vizUBarras = undefined;
+                    }
+                    
+                    $("#vizElgICU").html('');
+                  
+                    changeUniversidades();
+        
+                }
                
   });
               
@@ -136,6 +156,8 @@ $(document).on('click', '.BuGraphIcu', function () {
         
         //vizElgICU
    });
+   
+   
   
 $(document).on('click', '.buttonStyleGraphCity', function () {
         Shiny.onInputChange('lastGraphCity',this.id);
@@ -844,7 +866,7 @@ function changeUniversidades(){
          var sheet = vizULineas.getWorkbook().getActiveSheet();
             var fieldname = "Name";
             var value = $("#indEOT").val();
-           console.log(value);
+         
             if (value !== "") {
                 sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
             }
@@ -874,8 +896,7 @@ function changeUniversidades(){
                         };
                     vizUBarras = new tableau.Viz(containerDiv, url, options);
     }else{
-         console.log($("#ciudadSubj").val());
-         console.log($("#varCiudadSubjSel").val());
+      
          var sheet = vizUBarras.getWorkbook().getActiveSheet();
             var fieldname = "Name";
             var value = $("#indEOT").val();
