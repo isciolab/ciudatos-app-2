@@ -827,21 +827,21 @@ function changeUniversidades(){
   if(currentButton=='linea'){
     
     
-    if (vizLine == null || vizLine==undefined) {
-       var containerDiv = document.getElementById("VizSubjCity"),
+    if (vizULineas == null || vizULineas==undefined) {
+       var containerDiv = document.getElementById("vizElgICU"),
                         url = "https://public.tableau.com/views/Ciudatos-universidaes/Hoja1?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
 
                             onFirstInteractive: function () {
-                               changeSUbjCiudad();
+                               changeUniversidades();
                                                       
                             }
                         };
-                    vizLine = new tableau.Viz(containerDiv, url, options);
+                    vizULineas = new tableau.Viz(containerDiv, url, options);
     }else{
         
-         var sheet = vizLine.getWorkbook().getActiveSheet();
+         var sheet = vizULineas.getWorkbook().getActiveSheet();
             var fieldname = "Name";
             var value = $("#indEOT").val();
            console.log(value);
@@ -860,23 +860,23 @@ function changeUniversidades(){
     if(currentButton=='barras'){
       
       console.log('son barras');
-    console.log(vizStackCiudad);
-    if (vizStackCiudad == null || vizStackCiudad==undefined) {
-       var containerDiv = document.getElementById("VizSubjCity"),
+    console.log(vizUBarras);
+    if (vizUBarras == null || vizUBarras==undefined) {
+       var containerDiv = document.getElementById("vizElgICU"),
                         url = "https://public.tableau.com/views/CiudatosGraficos/Hoja3?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
 
                            onFirstInteractive: function () {
-                               changeSUbjCiudad();
+                               changeUniversidades();
                                                       
                             }
                         };
-                    vizStackCiudad = new tableau.Viz(containerDiv, url, options);
+                    vizUBarras = new tableau.Viz(containerDiv, url, options);
     }else{
          console.log($("#ciudadSubj").val());
          console.log($("#varCiudadSubjSel").val());
-         var sheet = vizStackCiudad.getWorkbook().getActiveSheet();
+         var sheet = vizUBarras.getWorkbook().getActiveSheet();
             var fieldname = "Name";
             var value = $("#indEOT").val();
            
