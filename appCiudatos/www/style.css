@@ -566,7 +566,7 @@ img {
   margin-left: 10%;
 }
 
-.grafICU {
+.grafICU, .grafIEOT {
   text-align: -webkit-center;
   text-align: -moz-center;
   background: #fff;

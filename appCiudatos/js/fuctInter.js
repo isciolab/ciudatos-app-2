@@ -14,6 +14,8 @@ var vizLineSubjCrucesDS;
 var vizLineObjCrucesDS;
 var vizULineas;
 var vizUBarras;
+var vizUeotLineas;
+var vizUeotBarras;
 var currentButton = 'linea';
 $(document).on('click', '.buttonStyle', function () {
         Shiny.onInputChange('last_btn',this.id);
@@ -103,9 +105,9 @@ $(document).on("shiny:inputchanged", function(event) {
                    
                 }
                 
-                if(event.name=='indEOT'){
+                if(event.name=='indCCU'){
                   
-                    currentButton = this.id;
+                    //currentButton = this.id;
          
                     if(vizULineas !=undefined){
                             vizULineas.dispose();
@@ -122,6 +124,47 @@ $(document).on("shiny:inputchanged", function(event) {
                     changeUniversidades();
         
                 }
+                
+                if(event.name=='indCCU'){
+                  
+                   // currentButton = this.id;
+         
+                    if(vizULineas !=undefined){
+                            vizULineas.dispose();
+                            vizULineas = undefined;
+                    }
+                    
+                     if(vizUBarras !=undefined){
+                            vizUBarras.dispose();
+                            vizUBarras = undefined;
+                    }
+                    
+                    $("#vizElgICU").html('');
+                  
+                    changeUniversidades();
+        
+                }
+                
+                if(event.name=='indEOT'){
+                  
+                   // currentButton = this.id;
+         
+                    if(vizUeotLineas !=undefined){
+                            vizUeotLineas.dispose();
+                            vizUeotLineas = undefined;
+                    }
+                    
+                     if(vizeotBarras !=undefined){
+                            vizeotBarras.dispose();
+                            vizeotBarras = undefined;
+                    }
+                    
+                    $("#vizlinEot").html('');
+                  
+                    changeEot();
+        
+                }
+                
                
   });
               
@@ -132,6 +175,30 @@ $(document).on('click', '.buttonStyleGraph', function () {
       changeSUbj();
       
    });
+
+$(document).on('click', '.BUgrafIEOT', function () {
+       //Shiny.onInputChange('lastGraph',this.id);
+       
+                currentButton = this.id;
+         
+                    if(vizUeotLineas !=undefined){
+                            vizUeotLineas.dispose();
+                            vizUeotLineas = undefined;
+                    }
+                    
+                     if(vizeotBarras !=undefined){
+                            vizeotBarras.dispose();
+                            vizeotBarras = undefined;
+                    }
+                    
+                    $("#vizlinEot").html('');
+                  
+                    changeEot();
+      
+   });
+
+
+
 
 
   
@@ -804,7 +871,7 @@ function changeSubjCrucesDS(){
     
     if (vizLineSubjCrucesDS == null) {
        var containerDiv = document.getElementById("grafCrucesDS"),
-                        url = "https://public.tableau.com/views/CiudatosGraficos/Hoja2?:embed=y&:display_count=yes&publish=yes",
+                        url = "https://public.tableau.com/views/ciudatoseot/Hoja1?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
 
@@ -835,6 +902,79 @@ function changeSubjCrucesDS(){
     
   
    
+    
+    
+  
+}
+
+
+
+function changeEot(){
+  
+  
+  
+  if(currentButton=='linea'){
+    
+    
+    if (vizeotLineas == null || vizeotLineas==undefined) {
+       var containerDiv = document.getElementById("vizlinEot"),
+                        url = "https://public.tableau.com/views/ciudatoseot/Hoja2?:embed=y&:display_count=yes&publish=yes",
+                        options = {
+                            hideTabs: true,
+
+                            onFirstInteractive: function () {
+                               changeEot();
+                                                      
+                            }
+                        };
+                    vizeotLineas = new tableau.Viz(containerDiv, url, options);
+    }else{
+        
+         var sheet = vizeotLineas.getWorkbook().getActiveSheet();
+            var fieldname = "Name";
+            var value = $("#indEOT").val();
+         
+            if (value !== "") {
+                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+            }
+            
+           
+    }
+  }
+  
+  
+    
+    
+    
+    if(currentButton=='barras'){
+    
+    if (vizeotBarras == null || vizeotBarras==undefined) {
+       var containerDiv = document.getElementById("vizlinEot"),
+                        url = "https://public.tableau.com/views/Ciudatos-universidaes/Hoja2?:embed=y&:display_count=yes&publish=yes",
+                        options = {
+                            hideTabs: true,
+
+                           onFirstInteractive: function () {
+                               changeEot();
+                                                      
+                            }
+                        };
+                    vizeotBarras = new tableau.Viz(containerDiv, url, options);
+    }else{
+      
+         var sheet = vizeotBarras.getWorkbook().getActiveSheet();
+            var fieldname = "Name";
+            var value = $("#indEOT").val();
+           
+            if (value !== "") {
+                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+            }
+           
+     }
+    }
+    
+    
+    
     
     
   
@@ -914,8 +1054,6 @@ function changeUniversidades(){
     
   
 }
-
-
 
    /*
    
