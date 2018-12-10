@@ -253,7 +253,7 @@ HTML("<img src='img/menu/datosoficiales.png' class = 'imgTab'>
     div( class = 'col-md-9', style="text-align: center;",
          uiOutput('grafIcu'),
     div(class = 'grafICU',
-    uiOutput('vizElgICU', width = 750)
+    uiOutput('vizElgICU', width = 900)
     ))
   )),
   tabPanel(
@@ -267,7 +267,7 @@ HTML("<img src='img/menu/datosoficiales.png' class = 'imgTab'>
     div( class = 'col-md-9',
     uiOutput('grafIEOT'),
     div(class = 'grafICUEOT',
-    highchartOutput('vizlinEot', width = 750))))#,
+    highchartOutput('vizlinEot', width = 900))))#,
     
   )
                   )

@@ -918,7 +918,7 @@ function changeEot(){
     
     if (vizeotLineas == null || vizeotLineas==undefined) {
        var containerDiv = document.getElementById("vizlinEot"),
-                        url = "https://public.tableau.com/views/ciudatoseot/Hoja2?:embed=y&:display_count=yes&publish=yes",
+                        url = "https://public.tableau.com/views/ciudatoseot/Hoja1?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
 
