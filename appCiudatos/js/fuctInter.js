@@ -105,6 +105,63 @@ $(document).on("shiny:inputchanged", function(event) {
                    
                 }
                 
+                
+                
+                
+                
+                //CRUCES POR TEMAS 
+                if(event.name=='cidCruc'){
+                  
+                  if(vizLineObjCruces!=undefined){
+                      vizLineObjCruces.dispose();
+                      vizLineObjCruces = undefined;
+                  }
+                  if(vizLineSubjCruces!=undefined){
+                      vizLineSubjCruces.dispose();
+                      vizLineSubjCruces = undefined;
+                  }
+        
+                  $("#grafCrucesD").html('');
+                 setTimeout(function(){ 
+                   var tipo=$("#grafCrucesDHidden").text();
+                    console.log(tipo);
+                    if(tipo=='obj'){
+                       changeObjCruces();
+                    }else{
+                      changeSubjCruces();
+                    } }, 3000);
+                    
+                    
+                }
+                
+                if(event.name=='varOfiC'){
+                  if(vizLineObjCrucesDS!=undefined){
+                      vizLineObjCrucesDS.dispose();
+                      vizLineObjCrucesDS = undefined;
+                  }
+                  if(vizLineSubjCrucesDS!=undefined){
+                      vizLineSubjCrucesDS.dispose();
+                      vizLineSubjCrucesDS = undefined;
+                  }
+        
+       
+               $("#grafCrucesDS").html('');
+        
+                 setTimeout(function(){ 
+                   var tipo=$("#grafCrucesDHidden").text();
+                     var tipo=$("#grafCrucesDSHidden").text();
+                    if(tipo=='obj'){
+                       changeObjCrucesDS();
+                    }else{
+                      changeSubjCrucesDS();
+                    } }, 3000);
+                    
+                    
+                 
+                   
+                }
+                //FIN CRUCES PR TEMAS
+                
                 if(event.name=='indCCU'){
                   
                     //currentButton = this.id;

@@ -527,19 +527,19 @@ output$baks <- renderPrint({
   })
   
   
-  output$grafSubC <- renderHighchart({
+  #output$grafSubC <- renderHighchart({
 
-    anioL <- unique(dataSubCruces()$AÑO)
+   # anioL <- unique(dataSubCruces()$AÑO)
     
-    if (length(anioL) > 1) {
-      h <- linesubjCru(dataSubCruces())}#hgch_line_CatYeaNum(dataSubCruces(), dropNa = TRUE, theme = cid_theme, percentage = TRUE)}
-    if (length(anioL) == 1) {
-      d <- dataSubCruces()[,-2]
-      h <- barsubjCru(d)
-    }
-    h
+    ##if (length(anioL) > 1) {
+    #  h <- linesubjCru(dataSubCruces())}#hgch_line_CatYeaNum(dataSubCruces(), dropNa = TRUE, theme = cid_theme, percentage = TRUE)}
+    #if (length(anioL) == 1) {
+    #  d <- dataSubCruces()[,-2]
+    #  h <- barsubjCru(d)
+    #}
+  #  h
 
-  })
+  #})
   
   
   dataObjCruces <- reactive({
