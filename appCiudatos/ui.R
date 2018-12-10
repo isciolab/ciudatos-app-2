@@ -265,7 +265,8 @@ HTML("<img src='img/menu/datosoficiales.png' class = 'imgTab'>
     uiOutput('textEOTdes'),
     uiOutput('botDataEot'))),
     div( class = 'col-md-9',
-    div(class = 'grafICU',
+    uiOutput('grafIEOT'),
+    div(class = 'grafICUEOT',
     highchartOutput('vizlinEot', width = 750))))#,
     
   )

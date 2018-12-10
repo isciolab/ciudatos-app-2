@@ -912,6 +912,10 @@ output$baks <- renderPrint({
     BotonesGraficas(c('linea', 'barras'), 'BuGraphIcu')
   })
   
+  output$grafIEOT <- renderUI({
+    BotonesGraficas(c('linea', 'barras'), 'BUgrafIEOT')
+  })
+  
   
   output$vizElgICU <- renderUI({
     ifGraf <- input$lastGraphICU
