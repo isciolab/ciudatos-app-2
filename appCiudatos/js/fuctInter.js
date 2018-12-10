@@ -149,9 +149,9 @@ $(document).on("shiny:inputchanged", function(event) {
                   
                    // currentButton = this.id;
          
-                    if(vizUeotLineas !=undefined){
-                            vizUeotLineas.dispose();
-                            vizUeotLineas = undefined;
+                    if(vizeotLineas !=undefined){
+                            vizeotLineas.dispose();
+                            vizeotLineas = undefined;
                     }
                     
                      if(vizeotBarras !=undefined){
