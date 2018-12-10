@@ -14,8 +14,8 @@ var vizLineSubjCrucesDS;
 var vizLineObjCrucesDS;
 var vizULineas;
 var vizUBarras;
-var vizUeotLineas;
-var vizUeotBarras;
+var vizeotLineas;
+var vizeotBarras ;
 var currentButton = 'linea';
 $(document).on('click', '.buttonStyle', function () {
         Shiny.onInputChange('last_btn',this.id);
