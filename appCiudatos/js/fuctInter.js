@@ -950,7 +950,7 @@ function changeEot(){
     
     if (vizeotBarras == null || vizeotBarras==undefined) {
        var containerDiv = document.getElementById("vizlinEot"),
-                        url = "https://public.tableau.com/views/Ciudatos-universidaes/Hoja2?:embed=y&:display_count=yes&publish=yes",
+                        url = "https://public.tableau.com/views/ciudatoseot/Hoja2?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
 
