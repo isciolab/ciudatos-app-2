@@ -979,9 +979,9 @@ output$baks <- renderPrint({
     baseEOT()
   })
   
-  output$vizlinEot <- renderHighchart({
-  vizLineEOT(baseEOT(), dicEOT()$label[dicEOT()$id == input$indEOT] )
-  })
+  #output$vizlinEot <- renderHighchart({
+  #  vizLineEOT(baseEOT(), dicEOT()$label[dicEOT()$id == input$indEOT] )
+  #})
   
   output$botDataEot <- renderUI({
     HTML(

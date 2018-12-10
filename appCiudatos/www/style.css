@@ -382,11 +382,12 @@ img {
   width: 55px;
 }
 
-.buttonStyleGraph, .buttonStyleGraphCity, .buttonStyleGraphObj, .buttonStyleGraphObjCiud, .BuGraphIcu{
+.buttonStyleGraph, .buttonStyleGraphCity, .BUgrafIEOT, .buttonStyleGraphObj, .buttonStyleGraphObjCiud, .BuGraphIcu{
   background: transparent;
   border: none;
   width: 150px;
   margin-top: 9px;
+  
 }
 
 .buttonStyleODS {
