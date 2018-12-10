@@ -917,18 +917,18 @@ output$baks <- renderPrint({
   })
   
   
-  output$vizElgICU <- renderUI({
-    ifGraf <- input$lastGraphICU
-    
-    if (is.null(ifGraf)) ifGraf <- 'linea'
+  #output$vizElgICU <- renderUI({
+  #  ifGraf <- input$lastGraphICU
+  #  
+  #  if (is.null(ifGraf)) ifGraf <- 'linea'
 
-    if (ifGraf == 'barras') {
-      v <- highchartOutput('vizCU', width = 750)
-    } else {
-      v <- highchartOutput('vizCULi', width = 750)
-    }
-    v
-  })
+   # if (ifGraf == 'barras') {
+  #    v <- highchartOutput('vizCU', width = 750)
+  #  } else {
+  #    v <- highchartOutput('vizCULi', width = 750)
+  #  }
+  #  v
+  #})
   
   output$botDataIcu <- renderUI({
     HTML(
