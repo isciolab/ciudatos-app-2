@@ -13,9 +13,9 @@ var vizLineSubjCruces;
 var vizLineSubjCrucesDS;
 var vizLineObjCrucesTema;
 var vizLineSubjCrucesTema;
-var vizLineSubjCrucesDSTema;
+
 var vizLineObjCrucesDS;
-var vizLineObjCrucesDSTema;
+
 var vizULineas;
 var vizUBarras;
 var vizeotLineas;
@@ -1043,95 +1043,6 @@ function changeSubjCrucesTema(){
 
 
 
-
-function changeObjCrucesDSTema(){
-  
- 
- 
- 
-    
-    if (vizLineObjCrucesDSTema == null) {
-       var containerDiv = document.getElementById("grafObjC"),
-                        url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja5?:embed=y&:display_count=yes&publish=yes",
-                        options = {
-                            hideTabs: true,
-
-                            
-                            onFirstInteractive: function () {
-
-                                  changeObjCrucesDSTema();
-                            }
-                        };
-                    vizLineObjCrucesDSTema = new tableau.Viz(containerDiv, url, options);
-    }else{
-         var sheet = vizLineObjCrucesDSTema.getWorkbook().getActiveSheet();
-            var fieldname = "Name";
-            var value = $("#varOfiC").val();
-           
-            if (value !== "") {
-                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
-            }
-             var fieldname = "City";
-            var value = $("#cidCruc").val();
-           
-            if (value !== "") {
-                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
-            }
-             
-           
-    }
-    
-  
-   
-    
-    
-  
-}
-
-
-function changeSubjCrucesDSTema(){
-  
- 
- 
- 
-    
-    if (vizLineSubjCrucesDSTema == null) {
-       var containerDiv = document.getElementById("grafSubC"),
-                        url = "https://public.tableau.com/views/CiudatosGraficos/Hoja2?:embed=y&:display_count=yes&publish=yes",
-                        options = {
-                            hideTabs: true,
-
-                            
-                            onFirstInteractive: function () {
-
-                                  changeSubjCrucesDSTema();
-                            }
-                        };
-                    vizLineSubjCrucesDSTema = new tableau.Viz(containerDiv, url, options);
-    }else{
-         var sheet = vizLineSubjCrucesDSTema.getWorkbook().getActiveSheet();
-            var fieldname = "Name";
-            var value = $("#varOfiC").val();
-           
-            if (value !== "") {
-                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
-            }
-            var fieldname = "City";
-            var value = $("#cidCruc").val();
-           
-            if (value !== "") {
-                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
-            }
-             
-           
-    }
-    
-  
-   
-    
-    
-  
-}
 
 
 
