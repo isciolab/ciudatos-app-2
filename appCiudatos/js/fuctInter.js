@@ -116,24 +116,14 @@ $(document).on("shiny:inputchanged", function(event) {
                 //CRUCES POR TEMAS 
                 if(event.name=='varPerC'){
                   
-                  if(vizLineObjCrucesTema!=undefined){
-                      vizLineObjCrucesTema.dispose();
-                      vizLineObjCrucesTema = undefined;
-                  }
+                  
                   if(vizLineSubjCrucesTema!=undefined){
                       vizLineSubjCrucesTema.dispose();
                       vizLineSubjCrucesTema = undefined;
                   }
         
                   $("#grafSubC").html('');
-                 setTimeout(function(){ 
-                   var tipo=$("#percCrucesHidden").text();
-                    console.log(tipo);
-                    if(tipo=='obj'){
-                       changeObjCrucesTema();
-                    }else{
-                      changeSubjCrucesTema();
-                    } }, 3000);
+                   changeSubjCrucesTema();
                     
                     
                 }
@@ -143,22 +133,12 @@ $(document).on("shiny:inputchanged", function(event) {
                       vizLineObjCrucesDSTema.dispose();
                       vizLineObjCrucesDSTema = undefined;
                   }
-                  if(vizLineSubjCrucesDSTema!=undefined){
-                      vizLineSubjCrucesDSTema.dispose();
-                      vizLineSubjCrucesDSTema = undefined;
-                  }
+                  
         
        
-               $("#grafObjC").html('');
+                   $("#grafObjC").html('');
         
-                 setTimeout(function(){ 
-                   var tipo=$("#oficCrucesHidden").text();
-                  
-                    if(tipo=='obj'){
-                       changeObjCrucesTema();
-                    }else{
-                      changeSubjCrucesTema();
-                    } }, 3000);
+                    changeObjCrucesTema();
                     
                     
                  
@@ -984,7 +964,7 @@ function changeObjCrucesTema(){
  
     
     if (vizLineObjCrucesTema == null) {
-       var containerDiv = document.getElementById("grafSubC"),
+       var containerDiv = document.getElementById("grafObjC"),
                         url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja5?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
@@ -999,7 +979,7 @@ function changeObjCrucesTema(){
     }else{
          var sheet = vizLineObjCrucesTema.getWorkbook().getActiveSheet();
             var fieldname = "Name";
-            var value = $("#varPerC").val();
+            var value = $("#varOfiC").val();
            
             if (value !== "") {
                 sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
@@ -1121,7 +1101,7 @@ function changeSubjCrucesDSTema(){
  
     
     if (vizLineSubjCrucesDSTema == null) {
-       var containerDiv = document.getElementById("grafObjC"),
+       var containerDiv = document.getElementById("grafSubC"),
                         url = "https://public.tableau.com/views/CiudatosGraficos/Hoja2?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
