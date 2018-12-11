@@ -129,19 +129,14 @@ $(document).on("shiny:inputchanged", function(event) {
                 }
                 
                 if(event.name=='varOfiC'){
-                  if(vizLineObjCrucesDSTema!=undefined){
-                      vizLineObjCrucesDSTema.dispose();
-                      vizLineObjCrucesDSTema = undefined;
+                  if(vizLineObjCrucesTema!=undefined){
+                      vizLineObjCrucesTema.dispose();
+                      vizLineObjCrucesTema = undefined;
                   }
-                  
-        
        
                    $("#grafObjC").html('');
         
                     changeObjCrucesTema();
-                    
-                    
-                 
                    
                 }
                 //FIN CRUCES PR TEMAS
