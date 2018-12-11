@@ -172,7 +172,7 @@ shinyServer(function(input, output, session) {
   
   output$botDataSub <- renderUI({
     HTML(
-      '<a href="http://ciudatos.com:3000/datos?data=pc" target="_blank"><button id="botSub">Datos aquí !</button></a>
+      '<a href="http://ciudatos.com/datos?data=pc" target="_blank"><button id="botSub">Datos aquí !</button></a>
       ')
   })
   
