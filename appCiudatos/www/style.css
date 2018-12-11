@@ -567,7 +567,7 @@ img {
 }
 
 #grafIEOT{
-  text-align:centers;
+  text-align:center;
 }
 .grafICU, .grafIEOT {
   text-align: -webkit-center;
