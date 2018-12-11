@@ -11,7 +11,11 @@ var vizStackObjC;
 var vizLineObjCruces;
 var vizLineSubjCruces;
 var vizLineSubjCrucesDS;
+var vizLineObjCrucesTema;
+var vizLineSubjCrucesTema;
+var vizLineSubjCrucesDSTema;
 var vizLineObjCrucesDS;
+var vizLineObjCrucesDSTema;
 var vizULineas;
 var vizUBarras;
 var vizeotLineas;
@@ -92,7 +96,7 @@ $(document).on("shiny:inputchanged", function(event) {
                $("#grafCrucesDS").html('');
         
                  setTimeout(function(){ 
-                   var tipo=$("#grafCrucesDHidden").text();
+                  
                      var tipo=$("#grafCrucesDSHidden").text();
                     if(tipo=='obj'){
                        changeObjCrucesDS();
@@ -110,50 +114,50 @@ $(document).on("shiny:inputchanged", function(event) {
                 
                 
                 //CRUCES POR TEMAS 
-                if(event.name=='cidCruc'){
+                if(event.name=='varPerC'){
                   
-                  if(vizLineObjCruces!=undefined){
-                      vizLineObjCruces.dispose();
-                      vizLineObjCruces = undefined;
+                  if(vizLineObjCrucesTema!=undefined){
+                      vizLineObjCrucesTema.dispose();
+                      vizLineObjCrucesTema = undefined;
                   }
-                  if(vizLineSubjCruces!=undefined){
-                      vizLineSubjCruces.dispose();
-                      vizLineSubjCruces = undefined;
+                  if(vizLineSubjCrucesTema!=undefined){
+                      vizLineSubjCrucesTema.dispose();
+                      vizLineSubjCrucesTema = undefined;
                   }
         
-                  $("#grafCrucesD").html('');
+                  $("#grafSubC").html('');
                  setTimeout(function(){ 
-                   var tipo=$("#grafCrucesDHidden").text();
+                   var tipo=$("#percCrucesHidden").text();
                     console.log(tipo);
                     if(tipo=='obj'){
-                       changeObjCruces();
+                       changeObjCrucesTema();
                     }else{
-                      changeSubjCruces();
+                      changeSubjCrucesTema();
                     } }, 3000);
                     
                     
                 }
                 
                 if(event.name=='varOfiC'){
-                  if(vizLineObjCrucesDS!=undefined){
-                      vizLineObjCrucesDS.dispose();
-                      vizLineObjCrucesDS = undefined;
+                  if(vizLineObjCrucesDSTema!=undefined){
+                      vizLineObjCrucesDSTema.dispose();
+                      vizLineObjCrucesDSTema = undefined;
                   }
-                  if(vizLineSubjCrucesDS!=undefined){
-                      vizLineSubjCrucesDS.dispose();
-                      vizLineSubjCrucesDS = undefined;
+                  if(vizLineSubjCrucesDSTema!=undefined){
+                      vizLineSubjCrucesDSTema.dispose();
+                      vizLineSubjCrucesDSTema = undefined;
                   }
         
        
-               $("#grafCrucesDS").html('');
+               $("#oficCruces").html('');
         
                  setTimeout(function(){ 
-                   var tipo=$("#grafCrucesDHidden").text();
-                     var tipo=$("#grafCrucesDSHidden").text();
+                   var tipo=$("#oficCrucesHidden").text();
+                  
                     if(tipo=='obj'){
-                       changeObjCrucesDS();
+                       changeObjCrucesTema();
                     }else{
-                      changeSubjCrucesDS();
+                      changeSubjCrucesTema();
                     } }, 3000);
                     
                     
@@ -162,6 +166,8 @@ $(document).on("shiny:inputchanged", function(event) {
                 }
                 //FIN CRUCES PR TEMAS
                 
+                
+                //inicio universidades
                 if(event.name=='indCCU'){
                   
                     //currentButton = this.id;
@@ -966,6 +972,197 @@ function changeSubjCrucesDS(){
 
 
 
+
+//cruces por tema
+
+
+
+function changeObjCrucesTema(){
+  
+ 
+ 
+ 
+    
+    if (vizLineObjCrucesTema == null) {
+       var containerDiv = document.getElementById("grafSubC"),
+                        url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja5?:embed=y&:display_count=yes&publish=yes",
+                        options = {
+                            hideTabs: true,
+
+                            
+                            onFirstInteractive: function () {
+
+                                  changeObjCrucesTema();
+                            }
+                        };
+                    vizLineObjCrucesTema = new tableau.Viz(containerDiv, url, options);
+    }else{
+         var sheet = vizLineObjCrucesTema.getWorkbook().getActiveSheet();
+            var fieldname = "Name";
+            var value = $("#varPerC").val();
+           
+            if (value !== "") {
+                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+            }
+             var fieldname = "City";
+            var value = $("#cidCruc").val();
+           
+            if (value !== "") {
+                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+            }
+             
+           
+    }
+    
+  
+   
+    
+    
+  
+}
+
+
+function changeSubjCrucesTema(){
+  
+ 
+ 
+ 
+    
+    if (vizLineSubjCrucesTema == null) {
+       var containerDiv = document.getElementById("grafSubC"),
+                        url = "https://public.tableau.com/views/CiudatosGraficos/Hoja2?:embed=y&:display_count=yes&publish=yes",
+                        options = {
+                            hideTabs: true,
+
+                            
+                            onFirstInteractive: function () {
+
+                                  changeSubjCrucesTema();
+                            }
+                        };
+                    vizLineSubjCrucesTema = new tableau.Viz(containerDiv, url, options);
+    }else{
+         var sheet = vizLineSubjCrucesTema.getWorkbook().getActiveSheet();
+            var fieldname = "Name";
+            var value = $("#varPerC").val();
+           
+            if (value !== "") {
+                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+            }
+            var fieldname = "City";
+            var value = $("#cidCruc").val();
+           
+            if (value !== "") {
+                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+            }
+             
+           
+    }
+    
+  
+   
+    
+    
+  
+}
+
+
+
+
+function changeObjCrucesDSTema(){
+  
+ 
+ 
+ 
+    
+    if (vizLineObjCrucesDSTema == null) {
+       var containerDiv = document.getElementById("grafObjC"),
+                        url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja5?:embed=y&:display_count=yes&publish=yes",
+                        options = {
+                            hideTabs: true,
+
+                            
+                            onFirstInteractive: function () {
+
+                                  changeObjCrucesDSTema();
+                            }
+                        };
+                    vizLineObjCrucesDSTema = new tableau.Viz(containerDiv, url, options);
+    }else{
+         var sheet = vizLineObjCrucesDSTema.getWorkbook().getActiveSheet();
+            var fieldname = "Name";
+            var value = $("#varOfiC").val();
+           
+            if (value !== "") {
+                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+            }
+             var fieldname = "City";
+            var value = $("#cidCruc").val();
+           
+            if (value !== "") {
+                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+            }
+             
+           
+    }
+    
+  
+   
+    
+    
+  
+}
+
+
+function changeSubjCrucesDSTema(){
+  
+ 
+ 
+ 
+    
+    if (vizLineSubjCrucesDSTema == null) {
+       var containerDiv = document.getElementById("grafObjC"),
+                        url = "https://public.tableau.com/views/CiudatosGraficos/Hoja2?:embed=y&:display_count=yes&publish=yes",
+                        options = {
+                            hideTabs: true,
+
+                            
+                            onFirstInteractive: function () {
+
+                                  changeSubjCrucesDSTema();
+                            }
+                        };
+                    vizLineSubjCrucesDSTema = new tableau.Viz(containerDiv, url, options);
+    }else{
+         var sheet = vizLineSubjCrucesDSTema.getWorkbook().getActiveSheet();
+            var fieldname = "Name";
+            var value = $("#varOfiC").val();
+           
+            if (value !== "") {
+                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+            }
+            var fieldname = "City";
+            var value = $("#cidCruc").val();
+           
+            if (value !== "") {
+                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+            }
+             
+           
+    }
+    
+  
+   
+    
+    
+  
+}
+
+
+
+//fin cruces por tema
+
+//inicio EOT
 function changeEot(){
   
   
@@ -1036,6 +1233,8 @@ function changeEot(){
     
   
 }
+//FIN EOT
+//INICIO UNIVERDIDADES
 
 
 

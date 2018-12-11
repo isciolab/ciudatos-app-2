@@ -161,10 +161,12 @@ HTML("<img src='img/menu/datosoficiales.png' class = 'imgTab'>
                    div(class = 'row',
                        div(class = 'col-md-6 col-lg-6', style = 'margin-top: -23px; text-align: -webkit-center;',
                            uiOutput('percCruces'),
+                           uiOutput('percCrucesHidden', style = 'display:block; color:white'),
                            #verbatimTextOutput('gahsgs')),
                            highchartOutput('grafSubC', height = 311)),
                        div(class = 'col-md-6 col-lg-6',
                            uiOutput('oficCruces'), style = 'margin-top: -23px; text-align: -webkit-center;',
+                           uiOutput('oficCrucesHidden', style = 'display:block; color:white'),
                            highchartOutput('grafObjC', height = 311)))
                  )
                  )
