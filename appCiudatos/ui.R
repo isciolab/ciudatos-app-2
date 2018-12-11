@@ -255,7 +255,7 @@ HTML("<img src='img/menu/datosoficiales.png' class = 'imgTab'>
     div( class = 'col-md-9', style="text-align: center;",
          uiOutput('grafIcu'),
     div(class = 'grafICU',
-    uiOutput('vizElgICU', width = 900, height = 400)
+    uiOutput('vizElgICU', width = 900, max-height = 400)
     ))
   )),
   tabPanel(

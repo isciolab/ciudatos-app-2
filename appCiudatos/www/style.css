@@ -566,6 +566,9 @@ img {
   margin-left: 10%;
 }
 
+#grafIEOT{
+  text-align:centers;
+}
 .grafICU, .grafIEOT {
   text-align: -webkit-center;
   text-align: -moz-center;
