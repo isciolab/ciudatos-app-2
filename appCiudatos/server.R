@@ -563,12 +563,12 @@ output$baks <- renderPrint({
     })
   
 
-  output$grafObjC <- renderHighchart({
+  #output$grafObjC <- renderHighchart({
   
-    h <- crucLineObje(dataObjCruces(), dicObj$label[dicObj$id == input$varOfiC] )
-    h
+   # h <- crucLineObje(dataObjCruces(), dicObj$label[dicObj$id == input$varOfiC] )
+  #  h
     
-  })
+  #})
   
 
 # Cruces selección --------------------------------------------------------
