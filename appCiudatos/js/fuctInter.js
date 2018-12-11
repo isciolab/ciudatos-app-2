@@ -149,7 +149,7 @@ $(document).on("shiny:inputchanged", function(event) {
                   }
         
        
-               $("#oficCruces").html('');
+               $("#grafObjC").html('');
         
                  setTimeout(function(){ 
                    var tipo=$("#oficCrucesHidden").text();
