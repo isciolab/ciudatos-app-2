@@ -214,7 +214,7 @@ $(document).on('click', '.buttonStyleGraph', function () {
       
    });
 
-$(document).on('click', '.BUgrafIEOT', function () {
+     $(document).on('click', '.BUgrafIEOT', function () {
        //Shiny.onInputChange('lastGraph',this.id);
        
                 currentButton = this.id;
@@ -1052,6 +1052,7 @@ function changeSubjCrucesTema(){
 function changeEot(){
   
   
+  currentButton = 'linea';
   
   if(currentButton=='linea'){
     
