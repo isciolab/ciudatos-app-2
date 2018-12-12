@@ -817,39 +817,39 @@ output$baks <- renderPrint({
     HTML(paste0('<p style="font-size: 13px;font-weight:600;">Meta: ', tex$Título, '</p><p style="font-size: 13px;font-weight:600;">Objetivo: ', tex$Descripción, '</p>'))
   })
   
-  output$vizOds <- renderHighchart({
-    df <- baseODS() %>% 
-           filter(Indicadores == input$odsIndicador) 
-    captT <- unique(df$Fuente)
-    hoLab <- unique(df$Indicadores)
-    df <- df %>% select(Ciudad, Valor, Indicadores)
-    codigos <- read_csv('data/mapa/codigos.csv')
-    codigos <- codigos %>% select(Ciudad = CIUDAD, everything())
-    df <- df %>% 
-      left_join(codigos) %>% 
-      select(name = Ciudad, z = Valor, lat = lat , lon = lng, everything()) %>% 
-      drop_na()
-    df$color <- sample(paleta, nrow(df), replace = TRUE)
+  #output$vizOds <- renderHighchart({
+  #  df <- baseODS() %>% 
+  #         filter(Indicadores == input$odsIndicador) 
+  #  captT <- unique(df$Fuente)
+  #  hoLab <- unique(df$Indicadores)
+  #  df <- df %>% select(Ciudad, Valor, Indicadores)
+  #  codigos <- read_csv('data/mapa/codigos.csv')
+  #  codigos <- codigos %>% select(Ciudad = CIUDAD, everything())
+  #  df <- df %>% 
+  #    left_join(codigos) %>% 
+  #    select(name = Ciudad, z = Valor, lat = lat , lon = lng, everything()) %>% 
+  #    drop_na()
+   #  df$color <- sample(paleta, nrow(df), replace = TRUE)
     
-    hcmap('countries/co/co-all') %>% 
-      hc_legend(enabled = FALSE) %>% 
-      hc_add_series(
-        data = df,
-        type = "mapbubble",
-        allowPointSelect = TRUE,
-        cursor = 'pointer',
-        borderWidth = 1,
-        marker= list(
-          fillOpacity=0.9),
-        cursor = 'pointer', minSize = '3%',
-        maxSize = 30,
-        tooltip= list(
-          headerFormat= '',
-          pointFormat='<b>{point.name}</b><br/>{point.Indicadores}: {point.z}'
-        )
-      ) %>% 
-      hc_credits(enabled = TRUE, text = paste0(captT, ' (Año 2015).'))
-  })
+   # hcmap('countries/co/co-all') %>% 
+  #    hc_legend(enabled = FALSE) %>% 
+   #   hc_add_series(
+   #     data = df,
+  #    type = "mapbubble",
+  #     allowPointSelect = TRUE,
+  #     cursor = 'pointer',
+  #     borderWidth = 1,
+  #     marker= list(
+  #       fillOpacity=0.9),
+  #     cursor = 'pointer', minSize = '3%',
+  #     maxSize = 30,
+  #     tooltip= list(
+  #       headerFormat= '',
+  #       pointFormat='<b>{point.name}</b><br/>{point.Indicadores}: {point.z}'
+  #     )
+  #   ) %>% 
+  #   hc_credits(enabled = TRUE, text = paste0(captT, ' (Año 2015).'))
+  #  })
   
   output$botDataOds <- renderUI({
     HTML(

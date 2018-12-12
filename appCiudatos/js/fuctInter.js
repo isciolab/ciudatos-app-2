@@ -20,6 +20,7 @@ var vizULineas;
 var vizUBarras;
 var vizeotLineas;
 var vizeotBarras ;
+var vizOds;
 var currentButton = 'linea';
 $(document).on('click', '.buttonStyle', function () {
         Shiny.onInputChange('last_btn',this.id);
@@ -202,6 +203,11 @@ $(document).on("shiny:inputchanged", function(event) {
                     changeEot();
         
                 }
+                
+                //ODS
+                 if(event.name=='odsIndicador' ){
+                     changeOds();
+                  }
                 
                
   });
@@ -1197,6 +1203,42 @@ function changeUniversidades(){
     
   
 }
+
+
+//ODS
+
+
+
+function changeOds(){
+  
+  
+    if (vizOds == null) {
+       var containerDiv = document.getElementById("vizOds"),
+                        url = "https://public.tableau.com/views/Odsciudatos/Hoja1?:embed=y&:display_count=yes&publish=yes",
+                        options = {
+                            hideTabs: true,
+
+                           
+                            onFirstInteractive: function () {
+
+                                  changeOds();
+                            }
+                        };
+                    vizOds = new tableau.Viz(containerDiv, url, options);
+    }else{
+         var sheet = vizOds.getWorkbook().getActiveSheet();
+            var fieldname = "Indicator";
+            var value = $("#odsIndicador").val();
+           
+            if (value !== "") {
+                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+            }
+             
+           
+    }
+  
+}
+
 
    /*
    
