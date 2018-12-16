@@ -778,7 +778,7 @@ function changeObjCruces(){
     
     if (vizLineObjCruces == null) {
        var containerDiv = document.getElementById("grafCrucesD"),
-                        url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja5?:embed=y&:display_count=yes&publish=yes",
+                        url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja7?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
 
@@ -870,7 +870,7 @@ function changeObjCrucesDS(){
     
     if (vizLineObjCrucesDS == null) {
        var containerDiv = document.getElementById("grafCrucesDS"),
-                        url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja5?:embed=y&:display_count=yes&publish=yes",
+                        url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja7?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
 
