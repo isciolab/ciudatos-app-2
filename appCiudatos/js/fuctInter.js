@@ -736,7 +736,7 @@ function changeObjC(){
                               hideTabs: true,
   
                              onFirstInteractive: function () {
-                                 changeSUbjCiudad();
+                                 changeObjC();
                                                         
                               }
                           };
