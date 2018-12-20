@@ -380,7 +380,7 @@ output$baks <- renderPrint({
   output$VizObjCif <- renderUI({
     
     idG <- if (is.null(input$lastGraphObjC)){
-       'barras'
+       'lineas'
       } else {
         input$lastGraphObjC
       }         
