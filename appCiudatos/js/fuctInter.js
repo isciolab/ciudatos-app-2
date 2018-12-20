@@ -345,6 +345,7 @@ $(document).on('click', '.buttonStyleGraphObjCiud', function () {
             {
              vizLineObjC.dispose();
              vizLineObjC = undefined;
+             console.log(vizLineObjC);
             }
            /* if(vizStackObjC !=undefined){
                     vizStackObjC.dispose();
