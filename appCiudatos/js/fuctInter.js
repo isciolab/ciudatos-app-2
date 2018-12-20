@@ -366,7 +366,7 @@ $(document).on('click', '.buttonStyleGraphObjCiud', function () {
              
              
             }
-           $("#VizObjCif").html('');
+           //$("#VizObjCif").html('');
            
            console.log(currentButton);
            Shiny.onInputChange('lastGraphObjC',currentButton);
