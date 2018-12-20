@@ -340,7 +340,7 @@ $(document).on('click', '.buttonStyleGraphObjCiud', function () {
         if(currentButton=='linea'){
         
         
-        console.log(vizLineObjC);
+            console.log(vizLineObjC);
             if(vizLineObjC !=undefined)
             {
              vizLineObjC.dispose();
