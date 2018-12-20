@@ -351,11 +351,11 @@ shinyServer(function(input, output, session) {
                                                  symbol = "circle"))) %>% 
       hc_tooltip(headerFormat = "", 
                  pointFormat = "<b></b>{point.label}<br/><b>
-                                 Corte {point.Año}</b>: {point.format}")%>% 
+                 Corte {point.Año}</b>: {point.format}")%>% 
       hc_xAxis(title = list(text = '')) %>% 
       hc_yAxis(title = list(text = '')) %>% 
       hc_add_theme(custom_theme(custom = cid_theme)) %>%   hc_exporting(enabled = TRUE)
-    })
+  })
   
   
   output$barCiudadObj <- renderHighchart({
@@ -369,31 +369,31 @@ shinyServer(function(input, output, session) {
     verLabel <- nms[3]
     hchart(d, type = "bubble", hcaes(x = b, y = c, group = a))  %>% 
       hc_tooltip(headerFormat = "", 
-                pointFormat = paste0("<b> Corte: {point.a}<br/><b>", 
-                horLabel, "</b>: {point.b}<br/><b>", verLabel, "</b>: {point.c}")) %>% 
-       hc_xAxis(title = list(text = horLabel)) %>% 
-       hc_yAxis(title = list(text = verLabel)) %>% 
-       hc_add_theme(custom_theme(custom = cid_theme)) %>%   hc_exporting(enabled = TRUE)
-   })
+                 pointFormat = paste0("<b> Corte: {point.a}<br/><b>", 
+                                      horLabel, "</b>: {point.b}<br/><b>", verLabel, "</b>: {point.c}")) %>% 
+      hc_xAxis(title = list(text = horLabel)) %>% 
+      hc_yAxis(title = list(text = verLabel)) %>% 
+      hc_add_theme(custom_theme(custom = cid_theme)) %>%   hc_exporting(enabled = TRUE)
+  })
   
   
   output$VizObjCif <- renderUI({
     
     idG <- if (is.null(input$lastGraphObjC)){
-       'linea'
-      } else {
+      'linea'} else {
         input$lastGraphObjC
       }         
     
-    if (idG == 'treemap') 
-       g <- highchartOutput('vizTreeObjetive')
+    # if (idG == 'treemap') 
+    #   g <- highchartOutput('vizTreeObjetive')
     if (idG == 'linea') 
-       g <- highchartOutput('grafCiudadObj')
+      g <- highchartOutput('grafCiudadObj')
     if (idG == 'barras') 
       g <- highchartOutput('barCiudadObj')
     
     g
   })
+  
   
   
 # CRUCES OBJ Vs SUBJ ------------------------------------------------------
