@@ -347,10 +347,10 @@ $(document).on('click', '.buttonStyleGraphObjCiud', function () {
              vizLineObjC = undefined;
              console.log(vizLineObjC);
             }
-           /* if(vizStackObjC !=undefined){
+            if(vizStackObjC !=undefined){
                     vizStackObjC.dispose();
                     vizStackObjC = undefined;
-            }*/
+            }
             
             
              $("#VizObjCif").html('');
