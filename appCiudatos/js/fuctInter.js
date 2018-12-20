@@ -352,7 +352,7 @@ $(document).on('click', '.buttonStyleGraphObjCiud', function () {
             }*/
             
             
-            $
+            //$("#barCiudadObj").remove();
              $("#VizObjCif2").html('');
           
             changeObjC();
@@ -698,7 +698,7 @@ function changeObjC(){
        
   
       if (vizLineObjC == null || vizLineObjC==undefined) {
-         var containerDiv = document.getElementById("VizObjCif2"),
+         var containerDiv = document.getElementById("VizObjCif"),
                           url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja5?:embed=y&:display_count=yes&publish=yes",
                           options = {
                               hideTabs: true,
