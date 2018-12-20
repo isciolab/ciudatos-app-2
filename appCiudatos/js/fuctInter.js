@@ -343,7 +343,7 @@ $(document).on('click', '.buttonStyleGraphObjCiud', function () {
             console.log(vizLineObjC);
             if(vizLineObjC !=undefined)
             {
-            // vizLineObjC.dispose();
+             vizLineObjC.dispose();
              vizLineObjC = undefined;
              console.log(vizLineObjC);
             }
