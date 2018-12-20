@@ -332,7 +332,7 @@ shinyServer(function(input, output, session) {
       filter(Ciudad == ciudElg) %>% collect()
     
     d <- d[,c('Año', varSelc)]
-options(scipen = 9999)
+    options(scipen = 9999)
     format <- dicObj %>% filter(id %in% varSelc) %>% select(id, label, ctype)
     d <- d %>% gather(id, valor, -Año) %>% left_join(format) %>% drop_na(valor)
     d$est <- ifelse(d$ctype == 'Pct', d$valor*100, d$valor)
@@ -340,9 +340,9 @@ options(scipen = 9999)
     d
   })
   
-output$baks <- renderPrint({
-  baseObjeCiudad()
-})
+  output$baks <- renderPrint({
+    baseObjeCiudad()
+  })
   
   output$grafCiudadObj <- renderHighchart({
     db <- baseObjeCiudad()
