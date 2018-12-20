@@ -121,8 +121,9 @@ HTML("<img src='img/menu/datosoficiales.png' class = 'imgTab'>
                    uiOutput('grafObjCiudades')))),
                    div(class = 'contVizCiud',
                    #    verbatimTextOutput('baks')
-                   uiOutput('VizObjCif')
-                      #div(class="col-xs-12 col-md-9",  id = "VizObjCif", style="text-align: center;min-height:400px; height:auto")
+                   #uiOutput('VizObjCif')
+                   uiOutput('VizObjCif2'),
+                   div(class="col-xs-12 col-md-9",  id = "VizObjCif", style="text-align: center;min-height:400px; height:auto")
                    
                    )
                    #verbatimTextOutput('salida')

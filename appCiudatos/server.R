@@ -377,7 +377,7 @@ output$baks <- renderPrint({
    })
   
   
-  output$VizObjCif <- renderUI({
+  output$VizObjCif2 <- renderUI({
     
     idG <- if (is.null(input$lastGraphObjC)){
        'lineas'
