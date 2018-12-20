@@ -966,7 +966,7 @@ function changeObjCrucesTema(){
     
     if (vizLineObjCrucesTema == null) {
        var containerDiv = document.getElementById("grafObjC"),
-                        url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja5?:embed=y&:display_count=yes&publish=yes",
+                        url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja7?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
 
@@ -1011,7 +1011,7 @@ function changeSubjCrucesTema(){
     
     if (vizLineSubjCrucesTema == null) {
        var containerDiv = document.getElementById("grafSubC"),
-                        url = "https://public.tableau.com/views/CiudatosGraficos/Hoja2?:embed=y&:display_count=yes&publish=yes",
+                        url = "https://public.tableau.com/views/CiudatosGraficos/Hoja5?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
 
