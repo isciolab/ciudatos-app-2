@@ -385,12 +385,12 @@ output$baks <- renderPrint({
         input$lastGraphObjC
       }         
     
-    # if (idG == 'treemap') 
-    #   g <- highchartOutput('vizTreeObjetive')
-   # if (idG == 'linea') 
-    #  g <- highchartOutput('grafCiudadObj')
+    if (idG == 'treemap') 
+       g <- highchartOutput('vizTreeObjetive')
+    if (idG == 'linea') 
+       g <- highchartOutput('grafCiudadObj')
     if (idG == 'barras') 
-      g <- highchartOutput('grafCiudadObj')
+      g <- highchartOutput('barCiudadObj')
     
     g
   })
