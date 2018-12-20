@@ -56,7 +56,7 @@ $(document).on("shiny:inputchanged", function(event) {
                   }
                
                 if(event.name=='varObjCiudadE'){
-                    // changeObjC();
+                     changeObjC();
                   }
                   
                 if(event.name=='SelvarElgC'){
@@ -335,8 +335,7 @@ $(document).on('click', '.buttonStyleGraphObj', function () {
    
 $(document).on('click', '.buttonStyleGraphObjCiud', function () {
         
-        Shiny.onInputChange('lastGraphObjC',currentButton);
-         /*currentButton = this.id;
+         currentButton = this.id;
        
         if(currentButton=='linea'){
         
@@ -354,12 +353,12 @@ $(document).on('click', '.buttonStyleGraphObjCiud', function () {
             
             
             //$("#barCiudadObj").remove();
-            /* $("#VizObjCif2").html('');
+             $("#VizObjCif2").html('');
           
             changeObjC();
         }else{
            Shiny.onInputChange('lastGraphObjC',currentButton);
-        }*/
+        }
         
         
    });
