@@ -357,13 +357,18 @@ $(document).on('click', '.buttonStyleGraphObjCiud', function () {
           
             changeObjC();
         }else{
+          
           if(vizLineObjC !=undefined)
             {
              vizLineObjC.dispose();
              vizLineObjC = undefined;
              console.log(vizLineObjC);
+             
+             
             }
            $("#VizObjCif").html('');
+           
+           console.log(currentButton);
            Shiny.onInputChange('lastGraphObjC',currentButton);
         }
         
