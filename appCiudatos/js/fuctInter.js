@@ -356,6 +356,7 @@ $(document).on('click', '.buttonStyleGraphObjCiud', function () {
           
             changeObjC();
         }else{
+           $("#VizObjCif").html('');
            Shiny.onInputChange('lastGraphObjC',currentButton);
         }
         
