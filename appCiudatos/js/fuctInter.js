@@ -336,11 +336,11 @@ $(document).on('click', '.buttonStyleGraphObj', function () {
 $(document).on('click', '.buttonStyleGraphObjCiud', function () {
         
          currentButton = this.id;
-        Shiny.onInputChange('lastGraphObjC',this.id);
+        
         if(currentButton=='linea'){
         
         
-        
+           Shiny.onInputChange('lastGraphObjC',this.id);
             if(vizLineObjC !=undefined)
             {
              vizLineObjC.dispose();
@@ -355,6 +355,12 @@ $(document).on('click', '.buttonStyleGraphObjCiud', function () {
             
           
             changeObjC();
+        }else{
+          
+          
+          
+           $("#VizObjCif").html('');
+           Shiny.onInputChange('lastGraphObjC',this.id);
         }
         
         
