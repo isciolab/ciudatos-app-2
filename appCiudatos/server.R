@@ -389,10 +389,10 @@ output$baks <- renderPrint({
     #   g <- highchartOutput('vizTreeObjetive')
    # if (idG == 'linea') 
     #  g <- highchartOutput('grafCiudadObj')
-    #if (idG == 'barras') 
-    #  g <- highchartOutput('barCiudadObj')
+    if (idG == 'barras') 
+      g <- highchartOutput('barCiudadObj')
     
-    #g
+    g
   })
   
   
