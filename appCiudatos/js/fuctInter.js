@@ -337,7 +337,7 @@ $(document).on('click', '.buttonStyleGraphObjCiud', function () {
         
          currentButton = this.id;
        
-        if(currentButton=='linea'){
+        //if(currentButton=='linea'){
         
         
             console.log(vizLineObjC);
@@ -356,7 +356,7 @@ $(document).on('click', '.buttonStyleGraphObjCiud', function () {
              $("#VizObjCif").html('');
           
             changeObjC();
-        }else{
+        /*}else{
           
           if(vizLineObjC !=undefined)
             {
@@ -370,7 +370,7 @@ $(document).on('click', '.buttonStyleGraphObjCiud', function () {
            
            console.log(currentButton);
            Shiny.onInputChange('lastGraphObjC',currentButton);
-        }
+        }*/
         
         
    });
@@ -745,7 +745,7 @@ function changeObjC(){
     
     
     
-    /*if(currentButton=='barras'){
+    if(currentButton=='barras'){
       
         console.log('son barras');
      
@@ -781,7 +781,7 @@ function changeObjC(){
                
              
        }
-    }*/
+    }
     
     
     

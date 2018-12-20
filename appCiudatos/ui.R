@@ -122,7 +122,7 @@ HTML("<img src='img/menu/datosoficiales.png' class = 'imgTab'>
                    div(class = 'contVizCiud',
                    #    verbatimTextOutput('baks')
                    #uiOutput('VizObjCif')
-                   uiOutput('VizObjCif2'),
+                   #uiOutput('VizObjCif2'),
                    div(class="col-xs-12 col-md-9",  id = "VizObjCif", style="text-align: center;min-height:400px; height:auto")
                    
                    )

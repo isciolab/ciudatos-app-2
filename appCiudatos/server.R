@@ -1,7 +1,7 @@
 #options(shiny.trace = TRUE)
 options(warn=-1)
 
-options(shiny.sanitize.errors = FALSE)
+options(shiny.sanitize.errors = TRUE)
 
 shinyServer(function(input, output, session) {
   
