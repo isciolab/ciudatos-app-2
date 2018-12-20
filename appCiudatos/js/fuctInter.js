@@ -352,8 +352,7 @@ $(document).on('click', '.buttonStyleGraphObjCiud', function () {
             }*/
             
             
-            //$("#barCiudadObj").remove();
-             $("#VizObjCif2").html('');
+             $("#VizObjCif").html('');
           
             changeObjC();
         }else{
