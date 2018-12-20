@@ -725,7 +725,7 @@ function changeObjC(){
     
     
     
-    if(currentButton=='barras'){
+    /*if(currentButton=='barras'){
       
         console.log('son barras');
      
@@ -761,7 +761,7 @@ function changeObjC(){
                
              
        }
-    }
+    }*/
     
     
     
