@@ -335,7 +335,8 @@ $(document).on('click', '.buttonStyleGraphObj', function () {
    
 $(document).on('click', '.buttonStyleGraphObjCiud', function () {
         
-         currentButton = this.id;
+        Shiny.onInputChange('lastGraphObjC',currentButton);
+         /*currentButton = this.id;
        
         if(currentButton=='linea'){
         
@@ -353,12 +354,12 @@ $(document).on('click', '.buttonStyleGraphObjCiud', function () {
             
             
             //$("#barCiudadObj").remove();
-             $("#VizObjCif2").html('');
+            /* $("#VizObjCif2").html('');
           
             changeObjC();
         }else{
            Shiny.onInputChange('lastGraphObjC',currentButton);
-        }
+        }*/
         
         
    });
