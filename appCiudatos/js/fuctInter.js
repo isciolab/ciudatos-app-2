@@ -56,7 +56,7 @@ $(document).on("shiny:inputchanged", function(event) {
                   }
                
                 if(event.name=='varObjCiudadE'){
-                     changeObjC();
+                    // changeObjC();
                   }
                   
                 if(event.name=='SelvarElgC'){
