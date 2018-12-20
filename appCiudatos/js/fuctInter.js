@@ -714,6 +714,7 @@ function changeObjC(){
                           url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja5?:embed=y&:display_count=yes&publish=yes",
                           options = {
                               hideTabs: true,
+                              name:$("#varObjCiudadE").val(),
   
                              onFirstInteractive: function () {
                                  changeObj();
