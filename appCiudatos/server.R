@@ -178,11 +178,10 @@ shinyServer(function(input, output, session) {
   
   
 
-
-# Objetivos ---------------------------------------------------------------
-
+  # Objetivos ---------------------------------------------------------------
+  
   output$botonesObjetivos <- renderUI({
-
+    
     BotonesGenerales(dicObj, cscl = 'buttonObj')
   })
   
@@ -202,7 +201,7 @@ shinyServer(function(input, output, session) {
     BaseGeneralObj(input$VariablesObjtivos, objDat) %>% left_join(codigos)
   })
   
-
+  
   
   output$vizLineObjetive <- renderHighchart({
     vizLineObje(baseObje(), dicObj$label[dicObj$id == input$VariablesObjtivos])
@@ -210,7 +209,7 @@ shinyServer(function(input, output, session) {
   
   output$vizTreeObjetive <- renderHighchart({
     df <- baseObje() %>% filter(b == input$anioObjSel)
-   vizTreeObje(df, dicObj$label[dicObj$id == input$VariablesObjtivos], minColor = '#cb4c55', maxColor = '#26327e')
+    vizTreeObje(df, dicObj$label[dicObj$id == input$VariablesObjtivos], minColor = '#cb4c55', maxColor = '#26327e')
   })
   
   output$vizMapObj <- renderLeaflet({
@@ -231,36 +230,35 @@ shinyServer(function(input, output, session) {
   })
   
   
-  #output$anioObj <- renderUI({
+  output$anioObj <- renderUI({
     
-   # gr <- input$lastGraphObj
+    gr <- input$lastGraphObj
     
-  #  if(is.null(gr)) gr <- 'linea'
+    if(is.null(gr)) gr <- 'linea'
     
-   #  if(gr == 'linea') return()  
-      
-  #  selectorAnio(objDat, input$VariablesObjtivos, 'anioObjSel')
-  #})
+    if(gr == 'linea') return()  
+    
+    selectorAnio(objDat, input$VariablesObjtivos, 'anioObjSel')
+  })
   
   
   output$VizObj <- renderUI({
     
     idG <- if (is.null(input$lastGraphObj)){
-            # 'linea'
-      } else {
-             # input$lastGraphObj
+      'linea'} else {
+        input$lastGraphObj
       }         
     
-    #if (idG == 'treemap') 
-      #g <- highchartOutput('vizTreeObjetive')
-    #if (idG == 'linea') 
-      #g <- highchartOutput('vizLineObjetive')
-    #if (idG == 'barras') 
-      #g <- highchartOutput('vizRankObj')
-    #if (idG == 'mapa') 
-     # g <- leafletOutput('vizMapObj')
+    if (idG == 'treemap') 
+      g <- highchartOutput('vizTreeObjetive')
+    if (idG == 'linea') 
+      g <- highchartOutput('vizLineObjetive')
+    if (idG == 'barras') 
+      g <- highchartOutput('vizRankObj')
+    if (idG == 'mapa') 
+      g <- leafletOutput('vizMapObj')
     
-    #g
+    g
   })
   
   output$botDataObj <- renderUI({
@@ -268,14 +266,14 @@ shinyServer(function(input, output, session) {
       '<a href="http://www.ciudatos.com/datos?data=do" target="_blank"><button id="botSub">Datos aquí !</button></a>
       ')
   })
-
-# FALTA CIUDADES OBJETIVOS ------------------------------------------------
-
+  
+  # FALTA CIUDADES OBJETIVOS ------------------------------------------------
+  
   output$grafObjCiudades <- renderUI({
     BotonesGraficas(c('linea', 'barras'), 'buttonStyleGraphObjCiud')
   })
   
-
+  
   output$CiudObj <- renderUI({
     variables <- objDat %>% select(CIUDAD) %>% collect() %>% .$CIUDAD
     variables <- unique(variables)
@@ -289,13 +287,13 @@ shinyServer(function(input, output, session) {
     dic <- dicCiudad(id_c, objDat, dicObj)
     BotonesGenerales(dic, 'buttonObjCty')
   })
-    
+  
   output$varCiudadObj <- renderUI({
     
     temaElg <- input$last_ObjCty
     
     if(is.null(temaElg)) temaElg <- 'pobreza_y_equidad'
-     
+    
     ciuElg <- input$ciudadObjD
     d <- objDat %>% filter(Ciudad == ciuElg) %>% collect()
     d <- Filter(function(x) !all(is.na(x)), d)
@@ -308,16 +306,16 @@ shinyServer(function(input, output, session) {
     
     variables <-  as.list(setNames(varInfo$id, varInfo$label))
     elg <- sample(variables, 2)
-
+    
     selectizeInput('varObjCiudadE', 'Selección de variables', 
                    choices = variables, multiple = TRUE,
                    selected = elg,
                    options = list(maxItems = 2,
                                   plugins= list('remove_button', 'drag_drop')))
-                   
+    
   })
   #
-
+  
   
   
   baseObjeCiudad <- reactive({
@@ -393,7 +391,6 @@ shinyServer(function(input, output, session) {
     
     g
   })
-  
   
   
 # CRUCES OBJ Vs SUBJ ------------------------------------------------------
