@@ -1,4 +1,4 @@
-options(shiny.trace = TRUE)
+#options(shiny.trace = TRUE)
 options(shiny.sanitize.errors = FALSE)
 options(warn=-1)
 shinyServer(function(input, output, session) {
