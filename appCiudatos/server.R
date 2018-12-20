@@ -380,19 +380,19 @@ output$baks <- renderPrint({
   output$VizObjCif <- renderUI({
     
     idG <- if (is.null(input$lastGraphObjC)){
-       #'lineas'
+       'lineas'
       } else {
-        #input$lastGraphObjC
+        input$lastGraphObjC
       }         
     
     # if (idG == 'treemap') 
     #   g <- highchartOutput('vizTreeObjetive')
    # if (idG == 'linea') 
     #  g <- highchartOutput('grafCiudadObj')
-    #if (idG == 'barras') 
-    #  g <- highchartOutput('barCiudadObj')
+    if (idG == 'barras') 
+      g <- highchartOutput('barCiudadObj')
     
-    #g
+    g
   })
   
   
