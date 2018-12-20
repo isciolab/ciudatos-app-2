@@ -390,7 +390,7 @@ output$baks <- renderPrint({
    # if (idG == 'linea') 
     #  g <- highchartOutput('grafCiudadObj')
     if (idG == 'barras') 
-      g <- highchartOutput('VizObjCif')
+      g <- highchartOutput('barCiudadObj')
     
     g
   })

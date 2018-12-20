@@ -334,24 +334,28 @@ $(document).on('click', '.buttonStyleGraphObj', function () {
    
    
 $(document).on('click', '.buttonStyleGraphObjCiud', function () {
-        Shiny.onInputChange('lastGraphObjC',this.id);
-        
         
          currentButton = this.id;
+        Shiny.onInputChange('lastGraphObjC',this.id);
+        if(currentButton=='linea'){
         
-        if(vizLineObjC !=undefined)
-        {
-         vizLineObjC.dispose();
-         vizLineObjC = undefined;
+        
+        
+            if(vizLineObjC !=undefined)
+            {
+             vizLineObjC.dispose();
+             vizLineObjC = undefined;
+            }
+            if(vizStackObjC !=undefined){
+                    vizStackObjC.dispose();
+                    vizStackObjC = undefined;
+            }
+            
+            
+            
+          
+            changeObjC();
         }
-        if(vizStackObjC !=undefined){
-                vizStackObjC.dispose();
-                vizStackObjC = undefined;
-        }
-        
-        
-      
-        changeObjC();
         
         
    });
