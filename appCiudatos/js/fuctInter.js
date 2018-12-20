@@ -352,8 +352,8 @@ $(document).on('click', '.buttonStyleGraphObjCiud', function () {
             }*/
             
             
-            $("#barCiudadObj").remove();
-             $("#VizObjCif").html('');
+            $
+             $("#VizObjCif2").html('');
           
             changeObjC();
         }else{
@@ -698,7 +698,7 @@ function changeObjC(){
        
   
       if (vizLineObjC == null || vizLineObjC==undefined) {
-         var containerDiv = document.getElementById("VizObjCif"),
+         var containerDiv = document.getElementById("VizObjCif2"),
                           url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja5?:embed=y&:display_count=yes&publish=yes",
                           options = {
                               hideTabs: true,
