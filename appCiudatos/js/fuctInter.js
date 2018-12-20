@@ -340,19 +340,18 @@ $(document).on('click', '.buttonStyleGraphObjCiud', function () {
         if(currentButton=='linea'){
         
         
-        
             if(vizLineObjC !=undefined)
             {
              vizLineObjC.dispose();
              vizLineObjC = undefined;
             }
-            if(vizStackObjC !=undefined){
+           /* if(vizStackObjC !=undefined){
                     vizStackObjC.dispose();
                     vizStackObjC = undefined;
-            }
+            }*/
             
             
-            
+             $("#VizObjCif").html('');
           
             changeObjC();
         }else{
@@ -694,7 +693,7 @@ function changeObjC(){
   if(currentButton=='linea'){
     
     
-        $("#VizObjCif").html('');
+       
   
       if (vizLineObjC == null || vizLineObjC==undefined) {
          var containerDiv = document.getElementById("VizObjCif"),
