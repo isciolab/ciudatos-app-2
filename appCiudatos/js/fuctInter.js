@@ -335,7 +335,7 @@ $(document).on('click', '.buttonStyleGraphObj', function () {
    
 $(document).on('click', '.buttonStyleGraphObjCiud', function () {
         
-        Shiny.onInputChange('lastGraphObjC',this.id);
+        Shiny.onInputChange('lastGraphObjC',currentButton);
          /*currentButton = this.id;
        
         if(currentButton=='linea'){
