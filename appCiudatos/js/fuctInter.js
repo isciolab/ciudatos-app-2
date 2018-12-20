@@ -350,7 +350,6 @@ $(document).on('click', '.buttonStyleGraphObjCiud', function () {
         }
         
         
-        $("#VizObjCif").html('');
       
         changeObjC();
         
@@ -688,6 +687,8 @@ function changeObjC(){
   
   if(currentButton=='linea'){
     
+    
+        $("#VizObjCif").html('');
   
       if (vizLineObjC == null || vizLineObjC==undefined) {
          var containerDiv = document.getElementById("VizObjCif"),
