@@ -319,10 +319,10 @@ $(document).on('click', '.buttonStyleGraphObj', function () {
                 vizTreemapObj = undefined;
         }
         
-         if(vizmapaObj !=undefined){
+         /*if(vizmapaObj !=undefined){
                 vizmapaObj.dispose();
                 vizmapaObj = undefined;
-        }
+        }*/
         
         
         $("#VizObj").html('');
