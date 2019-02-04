@@ -307,9 +307,9 @@ $(document).on('click', '.buttonStyleGraphObj', function () {
         if(vizLineObj !=undefined)
         {
            console.log(vizLineObj);
-           if(vizLineObj.$1e.parentNode1=null){
+          
          vizLineObj.dispose();
-           }
+          
          vizLineObj = undefined;
         }
         if(vizStackObj !=undefined){
@@ -331,7 +331,7 @@ $(document).on('click', '.buttonStyleGraphObj', function () {
         
           $("#VizObj").html('');
         
-        if(vizLineObj!='mapa'){
+        if(currentButton!='mapa'){
         
           changeObj();
         }
