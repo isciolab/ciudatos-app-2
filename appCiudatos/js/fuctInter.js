@@ -310,6 +310,7 @@ $(document).on('click', '.buttonStyleGraphObj', function () {
          vizLineObj = undefined;
         }
         if(vizStackObj !=undefined){
+          console.log(vizStackObj);
                 vizStackObj.dispose();
                 vizStackObj = undefined;
         }
