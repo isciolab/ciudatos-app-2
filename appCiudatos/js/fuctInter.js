@@ -579,6 +579,7 @@ function changeObj(){
     console.log(vizLineObj);
   
       if (vizLineObj == null || vizLineObj==undefined) {
+        console.log('entró');
          var containerDiv = document.getElementById("VizObj"),
                           url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja1?:embed=y&:display_count=yes&publish=yes",
                           options = {
