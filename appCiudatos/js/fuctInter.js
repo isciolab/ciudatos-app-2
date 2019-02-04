@@ -327,9 +327,10 @@ $(document).on('click', '.buttonStyleGraphObj', function () {
         }*/
         
         
-        $("#VizObj").html('');
+        
         
         if(vizLineObj!='mapa'){
+          $("#VizObj").html('');
           changeObj();
         }
           
