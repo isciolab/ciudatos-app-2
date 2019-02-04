@@ -576,6 +576,7 @@ function changeObj(){
   
   if(currentButton=='linea'){
     
+    console.log(vizLineObj);
   
       if (vizLineObj == null || vizLineObj==undefined) {
          var containerDiv = document.getElementById("VizObj"),
