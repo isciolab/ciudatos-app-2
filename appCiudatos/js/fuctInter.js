@@ -324,10 +324,13 @@ $(document).on('click', '.buttonStyleGraphObj', function () {
                 vizmapaObj = undefined;
         }
         
-        $("#VizObj").html('');
-      
-        changeObj();
         
+        $("#VizObj").html('');
+        
+        if(vizLineObj!='mapa'){
+          changeObj();
+        }
+          
         
    });
    
