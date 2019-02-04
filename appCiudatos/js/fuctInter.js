@@ -304,11 +304,12 @@ $(document).on('click', '.buttonStyleGraphObj', function () {
         
         currentButton = this.id;
         
+        console.log(vizLineObj);
         if(vizLineObj !=undefined)
         {
            console.log(vizLineObj);
           
-           //vizLineObj.dispose();
+           vizLineObj.dispose();
             
            vizLineObj = undefined;
         }
