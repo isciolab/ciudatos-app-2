@@ -324,13 +324,13 @@ $(document).on('click', '.buttonStyleGraphObj', function () {
                 vizTreemapObj = undefined;
         }
         
-         /*if(vizmapaObj !=undefined){
+         if(vizmapaObj !=undefined){
                 vizmapaObj.dispose();
-                vizmapaObj = undefined;
-        }*/
+              vizmapaObj = undefined;
+        }
         
         
-       //   $("#VizObj").html('');
+          $("#VizObj").html('');
         
         if(currentButton!='mapa'){
         
@@ -676,7 +676,7 @@ function changeObj(){
     
     
     
-    /*if(currentButton=='mapa'){
+    if(currentButton=='mapa'){
       
    
       if (vizmapaObj == null || vizmapaObj==undefined) {
@@ -703,7 +703,7 @@ function changeObj(){
               
              
        }
-    }*/
+    }
   
 }
 
