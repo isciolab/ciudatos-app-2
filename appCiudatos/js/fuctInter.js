@@ -304,17 +304,13 @@ $(document).on('click', '.buttonStyleGraphObj', function () {
         
         currentButton = this.id;
         
-      
-        
-        if(currentButton!='mapa'){
-        
-          if(vizLineObj !=undefined)
+        if(vizLineObj !=undefined)
         {
            console.log(vizLineObj);
           
-         vizLineObj.dispose();
-          
-         vizLineObj = undefined;
+           vizLineObj.dispose();
+            
+           vizLineObj = undefined;
         }
         if(vizStackObj !=undefined){
           console.log(vizStackObj);
@@ -334,7 +330,9 @@ $(document).on('click', '.buttonStyleGraphObj', function () {
         
         
           $("#VizObj").html('');
-          
+        
+        if(currentButton!='mapa'){
+        
           changeObj();
         }
           
