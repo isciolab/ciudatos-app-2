@@ -308,7 +308,7 @@ $(document).on('click', '.buttonStyleGraphObj', function () {
         {
            console.log(vizLineObj);
           
-           vizLineObj.dispose();
+           //vizLineObj.dispose();
             
            vizLineObj = undefined;
         }
