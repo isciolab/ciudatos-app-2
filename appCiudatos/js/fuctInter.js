@@ -330,7 +330,7 @@ $(document).on('click', '.buttonStyleGraphObj', function () {
         }*/
         
         
-          $("#VizObj").html('');
+       //   $("#VizObj").html('');
         
         if(currentButton!='mapa'){
         
