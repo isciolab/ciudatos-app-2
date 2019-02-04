@@ -304,7 +304,11 @@ $(document).on('click', '.buttonStyleGraphObj', function () {
         
         currentButton = this.id;
         
-        if(vizLineObj !=undefined)
+      
+        
+        if(currentButton!='mapa'){
+        
+          if(vizLineObj !=undefined)
         {
            console.log(vizLineObj);
           
@@ -330,9 +334,7 @@ $(document).on('click', '.buttonStyleGraphObj', function () {
         
         
           $("#VizObj").html('');
-        
-        if(currentButton!='mapa'){
-        
+          
           changeObj();
         }
           
@@ -586,6 +588,7 @@ function changeObj(){
                               hideTabs: true,
   
                              onFirstInteractive: function () {
+                               console.log('ya lo hizo');
                                  changeObj();
                                                         
                               }
