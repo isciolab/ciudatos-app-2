@@ -667,7 +667,7 @@ function changeObj(){
     
     
     
-    if(currentButton=='mapa'){
+    /*if(currentButton=='mapa'){
       
    
       if (vizmapaObj == null || vizmapaObj==undefined) {
@@ -694,7 +694,7 @@ function changeObj(){
               
              
        }
-    }
+    }*/
   
 }
 
