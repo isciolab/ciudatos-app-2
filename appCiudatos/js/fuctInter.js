@@ -335,10 +335,10 @@ $(document).on('click', '.buttonStyleGraphObj', function () {
           $("#VizObj").html('');
         
         if(currentButton!='mapa'){
-        $("#vizMapObj").css('display', 'none');
+          // $("#vizMapObj").css('display', 'none');
           changeObj();
         }else{
-          $("#vizMapObj").css('display', 'block');
+        //  $("#vizMapObj").css('display', 'block');
         }
           
         

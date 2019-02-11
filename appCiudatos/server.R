@@ -250,7 +250,7 @@ shinyServer(function(input, output, session) {
   })
   
   
-  output$vizMapObj <- renderUI({
+  output$vizMapObjContainer <- renderUI({
     
     idG <- if (is.null(input$lastGraphObj)){
              'linea'
@@ -265,7 +265,7 @@ shinyServer(function(input, output, session) {
     #if (idG == 'barras') 
       #g <- highchartOutput('vizRankObj')
     if (idG == 'mapa') {
-      g <- leafletOutput('vizMapObjint')
+      g <- leafletOutput('vizMapObj')
      
       g
     
