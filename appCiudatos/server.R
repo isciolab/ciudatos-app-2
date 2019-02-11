@@ -264,12 +264,13 @@ shinyServer(function(input, output, session) {
       #g <- highchartOutput('vizLineObjetive')
     #if (idG == 'barras') 
       #g <- highchartOutput('vizRankObj')
-    #if (idG == 'mapa') {
-    #  g <- leafletOutput('vizMapObj')
+    if (idG == 'mapa') {
+      g <- leafletOutput('vizMapObj')
+      g
     
-    #}
+    }
     
-    #g
+    
   })
   
   output$botDataObj <- renderUI({
