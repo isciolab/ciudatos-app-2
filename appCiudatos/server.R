@@ -261,7 +261,7 @@ shinyServer(function(input, output, session) {
     #if (idG == 'treemap') 
       #g <- highchartOutput('vizTreeObjetive')
     if (idG == 'linea') 
-      g <- textOutput("")
+      g <- textOutput('')
       #g <- highchartOutput('vizLineObjetive')
       
     #if (idG == 'barras') 
