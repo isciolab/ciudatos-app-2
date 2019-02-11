@@ -265,7 +265,8 @@ shinyServer(function(input, output, session) {
     #if (idG == 'barras') 
       #g <- highchartOutput('vizRankObj')
     if (idG == 'mapa') {
-      g <- leafletOutput('VizObj')
+     # g <- leafletOutput('vizMapObj')
+      g <- leafletOutput('vizMapObj')
       g
     
     }
