@@ -22,6 +22,8 @@ var vizeotLineas;
 var vizeotBarras ;
 var vizOds;
 var currentButton = 'linea';
+
+
 $(document).on('click', '.buttonStyle', function () {
         Shiny.onInputChange('last_btn',this.id);
    });
@@ -333,8 +335,10 @@ $(document).on('click', '.buttonStyleGraphObj', function () {
           $("#VizObj").html('');
         
         if(currentButton!='mapa'){
-        
+        $("#vizMapObj").css('display', 'none');
           changeObj();
+        }else{
+          $("#vizMapObj").css('display', 'block');
         }
           
         
