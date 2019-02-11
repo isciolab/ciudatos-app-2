@@ -253,9 +253,9 @@ shinyServer(function(input, output, session) {
   output$VizObj <- renderUI({
     
     idG <- if (is.null(input$lastGraphObj)){
-             #'linea'
+             'linea'
       } else {
-             # input$lastGraphObj
+              input$lastGraphObj
       }         
     
     #if (idG == 'treemap') 
