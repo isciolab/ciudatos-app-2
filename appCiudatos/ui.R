@@ -124,7 +124,7 @@ HTML("<img src='img/menu/datosoficiales.png' class = 'imgTab'>
                    #    verbatimTextOutput('baks')
                    #uiOutput('VizObjCif')
                    #uiOutput('VizObjCif2'),
-                   div(class="col-md-12",  id = "VizObjCif", style="text-align: center;min-height:400px; height:auto")
+                   div(class="col-md-12",  id = "VizObjCif", style="width: 100%; text-align: center;min-height:400px; height:auto")
                    
                    )
                    #verbatimTextOutput('salida')
