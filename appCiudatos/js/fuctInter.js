@@ -733,7 +733,7 @@ function changeObjC(){
                               hideTabs: true,
                               name:$("#varObjCiudadE").val(),
                               width: window.innerWidth,
-                              height: window.innerHeight,
+                             // height: window.innerHeight,
                              onFirstInteractive: function () {
                                  changeObj();
                                                         
@@ -774,7 +774,7 @@ function changeObjC(){
                           options = {
                               hideTabs: true,
                               width: window.innerWidth,
-                              height: window.innerHeight,
+                              //height: window.innerHeight,
   
                              onFirstInteractive: function () {
                                  changeObjC();
