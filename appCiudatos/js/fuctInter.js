@@ -732,7 +732,7 @@ function changeObjC(){
                           options = {
                               hideTabs: true,
                               name:$("#varObjCiudadE").val(),
-                              width: window.innerWidth,
+                              //width: window.innerWidth,
                              // height: window.innerHeight,
                              onFirstInteractive: function () {
                                  changeObj();
@@ -773,7 +773,7 @@ function changeObjC(){
                           url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja6?:embed=y&:display_count=yes&publish=yes",
                           options = {
                               hideTabs: true,
-                              width: window.innerWidth,
+                             // width: window.innerWidth,
                               //height: window.innerHeight,
   
                              onFirstInteractive: function () {
