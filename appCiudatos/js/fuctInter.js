@@ -602,7 +602,7 @@ function changeObj(){
                       vizLineObj = new tableau.Viz(containerDiv, url, options);
       }else{
           
-           var sheet = vizLineObj.getWorkbook().getActiveSheet();
+             var sheet = vizLineObj.getWorkbook().getActiveSheet();
               var fieldname = "Name";
               var value = $("#VariablesObjtivos").val();
              
@@ -659,7 +659,7 @@ function changeObj(){
                           url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja2?:embed=y&:display_count=yes&publish=yes",
                           options = {
                               hideTabs: true,
-  
+                              Name:$("#VariablesObjtivos").val(),
                              onFirstInteractive: function () {
                                  changeSUbjCiudad();
                                                         
