@@ -63,7 +63,7 @@ $(document).on("shiny:inputchanged", function(event) {
                   
                  
                 if(event.name=='SelvarElgC'){
-                   console.log(event.name);
+                   
                   console.log(vizLineObjCruces);
                   if(vizLineObjCruces!=undefined){
                       vizLineObjCruces.dispose();
