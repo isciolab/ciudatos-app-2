@@ -471,7 +471,7 @@ function changeSUbjCiudad(){
                             hideTabs: true,
 
                           Name:$("#varCiudadSubjSel").val(),
-                          City:$("#ciudadSubj").val(),
+                          
                             onFirstInteractive: function () {
                                changeSUbjCiudad();
                                                       
@@ -511,7 +511,7 @@ function changeSUbjCiudad(){
                         options = {
                             hideTabs: true,
                         Name:$("#varCiudadSubjSel").val(),
-                          City:$("#ciudadSubj").val(),
+                         
                            onFirstInteractive: function () {
                                changeSUbjCiudad();
                                                       
@@ -550,7 +550,7 @@ function changeSUbjCiudad(){
                         options = {
                             hideTabs: true,
                              Name:$("#varCiudadSubjSel").val(),
-                          City:$("#ciudadSubj").val(),
+                          
 
                            onFirstInteractive: function () {
                                changeSUbjCiudad();
