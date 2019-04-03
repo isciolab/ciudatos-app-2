@@ -61,7 +61,7 @@ $(document).on("shiny:inputchanged", function(event) {
                      changeObjC();
                   }
                   
-                  console.log(vent.name);
+                  console.log(event.name);
                 if(event.name=='SelvarElgC'){
                   
                   if(vizLineObjCruces!=undefined){
