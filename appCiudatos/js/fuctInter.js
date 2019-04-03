@@ -929,9 +929,6 @@ function changeObjCrucesDS(){
                         url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja7?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
-                           
-                            
-
                             
                             onFirstInteractive: function () {
 
