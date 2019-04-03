@@ -836,7 +836,7 @@ function changeObjCruces(){
                             hideTabs: true,
                             Name:$("#SelvarElgC").val(),
                             
-                            City:("#ciudadOpCru").val(),
+                           
                             onFirstInteractive: function () {
 
                                   changeObjCruces();
@@ -882,7 +882,7 @@ function changeSubjCruces(){
                         options = {
                             hideTabs: true,
                             Name:$("#SelvarElgC").val(),
-                            City:$("#ciudadOpCru").val(),
+                           
                             
                             onFirstInteractive: function () {
 
@@ -930,7 +930,7 @@ function changeObjCrucesDS(){
                         options = {
                             hideTabs: true,
                             Name:$("#SelSegVar").val(),
-                            City:$("#ciudadOpCru").val(),
+                            
 
                             
                             onFirstInteractive: function () {
@@ -977,7 +977,7 @@ function changeSubjCrucesDS(){
                         options = {
                             hideTabs: true,
                             Name:$("#SelSegVar").val(),
-                            City:$("#ciudadOpCru").val(),
+                           
 
                             
                             onFirstInteractive: function () {
@@ -1030,7 +1030,7 @@ function changeObjCrucesTema(){
                         options = {
                             hideTabs: true,
                             Name:$("#varOfiC").val(),
-                            City:$("#cidCruc").val(),
+                           
 
                             
                             onFirstInteractive: function () {
@@ -1077,7 +1077,7 @@ function changeSubjCrucesTema(){
                         options = {
                             hideTabs: true,
                             Name:$("#varPerC").val(),
-                            City:$("#cidCruc").val(),
+                            
 
                             
                             onFirstInteractive: function () {
