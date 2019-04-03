@@ -834,7 +834,7 @@ function changeObjCruces(){
                         url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja7?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
-                            Name:$("#SelvarElgC").val(),
+                            
                             
                            
                             onFirstInteractive: function () {
@@ -881,7 +881,7 @@ function changeSubjCruces(){
                         url = "https://public.tableau.com/views/CiudatosGraficos/Hoja5?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
-                            Name:$("#SelvarElgC").val(),
+                            
                            
                             
                             onFirstInteractive: function () {
@@ -929,7 +929,7 @@ function changeObjCrucesDS(){
                         url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja7?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
-                            Name:$("#SelSegVar").val(),
+                           
                             
 
                             
@@ -976,7 +976,7 @@ function changeSubjCrucesDS(){
                         url = "https://public.tableau.com/views/CiudatosGraficos/Hoja5?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
-                            Name:$("#SelSegVar").val(),
+                           
                            
 
                             
@@ -1029,7 +1029,7 @@ function changeObjCrucesTema(){
                         url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja7?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
-                            Name:$("#varOfiC").val(),
+                          
                            
 
                             
@@ -1076,7 +1076,7 @@ function changeSubjCrucesTema(){
                         url = "https://public.tableau.com/views/CiudatosGraficos/Hoja5?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
-                            Name:$("#varPerC").val(),
+                            
                             
 
                             
