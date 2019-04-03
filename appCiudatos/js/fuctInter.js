@@ -61,9 +61,9 @@ $(document).on("shiny:inputchanged", function(event) {
                      changeObjC();
                   }
                   
-                  console.log(event.name);
+                 
                 if(event.name=='SelvarElgC'){
-                  
+                   console.log(event.name);
                   console.log(vizLineObjCruces);
                   if(vizLineObjCruces!=undefined){
                       vizLineObjCruces.dispose();
@@ -865,7 +865,8 @@ function changeSubjCruces(){
  
  console.log(vizLineSubjCruces);
     
-    if (vizLineSubjCruces == null) {
+    if (vizLineSubjCruces == null || vizLineSubjCruces == undefined) {
+      console.log('haciendoooo');
        var containerDiv = document.getElementById("grafCrucesD"),
                         url = "https://public.tableau.com/views/CiudatosGraficos/Hoja5?:embed=y&:display_count=yes&publish=yes",
                         options = {
@@ -912,7 +913,7 @@ function changeObjCrucesDS(){
  
  
     
-    if (vizLineObjCrucesDS == null) {
+    if (vizLineObjCrucesDS == null || vizLineObjCrucesDS==undefined) {
        var containerDiv = document.getElementById("grafCrucesDS"),
                         url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja7?:embed=y&:display_count=yes&publish=yes",
                         options = {
@@ -957,7 +958,7 @@ function changeSubjCrucesDS(){
  
  
     
-    if (vizLineSubjCrucesDS == null) {
+    if (vizLineSubjCrucesDS == null || vizLineSubjCrucesDS==undefined) {
        var containerDiv = document.getElementById("grafCrucesDS"),
                         url = "https://public.tableau.com/views/CiudatosGraficos/Hoja5?:embed=y&:display_count=yes&publish=yes",
                         options = {
