@@ -729,19 +729,9 @@ output$baks <- renderPrint({
   
   #IMG 
   
-  output$grafCrucesD <- renderHighchart({
-    varSe <- input$SelvarElgC
-    if (cruces$base[cruces$id == varSe] == 'Datos de percepción') {
-      anioL <- unique(tablaCompUno()$AÑO)
-      if (length(anioL) > 1) {
-        h <- linesubjCru(tablaCompUno())#}#hgch_line_CatYeaNum(dataSubCruces(), dropNa = TRUE, theme = cid_theme, percentage = TRUE)}
-    if (length(anioL) == 1) {
-     d <- tablaCompUno()[,-2]
-    h <- barsubjCru(d) }
-    }} else {
-    h <- crucLineObje(tablaCompUno(), dicObj$label[dicObj$id == varSe] )
-    }
-  h
+  output$grafCrucesD <- renderUI({
+    h<-''
+    h
   })
   
   output$grafCrucesDHidden <- renderUI({
