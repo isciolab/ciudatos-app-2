@@ -738,7 +738,7 @@ function changeObjC(){
                               //width: window.innerWidth,
                              // height: window.innerHeight,
                              onFirstInteractive: function () {
-                                 changeObj();
+                                 changeObjC();
                                                         
                               }
                           };
