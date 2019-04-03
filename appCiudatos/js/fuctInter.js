@@ -829,7 +829,7 @@ function changeObjCruces(){
  
  
     
-    if (vizLineObjCruces == null) {
+    if (vizLineObjCruces == null || vizLineObjCruces==undefined) {
        var containerDiv = document.getElementById("grafCrucesD"),
                         url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja7?:embed=y&:display_count=yes&publish=yes",
                         options = {
@@ -1021,7 +1021,7 @@ function changeObjCrucesTema(){
  
  
     
-    if (vizLineObjCrucesTema == null) {
+    if (vizLineObjCrucesTema == null || vizLineObjCrucesTema==undefined) {
        var containerDiv = document.getElementById("grafObjC"),
                         url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja7?:embed=y&:display_count=yes&publish=yes",
                         options = {
@@ -1068,7 +1068,7 @@ function changeSubjCrucesTema(){
  
  
     
-    if (vizLineSubjCrucesTema == null) {
+    if (vizLineSubjCrucesTema == null || vizLineSubjCrucesTema==undefined) {
        var containerDiv = document.getElementById("grafSubC"),
                         url = "https://public.tableau.com/views/CiudatosGraficos/Hoja5?:embed=y&:display_count=yes&publish=yes",
                         options = {
