@@ -745,19 +745,8 @@ output$baks <- renderPrint({
     h
   })
   
-  output$grafCrucesDS <- renderHighchart({
-    varSe <- input$SelSegVar
-    if (cruces$base[cruces$id == varSe] == 'Datos de percepción') {
-      anioL <- unique(tablaCompDos()$AÑO)
-      if (length(anioL) > 1) {
-        h <- linesubjCru(tablaCompDos())}#hgch_line_CatYeaNum(dataSubCruces(), dropNa = TRUE, theme = cid_theme, percentage = TRUE)}
-      if (length(anioL) == 1) {
-        d <- tablaCompDos()[,-2]
-        h <- barsubjCru(d)
-      }
-    } else {
-      h <- crucLineObje(tablaCompDos(), dicObj$label[dicObj$id == varSe] )
-    }
+  output$grafCrucesDS <- renderUI({
+    h<-''
     h
   })
   
