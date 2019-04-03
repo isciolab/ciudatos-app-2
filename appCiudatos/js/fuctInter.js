@@ -629,7 +629,7 @@ function changeObj(){
                               hideTabs: true,
   
                              onFirstInteractive: function () {
-                                 changeSUbjCiudad();
+                                 changeObj();
                                                         
                               }
                           };
@@ -659,9 +659,9 @@ function changeObj(){
                           url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja2?:embed=y&:display_count=yes&publish=yes",
                           options = {
                               hideTabs: true,
-                              Name:$("#VariablesObjtivos").val(),
+                             
                              onFirstInteractive: function () {
-                                 changeSUbjCiudad();
+                                 changeObj();
                                                         
                               }
                           };
