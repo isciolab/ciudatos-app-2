@@ -61,6 +61,7 @@ $(document).on("shiny:inputchanged", function(event) {
                      changeObjC();
                   }
                   
+                  console.log(vent.name);
                 if(event.name=='SelvarElgC'){
                   
                   if(vizLineObjCruces!=undefined){
@@ -73,8 +74,9 @@ $(document).on("shiny:inputchanged", function(event) {
                   }
         
                   $("#grafCrucesD").html('');
-                 setTimeout(function(){ 
+                setTimeout(function(){ 
                    var tipo=$("#grafCrucesDHidden").text();
+                   
                     console.log(tipo);
                     if(tipo=='obj'){
                        changeObjCruces();
@@ -813,7 +815,7 @@ function changeObjC(){
 
 function changeObjCruces(){
   
- 
+ console.log('changeObjCruces');
  
  
     
