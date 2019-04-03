@@ -470,6 +470,8 @@ function changeSUbjCiudad(){
                         options = {
                             hideTabs: true,
 
+                          Name:$("#varCiudadSubjSel").val(),
+                          City:$("#ciudadSubj").val(),
                             onFirstInteractive: function () {
                                changeSUbjCiudad();
                                                       
@@ -508,7 +510,8 @@ function changeSUbjCiudad(){
                         url = "https://public.tableau.com/views/CiudatosGraficos/Hoja3?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
-
+                        Name:$("#varCiudadSubjSel").val(),
+                          City:$("#ciudadSubj").val(),
                            onFirstInteractive: function () {
                                changeSUbjCiudad();
                                                       
@@ -546,6 +549,8 @@ function changeSUbjCiudad(){
                         url = "https://public.tableau.com/views/CiudatosGraficos/Hoja4?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
+                             Name:$("#varCiudadSubjSel").val(),
+                          City:$("#ciudadSubj").val(),
 
                            onFirstInteractive: function () {
                                changeSUbjCiudad();
@@ -592,7 +597,7 @@ function changeObj(){
                           url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja1?:embed=y&:display_count=yes&publish=yes",
                           options = {
                               hideTabs: true,
-                         Name:$("#VariablesObjtivos").val(),
+                            Name:$("#VariablesObjtivos").val(),
                              onFirstInteractive: function () {
                                console.log('ya lo hizo');
                                  changeObj();
@@ -735,6 +740,7 @@ function changeObjC(){
                           options = {
                               hideTabs: true,
                               name:$("#varObjCiudadE").val(),
+                              City:$("#ciudadObjD").val(),
                               //width: window.innerWidth,
                              // height: window.innerHeight,
                              onFirstInteractive: function () {
@@ -779,6 +785,9 @@ function changeObjC(){
                              // width: window.innerWidth,
                               //height: window.innerHeight,
   
+  
+                            Name:$("#varObjCiudadE").val(),
+                            City:$("#ciudadObjD").val(),
                              onFirstInteractive: function () {
                                  changeObjC();
                                                         
@@ -825,8 +834,9 @@ function changeObjCruces(){
                         url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja7?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
-
+                            Name:$("#SelvarElgC").val(),
                             
+                            City:("#ciudadOpCru").val(),
                             onFirstInteractive: function () {
 
                                   changeObjCruces();
@@ -871,7 +881,8 @@ function changeSubjCruces(){
                         url = "https://public.tableau.com/views/CiudatosGraficos/Hoja5?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
-
+                            Name:$("#SelvarElgC").val(),
+                            City:$("#ciudadOpCru").val(),
                             
                             onFirstInteractive: function () {
 
@@ -918,6 +929,8 @@ function changeObjCrucesDS(){
                         url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja7?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
+                            Name:$("#SelSegVar").val(),
+                            City:$("#ciudadOpCru").val(),
 
                             
                             onFirstInteractive: function () {
@@ -963,6 +976,8 @@ function changeSubjCrucesDS(){
                         url = "https://public.tableau.com/views/CiudatosGraficos/Hoja5?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
+                            Name:$("#SelSegVar").val(),
+                            City:$("#ciudadOpCru").val(),
 
                             
                             onFirstInteractive: function () {
@@ -1014,6 +1029,8 @@ function changeObjCrucesTema(){
                         url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja7?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
+                            Name:$("#varOfiC").val(),
+                            City:$("#cidCruc").val(),
 
                             
                             onFirstInteractive: function () {
@@ -1059,6 +1076,8 @@ function changeSubjCrucesTema(){
                         url = "https://public.tableau.com/views/CiudatosGraficos/Hoja5?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
+                            Name:$("#varPerC").val(),
+                            City:$("#cidCruc").val(),
 
                             
                             onFirstInteractive: function () {
@@ -1113,6 +1132,7 @@ function changeEot(){
                         url = "https://public.tableau.com/views/ciudatoseot/Hoja1?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
+                            Name:$("#indEOT").val(),
 
                             onFirstInteractive: function () {
                                changeEot();
@@ -1145,6 +1165,7 @@ function changeEot(){
                         url = "https://public.tableau.com/views/ciudatoseot/Hoja2?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
+                            Name:$("#indEOT").val(),
 
                            onFirstInteractive: function () {
                                changeEot();
@@ -1188,6 +1209,7 @@ function changeUniversidades(){
                         url = "https://public.tableau.com/views/Ciudatos-universidaes/Hoja1?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
+                            Name:$("#indCCU").val(),
 
                             onFirstInteractive: function () {
                                changeUniversidades();
@@ -1222,6 +1244,7 @@ function changeUniversidades(){
                         url = "https://public.tableau.com/views/Ciudatos-universidaes/Hoja2?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
+                            Name:$("#indCCU").val(),
 
                            onFirstInteractive: function () {
                                changeUniversidades();
@@ -1262,6 +1285,7 @@ function changeOds(){
                         url = "https://public.tableau.com/views/Odsciudatos/Hoja1?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
+                            Indicator:$("#odsIndicador").val(),
 
                            
                             onFirstInteractive: function () {
