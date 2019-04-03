@@ -835,7 +835,7 @@ function changeObjCruces(){
                         options = {
                             hideTabs: true,
                             
-                            
+                            height:'311px',
                            
                             onFirstInteractive: function () {
 
@@ -882,7 +882,7 @@ function changeSubjCruces(){
                         options = {
                             hideTabs: true,
                             
-                           
+                            height:'311px',
                             
                             onFirstInteractive: function () {
 
