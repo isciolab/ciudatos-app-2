@@ -592,7 +592,7 @@ function changeObj(){
                           url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja1?:embed=y&:display_count=yes&publish=yes",
                           options = {
                               hideTabs: true,
-  
+                         Name:$("#VariablesObjtivos").val(),
                              onFirstInteractive: function () {
                                console.log('ya lo hizo');
                                  changeObj();
@@ -627,7 +627,7 @@ function changeObj(){
                           url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja3?:embed=y&:display_count=yes&publish=yes",
                           options = {
                               hideTabs: true,
-  
+                         Name:$("#VariablesObjtivos").val(),
                              onFirstInteractive: function () {
                                  changeObj();
                                                         
@@ -659,7 +659,7 @@ function changeObj(){
                           url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja2?:embed=y&:display_count=yes&publish=yes",
                           options = {
                               hideTabs: true,
-                             
+                             Name:$("#VariablesObjtivos").val(),
                              onFirstInteractive: function () {
                                  changeObj();
                                                         
