@@ -1682,11 +1682,11 @@ output$baks <- renderPrint({
   #   tags$a(externalUrl, href = queryBuild, target = "_blank")
   # })
   # 
-  # observe({
-  #   query <- parseQueryString(session$clientData$url_search)
-  #   if (is.null(query)) query <- 'hola'
-  #   if (!is.null(query)) query <- 'chao'
-  # })
+   observe({
+     query <- parseQueryString(session$clientData$url_search)
+     if (is.null(query)) query <- ''
+     if (!is.null(query)) query <- ''
+   })
   # # # 
   # output$kds <- renderPrint({
   #   idLink()
