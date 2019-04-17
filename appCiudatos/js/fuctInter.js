@@ -62,7 +62,7 @@ $(document).on("shiny:inputchanged", function(event) {
                   }
                   
                  
-                if(event.name=='SelvarElgC'){
+                if(event.name=='SelvarElgC' || event.name=='ciudadOpCru'){
                    
                   console.log(vizLineObjCruces);
                   if(vizLineObjCruces!=undefined){
@@ -88,7 +88,7 @@ $(document).on("shiny:inputchanged", function(event) {
                     
                 }
                 
-                if(event.name=='SelSegVar'){
+                if(event.name=='SelSegVar' || event.name=='ciudadOpCru'){
                    console.log(vizLineObjCrucesDS);
                    console.log(vizLineSubjCrucesDS);
                     if(vizLineObjCrucesDS!=undefined){
