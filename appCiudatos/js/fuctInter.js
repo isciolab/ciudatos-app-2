@@ -842,6 +842,7 @@ function changeObjCruces(){
                             
                             height:'500px',
                               width:'100%',
+                              City:$("#ciudadOpCru").val(),
                            
                             onFirstInteractive: function () {
 
