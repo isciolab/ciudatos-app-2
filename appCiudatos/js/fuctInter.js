@@ -970,7 +970,7 @@ function changeSubjCrucesDS(){
  
  
  
- consolelog(vizLineSubjCrucesDS);
+ console.log(vizLineSubjCrucesDS);
     
     if (vizLineSubjCrucesDS == null || vizLineSubjCrucesDS==undefined) {
        var containerDiv = document.getElementById("grafCrucesDS"),
@@ -989,6 +989,10 @@ function changeSubjCrucesDS(){
                         };
                     vizLineSubjCrucesDS = new tableau.Viz(containerDiv, url, options);
     }else{
+       
+ 
+ console.log('actuali');
+ 
          var sheet = vizLineSubjCrucesDS.getWorkbook().getActiveSheet();
             var fieldname = "Name";
             var value = $("#SelSegVar").val();
@@ -998,7 +1002,8 @@ function changeSubjCrucesDS(){
             }
             var fieldname = "City";
             var value = $("#ciudadOpCru").val();
-           
+            
+            console.log(value);
             if (value !== "") {
                 sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
             }
