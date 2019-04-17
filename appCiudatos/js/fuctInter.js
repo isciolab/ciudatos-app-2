@@ -842,7 +842,7 @@ function changeObjCruces(){
                             
                             height:'500px',
                               width:'100%',
-                              City:$("#ciudadOpCru").val(),
+                              
                            
                             onFirstInteractive: function () {
 
@@ -891,7 +891,6 @@ function changeSubjCruces(){
                             
                             height:'500px',
                               width:'100%',
-                                City:$("#ciudadOpCru").val(),
                             
                             onFirstInteractive: function () {
 
@@ -940,7 +939,6 @@ function changeObjCrucesDS(){
                             hideTabs: true,
                              height:'500px',
                                width:'100%',
-                                 City:$("#ciudadOpCru").val(),
                             onFirstInteractive: function () {
 
                                   changeObjCrucesDS();
@@ -989,7 +987,7 @@ function changeSubjCrucesDS(){
                             height:'500px',
                             width:'100%',
 
-                              City:$("#ciudadOpCru").val(),
+                            
                             onFirstInteractive: function () {
 
                                   changeSubjCrucesDS();
