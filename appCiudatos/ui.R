@@ -140,12 +140,12 @@ HTML("<img src='img/menu/datosoficiales.png' class = 'imgTab'>
                    div(class = 'row',
                        div(class = 'col-md-6 col-lg-6', style = 'text-align: -webkit-center;',
                            uiOutput('fselCruc'),
-                 uiOutput('grafCrucesD', height = 311),
+                 uiOutput('grafCrucesD', height = 500),
                  uiOutput('grafCrucesDHidden', style = 'display:block; color:white'),
                  uiOutput('tabSelCom1')),
                  div(class = 'col-md-6 col-lg-6', style = 'text-align: -webkit-center;',
                    uiOutput('TselCruc'),
-                   uiOutput('grafCrucesDS', height = 311),
+                   uiOutput('grafCrucesDS', height = 500),
                    uiOutput('grafCrucesDSHidden', style = 'display:block; color:white'),
                    uiOutput('tabSelCom2'))
                  )),
@@ -165,11 +165,11 @@ HTML("<img src='img/menu/datosoficiales.png' class = 'imgTab'>
                            uiOutput('percCruces'),
                            uiOutput('percCrucesHidden', style = 'display:block; color:white'),
                            #verbatimTextOutput('gahsgs')),
-                           highchartOutput('grafSubC', height = 311)),
+                           highchartOutput('grafSubC', height = 500)),
                        div(class = 'col-md-6 col-lg-6',
                            uiOutput('oficCruces'), style = 'margin-top: -23px; text-align: -webkit-center;',
                            uiOutput('oficCrucesHidden', style = 'display:block; color:white'),
-                           highchartOutput('grafObjC', height = 311)))
+                           highchartOutput('grafObjC', height = 500)))
                  )
                  )
       

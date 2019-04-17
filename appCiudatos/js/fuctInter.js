@@ -835,7 +835,7 @@ function changeObjCruces(){
                         options = {
                             hideTabs: true,
                             
-                            height:'311px',
+                            height:'500px',
                               width:'100%',
                            
                             onFirstInteractive: function () {
@@ -883,7 +883,7 @@ function changeSubjCruces(){
                         options = {
                             hideTabs: true,
                             
-                            height:'311px',
+                            height:'500px',
                               width:'100%',
                             
                             onFirstInteractive: function () {
@@ -931,7 +931,7 @@ function changeObjCrucesDS(){
                         url = "https://public.tableau.com/views/Ciudatosobjetivos/Hoja7?:embed=y&:display_count=yes&publish=yes",
                         options = {
                             hideTabs: true,
-                             height:'311px',
+                             height:'500px',
                                width:'100%',
                             onFirstInteractive: function () {
 
@@ -970,6 +970,7 @@ function changeSubjCrucesDS(){
  
  
  
+ consolelog(vizLineSubjCrucesDS);
     
     if (vizLineSubjCrucesDS == null || vizLineSubjCrucesDS==undefined) {
        var containerDiv = document.getElementById("grafCrucesDS"),
@@ -977,7 +978,7 @@ function changeSubjCrucesDS(){
                         options = {
                             hideTabs: true,
                            
-                            height:'311px',
+                            height:'500px',
                             width:'100%',
 
                             
